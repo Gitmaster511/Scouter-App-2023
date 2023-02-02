@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Scouter App</string>
     <string name="auto">AUTO</string>
+    <string name="button">Button</string>
 </resources>
