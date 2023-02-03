@@ -15,19 +15,20 @@
         android:buttonTint="#ffffff"
         android:text="Left Community"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="144dp">
-    </CheckBox>
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="228dp"></CheckBox>
+
 
     <CheckBox
         android:layout_width="276dp"
         android:layout_height="90dp"
         android:background="#ff0303"
         android:buttonTint="#ffffff"
-        android:text="Attempted Docked + Engaged"
+        android:text="Docked + Engaged"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="460dp"
-        tools:layout_editor_absoluteY="144dp"></CheckBox>
+        tools:layout_editor_absoluteX="426dp"
+        tools:layout_editor_absoluteY="228dp"></CheckBox>
+
 
     <CheckBox
         android:layout_width="276dp"
@@ -36,28 +37,39 @@
         android:buttonTint="#ffffff"
         android:text="Assisted"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="460dp"
-        tools:layout_editor_absoluteY="502dp"></CheckBox>
+        tools:layout_editor_absoluteX="478dp"
+        tools:layout_editor_absoluteY="878dp"></CheckBox>
 
-    <CheckBox
-        android:layout_width="276dp"
-        android:layout_height="90dp"
-        android:background="#ff0303"
-        android:buttonTint="#ffffff"
-        android:text="Docked"
-        android:textColor="@color/white"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="502dp"></CheckBox>
+    <View
+        android:id="@+id/view"
+        android:layout_width="422dp"
+        android:layout_height="155dp"
+        android:background="@drawable/smaller_rect_field"
+        android:backgroundTint="#ff0303"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="3dp"
 
-    <CheckBox
-        android:layout_width="276dp"
-        android:layout_height="90dp"
-        android:background="#ff0303"
-        android:buttonTint="#ffffff"
-        android:text="Engaged"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="131dp"
+        android:layout_height="76dp"
+        android:text="Auto"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="460dp"
-        tools:layout_editor_absoluteY="355dp"></CheckBox>
+        android:textSize="50dp"
+        tools:layout_editor_absoluteX="335dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="278dp"
+        android:layout_height="190dp"
+        app:srcCompat="?attr/homeAsUpIndicator"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="417dp"
+        Drawable.setColorFilter( #ff0303, Mode.MULTIPLY )
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
