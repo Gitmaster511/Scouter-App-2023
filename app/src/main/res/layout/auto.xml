@@ -3,37 +3,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="409dp"
-        android:layout_height="100dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="629dp" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="204.5dp"
+    <CheckBox
+        android:layout_width="276dp"
         android:layout_height="90dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="35dp" />
+        android:background="#ff0303"
+        android:buttonTint="#ffffff"
+        android:text="Left Community"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="144dp">
+    </CheckBox>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="210dp" />
+    <CheckBox
+        android:layout_width="276dp"
+        android:layout_height="90dp"
+        android:background="#ff0303"
+        android:buttonTint="#ffffff"
+        android:text="Attempted Docked + Engaged"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="460dp"
+        tools:layout_editor_absoluteY="144dp"></CheckBox>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="376dp"
-        tools:srcCompat="@tools:sample/avatars" />
+    <CheckBox
+        android:layout_width="276dp"
+        android:layout_height="90dp"
+        android:background="#ff0303"
+        android:buttonTint="#ffffff"
+        android:text="Assisted"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="460dp"
+        tools:layout_editor_absoluteY="502dp"></CheckBox>
+
+    <CheckBox
+        android:layout_width="276dp"
+        android:layout_height="90dp"
+        android:background="#ff0303"
+        android:buttonTint="#ffffff"
+        android:text="Docked"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="502dp"></CheckBox>
+
+    <CheckBox
+        android:layout_width="276dp"
+        android:layout_height="90dp"
+        android:background="#ff0303"
+        android:buttonTint="#ffffff"
+        android:text="Engaged"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="460dp"
+        tools:layout_editor_absoluteY="355dp"></CheckBox>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
