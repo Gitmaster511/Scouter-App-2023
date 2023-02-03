@@ -2,4 +2,7 @@
     <string name="app_name">Scouter App</string>
     <string name="auto">AUTO</string>
     <string name="button">Button</string>
+    <string name="titleauto">Auto</string>
+    <string name="docked_engaged">Docked + Engaged</string>
+    <string name="left_community">Left Community</string>
 </resources>
