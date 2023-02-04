@@ -13,43 +13,40 @@
         android:layout_width="422dp"
         android:layout_height="155dp"
         android:layout_marginStart="189dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="31dp"
         android:layout_marginEnd="189dp"
-        android:layout_marginBottom="1091dp"
         android:background="@drawable/smaller_rect_field"
         android:backgroundTint="#ff0303"
         android:bottomLeftRadius="40dp"
         android:bottomRightRadius="40dp"
         android:topLeftRadius="40dp"
         android:topRightRadius="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- CheckBoxes -->
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="148dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="335dp"
-        android:layout_marginEnd="334dp"
+        android:id="@+id/textView"
+        android:layout_width="114dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="189dp"
         android:text="@string/titleauto"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.697"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="73dp" />
-
-    <!-- CheckBoxes -->
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:layout_width="276dp"
+        android:layout_width="200dp"
         android:layout_height="90dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="228dp"
         android:background="#ff0303"
         android:buttonTint="#ffffff"
@@ -61,10 +58,10 @@
     </CheckBox>
 
     <CheckBox
-        android:layout_width="276dp"
+        android:layout_width="200dp"
         android:layout_height="90dp"
         android:layout_marginTop="228dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="48dp"
         android:background="#ff0303"
         android:buttonTint="#ffffff"
         android:text="@string/docked_engaged"
@@ -74,6 +71,9 @@
 
     </CheckBox>
 
+
+    <!-- Bottom Navigation -->
+
     <CheckBox
         android:layout_width="276dp"
         android:layout_height="90dp"
@@ -81,17 +81,14 @@
         android:buttonTint="#ffffff"
         android:text="Assisted"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="478dp"
-        tools:layout_editor_absoluteY="878dp"></CheckBox>
+        tools:layout_editor_absoluteX="309dp"
+        tools:layout_editor_absoluteY="636dp" />
 
-
-    <!-- Bottom Navigation -->
     <View
-        android:id="@+id/view"
+        android:id="@+id/view3"
         android:layout_width="422dp"
         android:layout_height="155dp"
         android:layout_marginStart="189dp"
-        android:layout_marginTop="1085dp"
         android:layout_marginEnd="189dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/smaller_rect_field"
@@ -102,22 +99,23 @@
         android:topRightRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="157dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="335dp"
-        android:layout_marginEnd="334dp"
-        android:text="Page 2"
+        android:layout_width="177dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginEnd="189dp"
+        android:layout_marginBottom="90dp"
+        android:text="@string/page_2"
         android:textColor="@color/white"
         android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="1126dp" />
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
