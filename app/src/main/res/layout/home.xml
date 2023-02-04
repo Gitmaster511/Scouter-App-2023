@@ -80,35 +80,38 @@ android:layout_height="match_parent">
         android:text="Driver Station "
         android:textColor="#0000FF"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="576dp" />
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="595dp" />
 
-    <View
+    <Button
         android:id="@+id/view2"
-        :background="0000FF"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="#0000FF"
         tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="686dp" />
+        tools:layout_editor_absoluteY="686dp"
+        android:text="L"
+        android:textSize="30sp"/>
 
-    <View
+    <Button
         android:id="@+id/view2"
-        :background="0000FF"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="#0000FF"
         tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="686dp" />
+        tools:layout_editor_absoluteY="686dp"
+        android:text="M"
+        android:textSize="30sp"/>
 
-    <View
+    <Button
         android:id="@+id/view2"
-        :background="0000FF"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="#0000FF"
         tools:layout_editor_absoluteX="477dp"
-        tools:layout_editor_absoluteY="686dp" />
+        tools:layout_editor_absoluteY="686dp"
+        android:text="R"
+        android:textSize="30sp"/>
 
     <View
         android:id="@+id/view4"
@@ -116,7 +119,25 @@ android:layout_height="match_parent">
         android:layout_height="200dp"
         android:background="@drawable/bottom_rect"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="849dp" />
+        tools:layout_editor_absoluteY="874dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Page 1"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="919dp" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="58dp"
+        android:layout_height="59dp"
+        android:background="@drawable/triangle"
+        tools:layout_editor_absoluteX="385dp"
+        tools:layout_editor_absoluteY="927dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
