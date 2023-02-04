@@ -10,23 +10,22 @@
 
     <!-- CheckBoxes -->
 
+    <!-- Checkboxes -->
+
+
+    <!-- Bottom Navigation -->
+
     <View
         android:id="@+id/view"
-        android:layout_width="608dp"
+        android:layout_width="match_parent"
         android:layout_height="115dp"
-        android:layout_marginTop="4dp"
         android:background="@drawable/top_rect"
         android:bottomLeftRadius="40dp"
         android:bottomRightRadius="40dp"
         android:topLeftRadius="40dp"
         android:topRightRadius="40dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-7dp" />
-
-    <!-- Checkboxes -->
-
-
-    <!-- Bottom Navigation -->
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="-3dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -35,7 +34,7 @@
         android:layout_marginStart="189dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="189dp"
-        android:text="@string/titleauto"
+        android:text="Autonomous"
         android:textColor="@color/white"
         android:textSize="75sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,32 +43,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:layout_width="268dp"
-        android:layout_height="131dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="148dp"
+        android:layout_width="258dp"
+        android:layout_height="99dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
         android:text="@string/left_community"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="132dp">
 
     </CheckBox>
 
     <CheckBox
-        android:layout_width="253dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="258dp"
+        android:layout_height="99dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
         android:text="@string/docked_engaged"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="326dp"
+        tools:layout_editor_absoluteY="132dp">
 
     </CheckBox>
+
 
     <CheckBox
         android:layout_width="276dp"
@@ -78,9 +74,8 @@
         android:buttonTint="#ffffff"
         android:text="Assisted"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="326dp"
-        tools:layout_editor_absoluteY="579dp" />
-
+        tools:layout_editor_absoluteX="308dp"
+        tools:layout_editor_absoluteY="575dp" />
 
     <CheckBox
         android:layout_width="276dp"
@@ -89,8 +84,8 @@
         android:buttonTint="#ffffff"
         android:text="Docked"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="323dp"
-        tools:layout_editor_absoluteY="672dp" />
+        tools:layout_editor_absoluteX="308dp"
+        tools:layout_editor_absoluteY="660dp" />
 
     <CheckBox
         android:layout_width="276dp"
@@ -99,21 +94,20 @@
         android:buttonTint="#ffffff"
         android:text="Engaged"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="332dp"
-        tools:layout_editor_absoluteY="742dp" />
+        tools:layout_editor_absoluteX="308dp"
+        tools:layout_editor_absoluteY="747dp" />
 
     <View
         android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="154dp"
-        android:layout_marginBottom="4dp"
         android:background="@drawable/smaller_rect_field"
         android:bottomLeftRadius="40dp"
         android:bottomRightRadius="40dp"
         android:topLeftRadius="40dp"
         android:topRightRadius="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-102dp" />
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="825dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -154,6 +148,41 @@
         android:background="@drawable/gray_field"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="288dp" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="#0000FF"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="585dp" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="74dp"
+        android:layout_height="59dp"
+        android:background="@drawable/triangle_blue"
+        android:rotation="-90"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="585dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="71dp"
+        app:srcCompat="@drawable/pngaaa_com_5257854"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="585dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time(to climb)"
+        android:textColor="#0000FF"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="679dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

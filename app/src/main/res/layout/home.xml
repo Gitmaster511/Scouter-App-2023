@@ -33,7 +33,7 @@ android:layout_height="match_parent">
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Match Number: "
+        android:text="Match Number "
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         tools:layout_editor_absoluteX="104dp"
@@ -59,7 +59,7 @@ android:layout_height="match_parent">
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team Number:  "
+        android:text="Team Number  "
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         tools:layout_editor_absoluteX="123dp"
@@ -131,7 +131,7 @@ android:layout_height="match_parent">
         tools:layout_editor_absoluteX="223dp"
         tools:layout_editor_absoluteY="860dp" />
 
-    <View
+    <Button
         android:id="@+id/view5"
         android:layout_width="46dp"
         android:layout_height="49dp"
@@ -139,5 +139,4 @@ android:layout_height="match_parent">
         tools:layout_editor_absoluteX="377dp"
         tools:layout_editor_absoluteY="870dp" />
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 </androidx.constraintlayout.widget.ConstraintLayout>
