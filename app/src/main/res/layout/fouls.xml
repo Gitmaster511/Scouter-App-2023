@@ -61,7 +61,7 @@
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="300dp"
+        android:layout_width="228dp"
         android:layout_height="100dp"
         android:background="@drawable/smaller_rect_field"
         android:text="Disabled"
@@ -72,13 +72,13 @@
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="300dp"
-        android:layout_height="102dp"
+        android:layout_width="215dp"
+        android:layout_height="103dp"
         android:background="@drawable/red"
         android:text="Disqualified"
         android:textColor="@color/white"
         android:textSize="40dp"
-        tools:layout_editor_absoluteX="300dp"
+        tools:layout_editor_absoluteX="385dp"
         tools:layout_editor_absoluteY="389dp" />
 
     <Switch
@@ -108,10 +108,9 @@
         android:id="@+id/seekBar2"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="599dp"
-        android:background="@drawable/smaller_rect_field"
         android:layout_height="151dp"
         android:max="5"
-        android:progress="3"
+        android:progress="0"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="493dp" />
 

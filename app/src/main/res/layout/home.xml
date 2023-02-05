@@ -136,7 +136,8 @@ android:layout_height="match_parent">
         android:layout_width="46dp"
         android:layout_height="49dp"
         android:background="@drawable/triangle"
-        tools:layout_editor_absoluteX="377dp"
-        tools:layout_editor_absoluteY="870dp" />
+        android:backgroundTint="@color/white"
+        tools:layout_editor_absoluteX="404dp"
+        tools:layout_editor_absoluteY="868dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
