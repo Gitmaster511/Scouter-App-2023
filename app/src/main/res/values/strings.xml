@@ -6,4 +6,15 @@
     <string name="docked_engaged">Docked + Engaged</string>
     <string name="left_community">Left Community</string>
     <string name="page_2">Page 2</string>
+    <string name="scouter_app">Scouter App</string>
+    <string name="match_number">Match Number</string>
+    <string name="_75">75</string>
+    <string name="ex_75">EX: 75</string>
+    <string name="team_number">Team Number</string>
+    <string name="ex_1">Ex: 1</string>
+    <string name="driver_station">Driver Station</string>
+    <string name="l">L</string>
+    <string name="m">M</string>
+    <string name="r">R</string>
+    <string name="page_1">Page 1</string>
 </resources>
