@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -136,9 +135,9 @@
 
     <View
         android:id="@+id/Page_1"
-        android:layout_width="601dp"
-        android:layout_height="141dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/bottom_rect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -149,30 +148,42 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="222dp"
         android:layout_marginEnd="223dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/page_1"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Forward_page_1"
         android:layout_width="46dp"
         android:layout_height="49dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/triangle"
-        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="46dp"
+        android:contentDescription="@string/greyed_our_arrow"
+        android:layout_height="49dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginBottom="40dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/triangle" />
+
+    <!-- Driver Station -->
     <RadioGroup
         android:id="@+id/driverStationButton"
         android:layout_width="match_parent"
-        android:layout_height="264dp"
+        android:layout_height="236dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">

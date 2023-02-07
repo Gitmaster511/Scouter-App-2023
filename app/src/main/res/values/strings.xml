@@ -21,4 +21,10 @@
     <string name="middle">Middle</string>
     <string name="left">Left</string>
     <string name="Right">Right</string>
+    <string name="greyed_our_arrow">Greyed_our_arrow</string>
+    <string name="climbing_time">Climbing Time</string>
+    <string name="engaged">Engaged</string>
+    <string name="docked">Docked</string>
+    <string name="assisted">Assisted</string>
+    <string name="start">Start</string>
 </resources>
