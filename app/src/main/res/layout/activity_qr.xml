@@ -27,10 +27,10 @@
     <View
         android:id="@+id/view4"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="140dp"
         android:background="@drawable/bottom_rect"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="822dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="787dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -39,8 +39,8 @@
         android:text="Page 6"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="860dp" />
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="826dp" />
 
     <View
         android:id="@+id/view9"

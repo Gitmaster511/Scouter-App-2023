@@ -13,6 +13,27 @@
         android:theme="@style/Theme.ScouterApp"
         tools:targetApi="31">
         <activity
+            android:name=".qr"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".fouls"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".endgame"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".auto"
             android:exported="false">
             <meta-data
