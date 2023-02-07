@@ -8,5 +8,11 @@
 
         android:topLeftRadius="15dp"
         android:topRightRadius="15dp" />
+    <gradient
+        android:startColor = "#001aff"
+        android:centerColor = "#b700ff"
+        android:endColor = "#ff0303"
+        android:angle = "0"
+        android:type = "linear" />
 
 </shape>
