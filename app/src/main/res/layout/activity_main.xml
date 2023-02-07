@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -101,7 +102,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/team_number"
+        android:id="@+id/team_number_input"
         android:layout_width="328dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
@@ -130,44 +131,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/L"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="686dp"
-        android:background="@drawable/smaller_rect_field"
-        android:text="@string/l"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/M"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="260dp"
-        android:background="#0000FF"
-        android:text="@string/m"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Driver_Station" />
-
-    <Button
-        android:id="@+id/R"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="686dp"
-        android:layout_marginEnd="47dp"
-        android:background="#0000FF"
-        android:text="@string/r"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Bottom -->
 
@@ -205,5 +168,47 @@
         android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="711dp"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/left"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/Middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="207dp"
+        android:layout_marginTop="711dp"
+        android:text="@string/middle"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="711dp"
+        android:layout_marginEnd="17dp"
+        android:text="@string/right"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

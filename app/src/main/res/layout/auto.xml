@@ -106,7 +106,7 @@
         android:bottomRightRadius="40dp"
         android:topLeftRadius="40dp"
         android:topRightRadius="40dp"
-        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="825dp" />
 
     <TextView

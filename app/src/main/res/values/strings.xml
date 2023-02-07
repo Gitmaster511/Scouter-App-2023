@@ -17,4 +17,7 @@
     <string name="m">M</string>
     <string name="r">R</string>
     <string name="page_1">Page 1</string>
+    <string name="right">Right</string>
+    <string name="middle">Middle</string>
+    <string name="left">Left</string>
 </resources>
