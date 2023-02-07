@@ -170,45 +170,40 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <RadioGroup
+        android:id="@+id/driverStationButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="264dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <RadioButton
+            android:id="@+id/Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/left"
+            android:textColor="#0000FF"
+            android:textSize="50sp" />
+
+        <RadioButton
+            android:id="@+id/Middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/middle"
+            android:textColor="#0000FF"
+            android:textSize="50sp" />
+
+        <RadioButton
+            android:id="@+id/Right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Right"
+            android:textColor="#0000FF"
+            android:textSize="50sp" />
     </RadioGroup>
-
-    <RadioButton
-        android:id="@+id/Left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="711dp"
-        android:onClick="onRadioButtonClicked"
-        android:text="@string/left"
-        android:textSize="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioButton
-        android:id="@+id/Middle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="207dp"
-        android:layout_marginTop="711dp"
-        android:text="@string/middle"
-        android:textSize="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioButton
-        android:id="@+id/Right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="711dp"
-        android:layout_marginEnd="17dp"
-        android:text="@string/right"
-        android:textSize="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
