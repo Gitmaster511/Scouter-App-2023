@@ -1,20 +1,20 @@
 package com.example.scouterapp;
-import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
-import android.view.View
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import com.clintpauldev.stopwatchsampleapp.Constants.TIMER_INTERVAL
-import com.clintpauldev.stopwatchsampleapp.Utility.getFormattedStopWatch
-import com.clintpauldev.stopwatchsampleapp.databinding.ActivityMainBinding
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
+import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import com.clintpauldev.stopwatchsampleapp.Constants.TIMER_INTERVAL;
+import com.clintpauldev.stopwatchsampleapp.Utility.getFormattedStopWatch;
+import com.clintpauldev.stopwatchsampleapp.databinding.ActivityMainBinding;
 class auto : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
-private val mInterval = TIMER_INTERVAL
-    private var mHandler: Handler? = null
-private var timeInSeconds = 0L
-    private var startButtonClicked = false
+private val mInterval = TIMER_INTERVAL;
+    private var mHandler: Handler? = null;
+private var timeInSeconds = 0L;
+    private var startButtonClicked = false;
 
 
         override fun onCreate(savedInstanceState: Bundle?) {
