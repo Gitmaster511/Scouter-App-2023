@@ -163,11 +163,50 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time(to climb)"
+        android:text="Climbing Time"
         android:textColor="#0000FF"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="58dp"
         tools:layout_editor_absoluteY="679dp" />
+
+    <TextView
+        android:id="@+id/textViewStopWatch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="00:00:00"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="712dp" />
+
+    <TextView
+        android:id="@+id/resetButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Reset"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="779dp" />
+
+    <TextView
+        android:id="@+id/startOrStopTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00FF38"
+        android:gravity="center"
+        android:onClick="startOrStopButtonClicked"
+        android:padding="8dp"
+        android:text="Start"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="776dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
