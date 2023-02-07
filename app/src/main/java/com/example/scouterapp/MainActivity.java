@@ -21,11 +21,12 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroup;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // I don't like github + Androdi Studio
 
 
 
