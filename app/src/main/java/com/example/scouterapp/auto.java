@@ -15,9 +15,9 @@ public class auto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //Remove Topbar + bottom Bar
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        //Objects.requireNonNull(getSupportActionBar()).hide();
-        setContentView(R.layout.activity_main);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Objects.requireNonNull(getSupportActionBar()).hide();
+        setContentView(R.layout.activity_auto);
     }
 }
