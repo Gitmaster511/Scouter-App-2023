@@ -48,7 +48,7 @@
         android:layout_height="471dp"
         tools:layout_editor_absoluteX="67dp"
         tools:layout_editor_absoluteY="222dp"
-        android:background="@drawable/bottom_rect"
+        android:background="@drawable/smaller_rect_field"
         />
 
 
