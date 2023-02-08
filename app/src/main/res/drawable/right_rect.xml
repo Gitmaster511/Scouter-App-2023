@@ -13,7 +13,5 @@
 
         android:topRightRadius="15dp"
         android:bottomRightRadius="15dp" />
-    />
 
 </shape>
-    </shape>

@@ -126,19 +126,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/Driver_Station"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="696dp"
-        android:layout_marginEnd="143dp"
-        android:text="@string/driver_station"
-        android:textColor="#0000FF"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <View
         android:id="@+id/Page_1"
@@ -177,10 +165,10 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="46dp"
-        android:contentDescription="@string/greyed_our_arrow"
         android:layout_height="49dp"
         android:layout_marginStart="156dp"
         android:layout_marginBottom="40dp"
+        android:contentDescription="@string/greyed_our_arrow"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -191,11 +179,13 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="218dp"
+        android:layout_marginTop="538dp"
         android:text="Alliance"
         android:textColor="#0000FF"
-        android:textSize="45dp"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="538dp" />
+        android:textSize="45sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <RadioGroup
@@ -211,64 +201,71 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/left_rect"
             android:text="@string/left"
             android:textColor="#FFFFFF"
-            android:textSize="50sp"
-            android:background="@drawable/left_rect"/>
+            android:textSize="50sp" />
 
         <RadioButton
             android:id="@+id/Middle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/middle_rect"
             android:text="@string/middle"
             android:textColor="#FFFFFF"
-            android:textSize="50sp"
-            android:background="@drawable/middle_rect"/>
+            android:textSize="50sp" />
 
         <RadioButton
             android:id="@+id/Right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/right_rect"
             android:text="@string/Right"
             android:textColor="#FFFFFF"
-            android:textSize="50sp"
-            android:background="@drawable/right_rect"/>
+            android:textSize="50sp" />
 
     </RadioGroup>
 
     <RadioGroup
-        android:id="@+id/driverStationButton"
-        android:layout_width="match_parent"
-        android:layout_height="236dp"
+        android:id="@+id/Alliance"
+        android:layout_width="611dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="689dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <RadioButton
         android:id="@+id/Right2"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="609dp"
+        android:layout_marginEnd="100dp"
         android:layout_weight="1"
         android:background="@drawable/smaller_rect_field"
-        android:text=" Right"
+        android:text="@string/right"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="609dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioButton
         android:id="@+id/Left2"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="609dp"
         android:layout_weight="1"
         android:background="@drawable/smaller_rect_field"
-        android:text="  Left"
+        android:text="@string/left"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="609dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
-        // I don't like github + Android Studio
         setContentView(R.layout.activity_main);
 
         Button forward = (Button) findViewById(R.id.Forward_page_1);
