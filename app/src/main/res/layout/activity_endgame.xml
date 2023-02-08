@@ -50,8 +50,8 @@
         android:text="Attempted"
         android:textColor="@color/white"
         android:textSize="60dp"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="142dp" />
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="127dp" />
 
     <CheckBox
         android:layout_width="378dp"
@@ -62,8 +62,8 @@
         android:text="Docked"
         android:textColor="@color/white"
         android:textSize="60dp"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="290dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="253dp" />
 
     <CheckBox
         android:layout_width="385dp"
@@ -73,8 +73,8 @@
         android:text="Engaged + Docked"
         android:textColor="@color/white"
         android:textSize="60dp"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="457dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="403dp" />
 
     <CheckBox
         android:id="@+id/checkBox2"
@@ -86,8 +86,21 @@
         android:text="Assisted"
         android:textColor="@color/white"
         android:textSize="60dp"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="644dp" />
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="569dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="382dp"
+        android:layout_height="100dp"
+        android:background="@drawable/smaller_rect_field"
+        android:buttonTint="#ffffff"
+
+        android:text="Received Assistance"
+        android:textColor="@color/white"
+        android:textSize="60dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="716dp" />
 
     <View
         android:id="@+id/view3"
@@ -108,7 +121,7 @@
         android:layout_marginStart="189dp"
         android:layout_marginEnd="189dp"
         android:layout_marginBottom="44dp"
-        android:text="page 4"
+        android:text="Page 4"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"

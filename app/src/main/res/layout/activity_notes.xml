@@ -22,7 +22,7 @@
         android:text="End Notes"
         android:textColor="#FFFFFF"
         android:textSize="75sp"
-        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <View
@@ -59,29 +59,6 @@
         android:rotation="180"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="870dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="228dp"
-        android:layout_height="100dp"
-        android:background="@drawable/smaller_rect_field"
-        android:text="Disabled"
-        android:textColor="@color/white"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="391dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="215dp"
-        android:layout_height="103dp"
-        android:background="@drawable/red"
-        android:text="Disqualified"
-        android:textColor="@color/white"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="385dp"
-        tools:layout_editor_absoluteY="389dp" />
-
 
 
     <EditText
@@ -142,13 +119,6 @@
         tools:layout_editor_absoluteY="253dp" />
 
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="184dp"
-        android:layout_height="78dp"
-        android:background="@drawable/smaller_rect_field"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="730dp" />
 
     <CheckBox
         android:id="@+id/yescheckBox"
@@ -171,6 +141,16 @@
         android:textSize="45sp"
         tools:layout_editor_absoluteX="434dp"
         tools:layout_editor_absoluteY="742dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Win?"
+        android:textColor="#0000ff"
+        android:textSize="45sp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="749dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
