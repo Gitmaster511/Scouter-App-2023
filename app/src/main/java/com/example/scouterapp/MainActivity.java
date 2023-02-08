@@ -1,7 +1,9 @@
 package com.example.scouterapp;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -20,31 +22,30 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroup;
 
+    String Alliance;
+    String driver_station;
+    String d = "sharedPrefs";
 
 
 
+
+
+    @SuppressLint("AppCompatMethod")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Remove topbar and bottombar
+
+
+        //DON'T CHANGE THIS IT WORKS WITHOUT THE CHANGE
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_main);
-
-        Button forward = (Button) findViewById(R.id.Forward_page_1);
-
-        forward.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent signup = new Intent(MainActivity.this, auto.class);
-                startActivity(signup);
-            }
-        });
-
-
-
 
         //Match Number
         EditText matchNumber = (EditText) findViewById(R.id.match_number_input);
@@ -56,6 +57,28 @@ public class MainActivity extends AppCompatActivity {
         EditText teamNumber = (EditText) findViewById(R.id.team_number_input);
         teamNumber.setTextColor(Color.WHITE);//set the red text color
         //String teamNumberOutput = teamNumber.getText().toString();
+
+
+
+
+
+        Button forward = (Button) findViewById(R.id.Forward_page_1);
+        forward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signup = new Intent(MainActivity.this, auto.class);
+                String match_number_final = matchNumber.getText().toString();
+                String teamNumber_final = teamNumber.getText().toString();
+                signup.putExtra("Match_Number",match_number_final);
+                signup.putExtra("Team_Number",teamNumber_final);
+                startActivity(signup);
+                finish();
+            }
+        });
+
+
+
+
 
         //Radio Group, displays what button is pressed with Toast
         radioGroup = findViewById(R.id.driverStationButton);

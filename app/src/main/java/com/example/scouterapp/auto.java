@@ -1,12 +1,17 @@
 package com.example.scouterapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.view.View;
 import android.os.Bundle;
 import java.util.Locale;
+
+import android.widget.Chronometer;
 import android.widget.TextView;
 import android.os.Bundle;
 import android.view.Window;
@@ -31,7 +36,11 @@ public class auto extends AppCompatActivity {
     private boolean isRunning;
     private boolean wasRunning;
 
+
+    String Team_Number;
+    String Match_Number;
     // Is the stopwatch running?
+    @SuppressLint("AppCompatMethod")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +50,38 @@ public class auto extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_auto);
+
+        Chronometer simpleChronometer = (Chronometer) findViewById(R.id.textViewStopWatch); // initiate a chronometer
+
+        //simpleChronometer.setFormat(""); // set the format for a chronometer
+
+        Button startOrStopTextView = (Button) findViewById(R.id.startOrStopTextView);
+
+        Button resetButton = (Button) findViewById(R.id.resetButton);
+
+
+        startOrStopTextView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO If there is only one time we need to climb make it so that it always show the climbing time
+                // ELSE Leave this how it is and save to variable
+
+                simpleChronometer.setBase(SystemClock.elapsedRealtime());
+                simpleChronometer.start();
+            }
+        });
+
+        // perform click  event on stop button to stop the chronometer
+        resetButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                simpleChronometer.setBase(SystemClock.elapsedRealtime());
+                simpleChronometer.stop();
+            }
+        });
 
         CheckBox left_community = (CheckBox) findViewById(R.id.left_community);
         Boolean left_community_checked = left_community.isChecked();
@@ -55,10 +96,8 @@ public class auto extends AppCompatActivity {
         CheckBox docked = (CheckBox) findViewById(R.id.Docked);
         Boolean docked_checked = docked.isChecked();
 
-
         CheckBox engaged = (CheckBox) findViewById(R.id.Engaged);
         Boolean engaged_engaged = engaged.isChecked();
-        Button hi = (Button) findViewById(R.id.resetButton);
 
         Button forward = (Button) findViewById(R.id.Forward_page_2);
         Button backward = (Button) findViewById(R.id.Backward_page_2);
