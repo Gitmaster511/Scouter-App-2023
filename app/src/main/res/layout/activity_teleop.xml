@@ -26,7 +26,7 @@
         android:layout_marginStart="189dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="189dp"
-        android:text="Tele-OP"
+        android:text="@string/tele_op"
         android:textColor="@color/white"
         android:textSize="75sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,92 +44,90 @@
 
     <CheckBox
         android:id="@+id/left_community"
-        android:layout_width="258dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="364dp"
-        android:background="@drawable/smaller_rect_field"
+        android:layout_width="181dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="416dp"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/red"
         android:buttonTint="#ffffff"
-        android:text="Ground"
-        android:textSize="30sp"
+        android:text="@string/ground"
         android:textColor="@color/white"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </CheckBox>
 
     <CheckBox
-        android:id="@+id/Docked_Engaged"
-        android:layout_width="258dp"
+        android:id="@+id/Docked"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="428dp"
+        android:layout_marginBottom="728dp"
+        android:background="@drawable/red"
+        android:buttonTint="#ffffff"
+        android:text="@string/cube_pickup"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/Station"
+        android:layout_width="150dp"
+        android:layout_height="97dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="732dp"
+        android:background="@drawable/red"
+        android:buttonTint="#ffffff"
+        android:text="@string/station"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/left_community2"
+        android:layout_width="182dp"
         android:layout_height="99dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="416dp"
+        android:layout_marginTop="284dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
-        android:text="Cone Pickup"
-        android:textSize="30sp"
+        android:text="@string/ground"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </CheckBox>
 
-
     <CheckBox
-        android:id="@+id/Assisted"
-        android:layout_width="258dp"
-        android:layout_height="99dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="560dp"
+        android:id="@+id/Docked2"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginEnd="428dp"
         android:background="@drawable/smaller_rect_field"
-        android:buttonTint="#ffffff"
-        android:text="Ground"
+        android:text="@string/cube_pickup"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/Docked"
-        android:layout_width="258dp"
-        android:layout_height="99dp"
-        android:layout_marginEnd="308dp"
-        android:layout_marginBottom="792dp"
+        android:id="@+id/Station2"
+        android:layout_width="150dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="285dp"
+        android:layout_marginEnd="224dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
-        android:text="Cube Pickup"
+        android:text="@string/station"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <CheckBox
-        android:id="@+id/Engaged"
-        android:layout_width="258dp"
-        android:layout_height="99dp"
-        android:layout_marginEnd="308dp"
-        android:layout_marginBottom="676dp"
-        android:background="@drawable/smaller_rect_field"
-        android:buttonTint="#ffffff"
-        android:text="Station"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <CheckBox
-        android:id="@+id/Engaged"
-        android:layout_width="258dp"
-        android:layout_height="99dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="680dp"
-        android:background="@drawable/smaller_rect_field"
-        android:buttonTint="#ffffff"
-        android:text="Station"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view3"
@@ -164,8 +162,7 @@
         android:id="@+id/view8"
         android:layout_width="match_parent"
         android:layout_height="277dp"
-        android:layout_marginTop="476dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginTop="400dp"
         android:background="@drawable/gray_field"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -174,8 +171,8 @@
         android:id="@+id/imageView"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="808dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="716dp"
         android:contentDescription="@string/greyed_our_arrow"
         android:rotation="-90"
         app:layout_constraintStart_toStartOf="parent"
@@ -186,29 +183,29 @@
         android:id="@+id/view9"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="808dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="716dp"
         android:background="#0000FF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="80dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="808dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="716dp"
+        android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pngaaa_com_5257854" />
-
 
     <Chronometer
         android:id="@+id/textViewStopWatch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="384dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginStart="376dp"
+        android:layout_marginBottom="176dp"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="50sp"
@@ -220,8 +217,8 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="396dp"
-        android:layout_marginBottom="228dp"
+        android:layout_marginStart="384dp"
+        android:layout_marginBottom="244dp"
         android:text="Cycle Timer"
         android:textColor="#0000FF"
         android:textSize="30sp"
@@ -230,16 +227,16 @@
 
     <Button
         android:id="@+id/startOrStopTextView"
-        android:layout_width="67dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="376dp"
-        android:layout_marginBottom="112dp"
+        android:layout_width="88dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="356dp"
+        android:layout_marginBottom="108dp"
         android:background="#00FF38"
         android:gravity="center"
         android:padding="8dp"
         android:text="@string/start"
         android:textColor="@color/white"
-        android:textSize="9sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -247,8 +244,8 @@
         android:id="@+id/resetButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="480dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginStart="488dp"
+        android:layout_marginBottom="108dp"
         android:background="#FF0000"
         android:gravity="center"
         android:padding="8dp"
@@ -260,20 +257,20 @@
 
     <Button
         android:id="@+id/Forward_page_3"
-        android:layout_width="46dp"
-        android:layout_height="49dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="13dp"
         android:background="@drawable/triangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/Backward_page_3"
-        android:layout_width="46dp"
-        android:layout_height="49dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginStart="100dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="13dp"
         android:background="@drawable/triangle"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"

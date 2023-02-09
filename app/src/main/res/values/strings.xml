@@ -31,4 +31,9 @@
     <string name="alliance">Alliance</string>
     <string name="random1">!</string>
     <string name="reset">Reset</string>
+    <string name="tele_op">Tele-OP</string>
+    <string name="ground">Ground</string>
+    <string name="cone_pickup">Cone Pickup</string>
+    <string name="cube_pickup">Cube Pickup</string>
+    <string name="station">Station</string>
 </resources>

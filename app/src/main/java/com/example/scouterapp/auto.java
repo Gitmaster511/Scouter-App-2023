@@ -27,6 +27,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -77,6 +78,7 @@ public class auto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 simpleChronometer.stop();
+                Toast.makeText(auto.this, "Climb time was : " + simpleChronometer.getText(), Toast.LENGTH_LONG).show();
                 simpleChronometer.setBase(SystemClock.elapsedRealtime());
                 simpleChronometer.stop();
             }

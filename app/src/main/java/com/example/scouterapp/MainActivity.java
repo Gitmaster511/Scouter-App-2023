@@ -88,8 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 // on below line we are getting radio button from our group.
                 RadioButton radioButton = findViewById(checkedId);
                 // on below line we are displaying a toast message.
-                Toast.makeText(MainActivity.this, "Drivers station is : " + radioButton.getText(), Toast.LENGTH_SHORT).show();
-            }
+                }
         }
         );
     }
