@@ -49,7 +49,7 @@
         android:buttonTint="#ffffff"
         android:text="Attempted"
         android:textColor="@color/white"
-        android:textSize="60dp"
+        android:textSize="60sp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="127dp" />
 
@@ -61,7 +61,7 @@
         android:buttonTint="#ffffff"
         android:text="Docked"
         android:textColor="@color/white"
-        android:textSize="60dp"
+        android:textSize="60sp"
         tools:layout_editor_absoluteX="324dp"
         tools:layout_editor_absoluteY="127dp" />
 
@@ -72,7 +72,7 @@
         android:buttonTint="#ffffff"
         android:text="Engaged"
         android:textColor="@color/white"
-        android:textSize="60dp"
+        android:textSize="60sp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="249dp" />
 
@@ -85,7 +85,7 @@
 
         android:text="Gave Assistance"
         android:textColor="@color/white"
-        android:textSize="55dp"
+        android:textSize="55sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +99,7 @@
         android:buttonTint="#ffffff"
         android:text="Solo Climb"
         android:textColor="@color/white"
-        android:textSize="45dp"
+        android:textSize="45sp"
         tools:layout_editor_absoluteX="324dp"
         tools:layout_editor_absoluteY="249dp" />
 
@@ -111,7 +111,7 @@
         android:buttonTint="#ffffff"
         android:text="Parked"
         android:textColor="@color/white"
-        android:textSize="45dp"
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,10 +124,9 @@
         android:layout_height="85dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
-
         android:text="Received Assistance"
         android:textColor="@color/white"
-        android:textSize="35dp"
+        android:textSize="35sp"
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="469dp" />
 
@@ -221,7 +220,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/startOrStopTextView"
+        android:id="@+id/start"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginStart="212dp"
@@ -236,7 +235,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/startOrStopTextView"
+        android:id="@+id/reset"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginStart="324dp"

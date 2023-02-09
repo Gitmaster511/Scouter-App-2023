@@ -43,21 +43,21 @@
         tools:layout_editor_absoluteX="223dp"
         tools:layout_editor_absoluteY="860dp" />
 
-    <View
-        android:id="@+id/view5"
+    <Button
+        android:id="@+id/Forward_page_4"
         android:layout_width="46dp"
         android:layout_height="49dp"
         android:background="@drawable/triangle"
         tools:layout_editor_absoluteX="391dp"
         tools:layout_editor_absoluteY="870dp" />
 
-    <View
-        android:id="@+id/view6"
+    <Button
+        android:id="@+id/Backward_page_4"
         android:layout_width="46dp"
         android:layout_height="49dp"
         android:background="@drawable/triangle"
         android:rotation="180"
-        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteX="162dp"
         tools:layout_editor_absoluteY="870dp" />
 
 
@@ -66,12 +66,12 @@
         android:layout_width="match_parent"
         android:layout_height="109dp"
         android:ems="10"
+        android:hint="Ex:the robot stopped"
         android:inputType="textPersonName"
         android:text="Additional Notes: "
-        android:textSize="30dp"
-        android:hint="Ex:the robot stopped"
-        android:textColorHint="#0000ff"
         android:textColor="#0000FF"
+        android:textColorHint="#0000ff"
+        android:textSize="30dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="613dp" />
 
@@ -119,15 +119,14 @@
         tools:layout_editor_absoluteY="253dp" />
 
 
-
     <CheckBox
         android:id="@+id/yescheckBox"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/smaller_rect_field"
         android:text=" Yes"
         android:textColor="#FFFFFF"
         android:textSize="45sp"
-        android:background="@drawable/smaller_rect_field"
         tools:layout_editor_absoluteX="272dp"
         tools:layout_editor_absoluteY="742dp" />
 

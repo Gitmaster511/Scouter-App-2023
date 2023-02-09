@@ -66,7 +66,6 @@ public class auto extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO If there is only one time we need to climb make it so that it always show the climbing time
                 // ELSE Leave this how it is and save to variable
-
                 simpleChronometer.setBase(SystemClock.elapsedRealtime());
                 simpleChronometer.start();
             }
@@ -77,7 +76,7 @@ public class auto extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                simpleChronometer.stop();
                 simpleChronometer.setBase(SystemClock.elapsedRealtime());
                 simpleChronometer.stop();
             }
