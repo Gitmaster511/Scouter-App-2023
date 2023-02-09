@@ -4,6 +4,288 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".teleop">
+    android:background="@color/white">
+
+    <!-- Top Bar  -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="@drawable/top_rect"
+        android:bottomLeftRadius="40dp"
+        android:bottomRightRadius="40dp"
+        android:topLeftRadius="40dp"
+        android:topRightRadius="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-4dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="277dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="189dp"
+        android:text="Tele-OP"
+        android:textColor="@color/white"
+        android:textSize="75sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- CheckBoxes -->
+
+    <!-- Checkboxes -->
+
+
+    <!-- Bottom Navigation -->
+
+
+    <CheckBox
+        android:id="@+id/left_community"
+        android:layout_width="258dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="364dp"
+        android:background="@drawable/smaller_rect_field"
+        android:buttonTint="#ffffff"
+        android:text="Ground"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/Docked_Engaged"
+        android:layout_width="258dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/smaller_rect_field"
+        android:buttonTint="#ffffff"
+        android:text="Cone Pickup"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </CheckBox>
+
+
+    <CheckBox
+        android:id="@+id/Assisted"
+        android:layout_width="258dp"
+        android:layout_height="99dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="560dp"
+        android:background="@drawable/smaller_rect_field"
+        android:buttonTint="#ffffff"
+        android:text="Ground"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/Docked"
+        android:layout_width="258dp"
+        android:layout_height="99dp"
+        android:layout_marginEnd="308dp"
+        android:layout_marginBottom="792dp"
+        android:background="@drawable/smaller_rect_field"
+        android:buttonTint="#ffffff"
+        android:text="Cube Pickup"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/Engaged"
+        android:layout_width="258dp"
+        android:layout_height="99dp"
+        android:layout_marginEnd="308dp"
+        android:layout_marginBottom="676dp"
+        android:background="@drawable/smaller_rect_field"
+        android:buttonTint="#ffffff"
+        android:text="Station"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/Engaged"
+        android:layout_width="258dp"
+        android:layout_height="99dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="680dp"
+        android:background="@drawable/smaller_rect_field"
+        android:buttonTint="#ffffff"
+        android:text="Station"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+
+        android:background="@drawable/bottom_rect"
+
+
+        android:topLeftRadius="40dp"
+        android:topRightRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="173dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginEnd="189dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/page_2"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="277dp"
+        android:layout_marginTop="476dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/gray_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="808dp"
+        android:contentDescription="@string/greyed_our_arrow"
+        android:rotation="-90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/triangle_blue" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="808dp"
+        android:background="#0000FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="80dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="808dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pngaaa_com_5257854" />
+
+
+    <Chronometer
+        android:id="@+id/textViewStopWatch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="384dp"
+        android:layout_marginBottom="164dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="396dp"
+        android:layout_marginBottom="228dp"
+        android:text="Cycle Timer"
+        android:textColor="#0000FF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/startOrStopTextView"
+        android:layout_width="67dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="376dp"
+        android:layout_marginBottom="112dp"
+        android:background="#00FF38"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/start"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="480dp"
+        android:layout_marginBottom="112dp"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Reset"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Forward_page_2"
+        android:layout_width="46dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/triangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/Backward_page_2"
+        android:layout_width="46dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/triangle"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="-305dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

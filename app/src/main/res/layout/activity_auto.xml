@@ -114,12 +114,12 @@
 
     <View
         android:id="@+id/view3"
-        android:layout_width="609dp"
+        android:layout_width="match_parent"
         android:layout_height="94dp"
-        android:layout_marginStart="1dp"
-        android:background="@drawable/smaller_rect_field"
-        android:bottomLeftRadius="40dp"
-        android:bottomRightRadius="40dp"
+
+        android:background="@drawable/bottom_rect"
+
+
         android:topLeftRadius="40dp"
         android:topRightRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
