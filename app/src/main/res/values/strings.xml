@@ -36,4 +36,5 @@
     <string name="cone_pickup">Cone Pickup</string>
     <string name="cube_pickup">Cube Pickup</string>
     <string name="station">Station</string>
+    <string name="cycle_timer">Cycle Timer</string>
 </resources>

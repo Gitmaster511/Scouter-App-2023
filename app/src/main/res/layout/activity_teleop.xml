@@ -219,7 +219,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="384dp"
         android:layout_marginBottom="244dp"
-        android:text="Cycle Timer"
+        android:text="@string/cycle_timer"
         android:textColor="#0000FF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
