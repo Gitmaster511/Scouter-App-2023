@@ -158,7 +158,8 @@
         android:layout_height="75dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="25dp"
-        android:background="@drawable/triangle"
+        android:background="@drawable/triangleforward"
+        android:backgroundTint="#"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -172,7 +173,7 @@
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/triangle" />
+        app:srcCompat="@drawable/triangleforward" />
 
     <!-- Driver Station -->
     <TextView
@@ -244,11 +245,11 @@
 
         <RadioButton
             android:id="@+id/Right2"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/smaller_rect_field"
-            android:text="@string/right"
+            android:text="     Blue"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -259,8 +260,8 @@
             android:layout_width="198dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/smaller_rect_field"
-            android:text="@string/left"
+            android:background="@drawable/smallrectred"
+            android:text="     Red"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
             app:layout_constraintStart_toStartOf="parent"

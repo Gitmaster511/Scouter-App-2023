@@ -261,7 +261,7 @@
         android:layout_height="75dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="13dp"
-        android:background="@drawable/triangle"
+        android:background="@drawable/triangleforward"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -271,17 +271,10 @@
         android:layout_height="75dp"
         android:layout_marginStart="100dp"
         android:layout_marginBottom="13dp"
-        android:background="@drawable/triangle"
+        android:background="@drawable/triangleforward"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="-305dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
