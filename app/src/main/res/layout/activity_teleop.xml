@@ -149,7 +149,7 @@
         android:layout_marginStart="189dp"
         android:layout_marginEnd="189dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/page_2"
+        android:text="@string/page_3"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
