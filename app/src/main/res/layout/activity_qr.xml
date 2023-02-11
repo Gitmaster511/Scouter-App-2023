@@ -10,7 +10,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="137dp"
+        android:layout_height="115dp"
         android:background="@drawable/top_rect"
         tools:layout_editor_absoluteX="-4dp"
         tools:layout_editor_absoluteY="-4dp" />
@@ -28,10 +28,10 @@
     <View
         android:id="@+id/view4"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="94dp"
         android:background="@drawable/bottom_rect"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="791dp" />
+        tools:layout_editor_absoluteY="867dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -40,8 +40,8 @@
         android:text="Page 6"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="826dp" />
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="878dp" />
 
     <View
         android:id="@+id/view9"
@@ -56,8 +56,8 @@
 
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/triangleforward"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"

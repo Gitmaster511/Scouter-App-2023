@@ -132,27 +132,27 @@
         android:id="@+id/checkBox2"
         android:layout_width="457dp"
         android:layout_height="85dp"
-        android:layout_marginTop="469dp"
-        android:layout_marginEnd="81dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
         android:text="Received Assistance"
         android:textColor="@color/white"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="469dp" />
 
     <View
         android:id="@+id/view3"
         android:layout_width="match_parent"
-        android:layout_height="154dp"
-        android:background="@drawable/smaller_rect_field"
+        android:layout_height="94dp"
+        android:background="@drawable/bottom_rect"
         android:bottomLeftRadius="40dp"
         android:bottomRightRadius="40dp"
         android:topLeftRadius="40dp"
         android:topRightRadius="40dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="825dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="870dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -160,13 +160,13 @@
         android:layout_height="71dp"
         android:layout_marginStart="189dp"
         android:layout_marginEnd="189dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         android:text="Page 4"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -201,8 +201,8 @@
         android:id="@+id/Forward_page_4"
         android:layout_width="46dp"
         android:layout_height="49dp"
-        android:layout_marginEnd="172dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/triangleforward"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -211,8 +211,8 @@
         android:id="@+id/Backward_page_4"
         android:layout_width="46dp"
         android:layout_height="49dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/triangleforward"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"
