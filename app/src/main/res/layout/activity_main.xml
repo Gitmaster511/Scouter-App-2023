@@ -23,6 +23,8 @@
         android:layout_marginEnd="96dp"
         android:text="@string/scouter_app"
         android:textColor="#FFFFFF"
+        android:fontFamily="@font/avenirbold"
+        app:fontFamily="@font/avenirbold"
         android:textSize="75sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +41,7 @@
         android:layout_marginStart="91dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="91dp"
-        android:background="@drawable/smaller_rect_field"
+        android:background="@drawable/corner_rectangle_maroon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +55,9 @@
         android:layout_marginEnd="121dp"
         android:text="@string/match_number"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,6 +74,9 @@
         android:layout_marginEnd="137dp"
         android:autofillHints="Ex: 1"
         android:hint="@string/ex_1"
+        android:fontFamily="@font/avenirlight"
+        app:fontFamily="@font/avenirlight"
+        android:textSize="20sp"
         android:inputType="number"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,24 +91,9 @@
         android:layout_marginStart="89dp"
         android:layout_marginTop="348dp"
         android:layout_marginEnd="92dp"
-        android:background="@drawable/smaller_rect_field"
+        android:background="@drawable/corner_rectangle_maroon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/team_number_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="364dp"
-        android:layout_marginEnd="141dp"
-        android:text="@string/team_number"
-        android:textColor="#FFFFFF"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,6 +102,23 @@
 
     <!-- Bottom -->
 
+    <TextView
+        android:id="@+id/team_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="364dp"
+        android:layout_marginEnd="141dp"
+        android:fontFamily="@font/avenir"
+        android:text="@string/team_number"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        app:fontFamily="@font/avenir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/team_number_input"
         android:layout_width="330dp"
@@ -117,8 +126,11 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="456dp"
         android:layout_marginEnd="137dp"
-        android:autofillHints="EX: 75"
-        android:hint="@string/ex_75"
+        android:autofillHints="Ex: 75"
+        android:hint="Ex: 75"
+        android:fontFamily="@font/avenirlight"
+        app:fontFamily="@font/avenirlight"
+        android:textSize="20sp"
         android:inputType="number"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,14 +164,13 @@
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageView
         android:id="@+id/Forward_page_1"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/triangleforward"
-        android:backgroundTint="#"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -184,7 +195,9 @@
         android:layout_marginTop="538dp"
         android:layout_marginEnd="225dp"
         android:text="@string/alliance"
-        android:textColor="#0000FF"
+        android:textColor="#000000"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -203,33 +216,39 @@
 
         <RadioButton
             android:id="@+id/Left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@drawable/left_rect"
-            android:text="@string/left"
+            android:text="   Left"
+            android:fontFamily="@font/avenirlight"
+            app:fontFamily="@font/avenirlight"
             android:textColor="#FFFFFF"
-            android:textSize="50sp" />
+            android:textSize="38sp" />
 
         <RadioButton
             android:id="@+id/Middle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@drawable/middle_rect"
-            android:text="@string/middle"
+            android:text=" Middle"
+            android:fontFamily="@font/avenirlight"
+            app:fontFamily="@font/avenirlight"
             android:textColor="#FFFFFF"
-            android:textSize="50sp" />
+            android:textSize="38sp" />
 
         <RadioButton
             android:id="@+id/Right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@drawable/right_rect"
-            android:text="@string/Right"
+            android:text="  Right"
+            android:fontFamily="@font/avenirlight"
+            app:fontFamily="@font/avenirlight"
             android:textColor="#FFFFFF"
-            android:textSize="50sp" />
+            android:textSize="38sp" />
 
     </RadioGroup>
 
@@ -246,12 +265,14 @@
         <RadioButton
             android:id="@+id/Right2"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/smaller_rect_field"
-            android:text="     Blue"
+            android:fontFamily="@font/avenirlight"
+            app:fontFamily="@font/avenirlight"
+            android:text="     Red"
+            android:background="#FF0000"
             android:textColor="#FFFFFF"
-            android:textSize="50sp"
+            android:textSize="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -260,10 +281,12 @@
             android:layout_width="198dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/smallrectred"
-            android:text="     Red"
+            android:fontFamily="@font/avenirlight"
+            app:fontFamily="@font/avenirlight"
+            android:text="     Blue"
+            android:background="#0000FF"
             android:textColor="#FFFFFF"
-            android:textSize="50sp"
+            android:textSize="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

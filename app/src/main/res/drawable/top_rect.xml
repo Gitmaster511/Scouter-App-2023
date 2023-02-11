@@ -3,15 +3,14 @@
     android:shape="rectangle" >
 
     <gradient
-        android:startColor = "#ff0303"
-        android:centerColor = "#b700ff"
-        android:endColor = "#001aff"
+        android:startColor = "#000000"
+        android:endColor = "#000000"
         android:angle = "0"
         android:type = "linear" />
 
     <corners
-        android:bottomLeftRadius="15dp"
-        android:bottomRightRadius="15dp"
+        android:bottomLeftRadius="30dp"
+        android:bottomRightRadius="30dp"
         android:topLeftRadius="0dp"
         android:topRightRadius="0dp" />
 
