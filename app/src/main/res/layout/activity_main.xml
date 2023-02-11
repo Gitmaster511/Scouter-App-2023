@@ -158,6 +158,8 @@
         android:layout_marginBottom="32dp"
         android:text="@string/page_1"
         android:textColor="#FFFFFF"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

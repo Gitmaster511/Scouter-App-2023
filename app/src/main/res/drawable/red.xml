@@ -2,11 +2,12 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle" >
 
-    <solid android:color="#ff0303" />
+    <solid android:color="#C40818" />
 
     <corners
 
-        android:topLeftRadius="15dp"
-        android:topRightRadius="15dp" />
-
+        android:bottomLeftRadius="20dp"
+        android:bottomRightRadius="20dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"/>
 </shape>

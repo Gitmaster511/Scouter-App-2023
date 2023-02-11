@@ -37,8 +37,10 @@
         android:layout_marginStart="189dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="189dp"
-        android:text="@string/tele_op"
+        android:text="@string/tele_op2"
         android:textColor="@color/white"
+        android:fontFamily="@font/avenirbold"
+        app:fontFamily="@font/avenirbold"
         android:textSize="75sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.365"
@@ -63,6 +65,8 @@
         android:buttonTint="#ffffff"
         android:text="@string/ground"
         android:textColor="@color/white"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -78,6 +82,8 @@
         android:background="@drawable/red"
         android:buttonTint="#ffffff"
         android:text="@string/cube_pickup"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,6 +99,8 @@
         android:buttonTint="#ffffff"
         android:text="@string/station"
         android:textColor="@color/white"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -108,6 +116,8 @@
         android:text="@string/ground"
         android:textColor="@color/white"
         android:textSize="30sp"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -123,6 +133,8 @@
         android:text="@string/cube_pickup"
         android:textColor="@color/white"
         android:textSize="30sp"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -137,6 +149,8 @@
         android:text="@string/station"
         android:textColor="@color/white"
         android:textSize="30sp"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -162,6 +176,8 @@
         android:layout_marginBottom="10dp"
         android:text="@string/page_3"
         android:textColor="@color/white"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -187,7 +203,7 @@
         android:layout_height="65dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="716dp"
-        android:background="#0000FF"
+        android:background="#5920E4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -211,6 +227,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="50sp"
+        android:fontFamily="@font/avenirbold"
+        app:fontFamily="@font/avenirbold"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -222,7 +240,9 @@
         android:layout_marginStart="384dp"
         android:layout_marginBottom="244dp"
         android:text="@string/cycle_timer"
-        android:textColor="#0000FF"
+        android:textColor="#000000"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
