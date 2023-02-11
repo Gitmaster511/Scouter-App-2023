@@ -145,7 +145,7 @@
         android:id="@+id/view8"
         android:layout_width="608dp"
         android:layout_height="277dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="276dp"
         android:layout_marginEnd="2dp"
         android:background="@drawable/gray_field"
         app:layout_constraintEnd_toEndOf="parent"
@@ -264,200 +264,193 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <View
-        android:id="@+id/grid_1"
-        android:layout_width="75dp"
-        android:layout_height="83dp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="397dp" />
+        android:id="@+id/grid_5"
+        android:layout_width="69dp"
+        android:layout_height="92dp"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="373dp" />
 
     <View
-        android:id="@+id/grid_2"
-        android:layout_width="73dp"
-        android:layout_height="67dp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="482dp" />
+        android:id="@+id/grid_9"
+        android:layout_width="63dp"
+        android:layout_height="92dp"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="460dp" />
 
     <View
-        android:id="@+id/grid_3"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="306dp" />
+        android:id="@+id/grid_7"
+        android:layout_width="61dp"
+        android:layout_height="97dp"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="277dp" />
+
+    <View
+        android:id="@+id/grid_10"
+        android:layout_width="64dp"
+        android:layout_height="95dp"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="277dp" />
 
     <View
         android:id="@+id/grid_4"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="307dp" />
+        android:layout_width="69dp"
+        android:layout_height="99dp"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="275dp" />
 
     <View
-        android:id="@+id/grid_5"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="294dp" />
+        android:id="@+id/grid_8"
+        android:layout_width="54dp"
+        android:layout_height="85dp"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="374dp" />
 
     <View
         android:id="@+id/grid_6"
         android:layout_width="66dp"
         android:layout_height="90dp"
         tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="384dp" />
-
-    <View
-        android:id="@+id/grid_7"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="78dp"
         tools:layout_editor_absoluteY="465dp" />
 
     <View
-        android:id="@+id/grid_8"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="459dp" />
+        android:id="@+id/grid_15"
+        android:layout_width="52dp"
+        android:layout_height="91dp"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="462dp" />
 
     <View
-        android:id="@+id/grid_9"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="384dp" />
+        android:id="@+id/grid_14"
+        android:layout_width="51dp"
+        android:layout_height="93dp"
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="372dp" />
 
     <View
-        android:id="@+id/grid_10"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="294dp" />
+        android:id="@+id/grid_13"
+        android:layout_width="52dp"
+        android:layout_height="92dp"
+        tools:layout_editor_absoluteX="268dp"
+        tools:layout_editor_absoluteY="278dp" />
 
     <View
-        android:id="@+id/grid_11"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
+        android:id="@+id/grid_18"
+        android:layout_width="69dp"
+        android:layout_height="94dp"
         tools:layout_editor_absoluteX="320dp"
         tools:layout_editor_absoluteY="458dp" />
 
     <View
-        android:id="@+id/grid_12"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="326dp"
+        android:id="@+id/grid_17"
+        android:layout_width="72dp"
+        android:layout_height="88dp"
+        tools:layout_editor_absoluteX="320dp"
         tools:layout_editor_absoluteY="369dp" />
 
     <View
-        android:id="@+id/grid_13"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="326dp"
-        tools:layout_editor_absoluteY="287dp" />
-
-    <View
-        android:id="@+id/grid_14"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="392dp"
-        tools:layout_editor_absoluteY="458dp" />
-
-    <View
-        android:id="@+id/grid_15"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="386dp"
-        tools:layout_editor_absoluteY="375dp" />
-
-    <View
         android:id="@+id/grid_16"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="392dp"
-        tools:layout_editor_absoluteY="294dp" />
+        android:layout_width="72dp"
+        android:layout_height="94dp"
+        tools:layout_editor_absoluteX="319dp"
+        tools:layout_editor_absoluteY="277dp" />
 
     <View
-        android:id="@+id/view17"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="452dp"
+        android:id="@+id/grid_21"
+        android:layout_width="56dp"
+        android:layout_height="94dp"
+        tools:layout_editor_absoluteX="386dp"
+        tools:layout_editor_absoluteY="459dp" />
+
+    <View
+        android:id="@+id/grid_20"
+        android:layout_width="61dp"
+        android:layout_height="94dp"
+        tools:layout_editor_absoluteX="391dp"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <View
+        android:id="@+id/grid_19"
+        android:layout_width="58dp"
+        android:layout_height="87dp"
+        tools:layout_editor_absoluteX="392dp"
+        tools:layout_editor_absoluteY="278dp" />
+
+    <View
+        android:id="@+id/grid_24"
+        android:layout_width="76dp"
+        android:layout_height="97dp"
+        tools:layout_editor_absoluteX="441dp"
         tools:layout_editor_absoluteY="458dp" />
 
     <View
-        android:id="@+id/view18"
+        android:id="@+id/grid_23"
         android:layout_width="66dp"
         android:layout_height="90dp"
         tools:layout_editor_absoluteX="452dp"
         tools:layout_editor_absoluteY="368dp" />
 
     <View
-        android:id="@+id/grid_19"
+        android:id="@+id/grid_22"
         android:layout_width="66dp"
         android:layout_height="90dp"
         tools:layout_editor_absoluteX="452dp"
         tools:layout_editor_absoluteY="279dp" />
 
     <View
-        android:id="@+id/grid_20"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
+        android:id="@+id/grid_25"
+        android:layout_width="84dp"
+        android:layout_height="89dp"
         tools:layout_editor_absoluteX="518dp"
         tools:layout_editor_absoluteY="279dp" />
 
     <View
-        android:id="@+id/grid_21"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
+        android:id="@+id/grid_26"
+        android:layout_width="80dp"
+        android:layout_height="91dp"
         tools:layout_editor_absoluteX="518dp"
         tools:layout_editor_absoluteY="369dp" />
 
     <View
-        android:id="@+id/grid_22"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
+        android:id="@+id/grid_27"
+        android:layout_width="80dp"
+        android:layout_height="98dp"
         tools:layout_editor_absoluteX="518dp"
         tools:layout_editor_absoluteY="459dp" />
 
     <View
-        android:id="@+id/grid_23"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="306dp" />
-
-    <View
-        android:id="@+id/grid_24"
-        android:layout_width="66dp"
-        android:layout_height="90dp"
+        android:id="@+id/grid_11"
+        android:layout_width="62dp"
+        android:layout_height="89dp"
         tools:layout_editor_absoluteX="204dp"
-        tools:layout_editor_absoluteY="398dp" />
+        tools:layout_editor_absoluteY="373dp" />
 
     <View
-        android:id="@+id/grid_25"
-        android:layout_width="57dp"
-        android:layout_height="68dp"
+        android:id="@+id/grid_12"
+        android:layout_width="59dp"
+        android:layout_height="88dp"
         tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="480dp" />
+        tools:layout_editor_absoluteY="464dp" />
 
     <View
-        android:id="@+id/grid_26"
-        android:layout_width="78dp"
-        android:layout_height="75dp"
+        android:id="@+id/grid_3"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="480dp" />
+        tools:layout_editor_absoluteY="465dp" />
 
     <View
-        android:id="@+id/grid_27"
+        android:id="@+id/grid_1"
+        android:layout_width="82dp"
+        android:layout_height="97dp"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="276dp" />
+
+    <View
+        android:id="@+id/grid_2"
         android:layout_width="80dp"
         android:layout_height="91dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="397dp" />
-
-    <View
-        android:id="@+id/grid_28"
-        android:layout_width="80dp"
-        android:layout_height="91dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="306dp" />
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="374dp" />
 
     <!-- grid -->
 
