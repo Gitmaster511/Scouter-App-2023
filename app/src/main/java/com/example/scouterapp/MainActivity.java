@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         //DON'T CHANGE THIS IT WORKS WITHOUT THE CHANGE
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
         Objects.requireNonNull(getSupportActionBar()).hide();

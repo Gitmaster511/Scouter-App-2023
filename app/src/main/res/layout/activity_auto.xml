@@ -26,7 +26,7 @@
         android:layout_marginStart="189dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="189dp"
-        android:text="Autonomous"
+        android:text="@string/autonomous"
         android:fontFamily="@font/avenirbold"
         app:fontFamily="@font/avenirbold"
         android:textColor="@color/white"
@@ -91,7 +91,7 @@
         android:text="@string/assisted"
         android:fontFamily="@font/avenir"
         app:fontFamily="@font/avenir"
-        android:textSize="26dp"
+        android:textSize="26sp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -106,7 +106,7 @@
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
         app:fontFamily="@font/avenir"
-        android:textSize="26dp"
+        android:textSize="26sp"
         android:text="@string/docked"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -122,8 +122,8 @@
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
         app:fontFamily="@font/avenir"
-        android:textSize="26dp"
-        android:text="Engaged"
+        android:textSize="26sp"
+        android:text="@string/engaged"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -201,7 +201,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:backgroundTint="#C40818"
-        app:srcCompat="@drawable/pngaaa_com_5257854" />
+        app:srcCompat="@drawable/pngaaa_com_5257854"
+        android:contentDescription="@string/x" />
 
 
     <TextView
@@ -225,7 +226,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginBottom="156dp"
         android:gravity="center"
-        android:text="00:00"
+        android:text="@string/_00_00"
         android:textColor="@color/black"
         android:textSize="50sp"
         android:fontFamily="@font/avenirbold"

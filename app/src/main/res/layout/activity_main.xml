@@ -166,15 +166,17 @@
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
+    <Button
         android:id="@+id/Forward_page_1"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/triangleforward"
+        app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -222,7 +224,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@drawable/left_rect"
-            android:text="   Left"
+            android:text="@string/left"
             android:fontFamily="@font/avenirlight"
             app:fontFamily="@font/avenirlight"
             android:textColor="#FFFFFF"
@@ -234,7 +236,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@drawable/middle_rect"
-            android:text=" Middle"
+            android:text="@string/middle"
             android:fontFamily="@font/avenirlight"
             app:fontFamily="@font/avenirlight"
             android:textColor="#FFFFFF"
@@ -246,7 +248,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:background="@drawable/right_rect"
-            android:text="  Right"
+            android:text="@string/right"
             android:fontFamily="@font/avenirlight"
             app:fontFamily="@font/avenirlight"
             android:textColor="#FFFFFF"
@@ -271,10 +273,10 @@
             android:layout_weight="1"
             android:fontFamily="@font/avenirlight"
             app:fontFamily="@font/avenirlight"
-            android:text="     Red"
+            android:text="@string/red"
             android:background="#FF0000"
             android:textColor="#FFFFFF"
-            android:textSize="50dp"
+            android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -285,10 +287,10 @@
             android:layout_weight="1"
             android:fontFamily="@font/avenirlight"
             app:fontFamily="@font/avenirlight"
-            android:text="     Blue"
+            android:text="@string/blue"
             android:background="#0000FF"
             android:textColor="#FFFFFF"
-            android:textSize="50dp"
+            android:textSize="50sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
