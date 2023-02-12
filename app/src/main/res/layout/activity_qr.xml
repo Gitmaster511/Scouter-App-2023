@@ -21,6 +21,8 @@
         android:layout_height="wrap_content"
         android:text="QR"
         android:textColor="#FFFFFF"
+        android:fontFamily="@font/avenirbold"
+        app:fontFamily="@font/avenirbold"
         android:textSize="75sp"
         tools:layout_editor_absoluteX="251dp"
         tools:layout_editor_absoluteY="16dp" />
@@ -40,6 +42,8 @@
         android:text="Page 6"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
+        android:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenir"
         tools:layout_editor_absoluteX="223dp"
         tools:layout_editor_absoluteY="878dp" />
 
@@ -56,7 +60,7 @@
 
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginStart="128dp"
+        android:layout_marginStart="144dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/triangleforward"
         android:rotation="180"

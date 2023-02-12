@@ -38,12 +38,18 @@
 
     <!-- CheckBoxes -->
 
+    <!-- Checkboxes -->
+
+
+    <!-- Bottom Navigation -->
+
+
     <CheckBox
         android:id="@+id/left_community"
         android:layout_width="258dp"
         android:layout_height="99dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="148dp"
         android:background="@drawable/corner_rectangle_maroon"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
@@ -56,17 +62,11 @@
 
     </CheckBox>
 
-    <!-- Checkboxes -->
-
-
-    <!-- Bottom Navigation -->
-
-
     <CheckBox
         android:id="@+id/Docked_Engaged"
         android:layout_width="258dp"
         android:layout_height="99dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="148dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/corner_rectangle_maroon"
         android:buttonTint="#ffffff"
@@ -223,7 +223,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="156dp"
+        android:layout_marginBottom="168dp"
         android:gravity="center"
         android:text="00:00"
         android:textColor="@color/black"
@@ -235,26 +235,20 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/resetButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
-        android:layout_marginBottom="104dp"
-        android:background="#FF0000"
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="@string/reset"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#C40818"
+        android:text="Reset"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="803dp" />
 
     <Button
-        android:id="@+id/startOrStopTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/resetButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="108dp"
         android:backgroundTint="#00FF38"
         android:gravity="center"
         android:padding="8dp"
@@ -268,8 +262,8 @@
         android:id="@+id/Backward_page_2"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/triangleforward"
         android:backgroundTint="#00ff5e"
         android:rotation="180"
@@ -280,9 +274,10 @@
         android:id="@+id/Forward_page_2"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/triangleforward"
+        android:backgroundTint="#C40818"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
