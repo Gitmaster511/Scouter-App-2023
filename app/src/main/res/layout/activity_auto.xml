@@ -170,7 +170,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/view9"
+        android:id="@+id/Cube_select"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginStart="16dp"
@@ -184,7 +184,7 @@
 
 
     <CheckBox
-        android:id="@+id/imageView"
+        android:id="@+id/Cone_select"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginStart="110dp"
@@ -199,7 +199,7 @@
         />
 
     <CheckBox
-        android:id="@+id/imageView2"
+        android:id="@+id/X_select"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginStart="204dp"
@@ -283,8 +283,8 @@
         android:id="@+id/Forward_page_2"
         android:layout_width="55dp"
         android:layout_height="65dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/triangleforward"
         android:backgroundTint="#C40818"
         app:layout_constraintBottom_toBottomOf="parent"
