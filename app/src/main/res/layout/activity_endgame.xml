@@ -217,8 +217,8 @@
 
     <Button
         android:id="@+id/Forward_page_4"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/triangleforward"
@@ -227,10 +227,10 @@
 
     <Button
         android:id="@+id/Backward_page_4"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="132dp"
         android:background="@drawable/triangleforward"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"
