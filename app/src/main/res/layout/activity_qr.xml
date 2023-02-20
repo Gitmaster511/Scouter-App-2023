@@ -19,38 +19,45 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="251dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/avenirbold"
         android:text="QR"
         android:textColor="#FFFFFF"
         android:textSize="75sp"
         app:fontFamily="@font/avenirbold"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view4"
         android:layout_width="match_parent"
         android:layout_height="94dp"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/bottom_rect"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="867dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="877dp"
+        android:layout_marginBottom="25dp"
         android:fontFamily="@font/avenir"
         android:text="Page 6"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         app:fontFamily="@font/avenir"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="878dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/view9"
-        android:layout_width="466dp"
-        android:layout_height="471dp"
+        android:layout_width="549dp"
+        android:layout_height="565dp"
         android:layout_marginStart="67dp"
         android:layout_marginTop="222dp"
         android:layout_marginEnd="68dp"
@@ -58,8 +65,10 @@
         android:background="@drawable/smaller_rect_field"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.893" />
 
     <Button
         android:id="@+id/Backward_page_5"
@@ -75,20 +84,17 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="223dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="197dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="198dp"
-        android:layout_marginBottom="26dp"
+        android:layout_width="245dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="178dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="105dp"
         android:text="Generate"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/view4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view9"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

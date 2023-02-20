@@ -50,6 +50,64 @@ public class auto extends AppCompatActivity {
     public int counter;
     private boolean isRunning;
     private boolean wasRunning;
+    String climb_time = "";
+
+    int grid1_first = 0;
+    int grid1_second = 0;
+    int grid2_first = 0;
+    int grid2_second = 0;
+    int grid3_first = 0;
+    int grid3_second = 0;
+    int grid4_first = 0;
+    int grid4_second = 0;
+    int grid5_first = 0;
+    int grid5_second = 0;
+    int grid6_first = 0;
+    int grid6_second = 0;
+    int grid7_first = 0;
+    int grid7_second = 0;
+    int grid8_first = 0;
+    int grid8_second = 0;
+    int grid9_first = 0;
+    int grid9_second = 0;
+
+    int grid10_first = 0;
+    int grid10_second = 0;
+    int grid11_first = 0;
+    int grid11_second = 0;
+    int grid12_first = 0;
+    int grid12_second = 0;
+    int grid13_first = 0;
+    int grid13_second = 0;
+    int grid14_first = 0;
+    int grid14_second = 0;
+    int grid15_first = 0;
+    int grid15_second = 0;
+    int grid16_first = 0;
+    int grid16_second = 0;
+    int grid17_first = 0;
+    int grid17_second = 0;
+    int grid18_first = 0;
+    int grid18_second = 0;
+
+    int grid19_first = 0;
+    int grid19_second = 0;
+    int grid20_first = 0;
+    int grid20_second = 0;
+    int grid21_first = 0;
+    int grid21_second = 0;
+    int grid22_first = 0;
+    int grid22_second = 0;
+    int grid23_first = 0;
+    int grid23_second = 0;
+    int grid24_first = 0;
+    int grid24_second = 0;
+    int grid25_first = 0;
+    int grid25_second = 0;
+    int grid26_first = 0;
+    int grid26_second = 0;
+    int grid27_first = 0;
+    int grid27_second = 0;
 
 
     String Team_Number;
@@ -103,8 +161,9 @@ public class auto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 simpleChronometer.stop();
+                climb_time = (String) simpleChronometer.getText();
                 Toast.makeText(auto.this, "Climb time was : " + simpleChronometer.getText(), Toast.LENGTH_LONG).show();
-                simpleChronometer.setBase(SystemClock.elapsedRealtime());
+                //simpleChronometer.setBase(SystemClock.elapsedRealtime());
                 simpleChronometer.stop();
             }
         });
@@ -113,12 +172,35 @@ public class auto extends AppCompatActivity {
         Button forward = (Button) findViewById(R.id.Forward_page_2);
         Button backward = (Button) findViewById(R.id.Backward_page_2);
 
+        //Int first_array = [[grid1_first]]
+        /*int[][] scores = new int[3][9];
+
+        //scores[0] = [grid1_first, grid2_first];
+
+        scores[0] = new int[1,1,1,1,1,1,1,1];
+        */
+
+        int [][] final1 = new int[3][9];
+        final1[0] = new int[]{grid1_first, grid2_first, grid3_first, grid4_first, grid5_first, grid6_first, grid7_first, grid8_first, grid9_first};
+        final1[1] = new int[]{grid10_first, grid11_first, grid12_first, grid13_first, grid14_first, grid15_first, grid16_first, grid17_first, grid18_first};
+        final1[2] = new int[]{grid19_first, grid20_first, grid21_first, grid22_first, grid23_first, grid24_first, grid25_first, grid26_first, grid27_first};
+
+        int [][] final2 = new int[3][9];
+        final2[0] = new int[]{grid1_second, grid2_second, grid3_second, grid4_second, grid5_second, grid6_second, grid7_second, grid8_second, grid9_second};
+        final2[1] = new int[]{grid10_second, grid11_second, grid12_second, grid13_second, grid14_second, grid15_second, grid16_second, grid17_second, grid18_second};
+        final2[2] = new int[]{grid19_second, grid20_second, grid21_second, grid22_second, grid23_second, grid24_second, grid25_second, grid26_second, grid27_second};
+
 
         forward.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(auto.this, teleop.class);
-                //i.putExtra("key",);
+                i.putExtra("climb_time", climb_time);
+                i.putExtra("First_array",final1);
+                i.putExtra("First_array",final2);
+
                 startActivity(i);
             }
         });
@@ -163,7 +245,6 @@ public class auto extends AppCompatActivity {
         RadioButton grid27 = (RadioButton) findViewById(R.id.grid_27);
 
 
-
         CheckBox assisted = (CheckBox) findViewById(R.id.Assisted);
         Boolean assisted_checked = assisted.isChecked();
 
@@ -182,30 +263,12 @@ public class auto extends AppCompatActivity {
         RadioButton cube = (RadioButton) findViewById(R.id.Cube_select);
         RadioButton cone = (RadioButton) findViewById(R.id.Cone_select);
         RadioButton x = (RadioButton) findViewById(R.id.X_select);
-
         RadioGroup row1 = (RadioGroup) findViewById(R.id.row1);
         RadioGroup row2 = (RadioGroup) findViewById(R.id.row2);
         RadioGroup row3 = (RadioGroup) findViewById(R.id.row3);
 
         row1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            int grid1_first = 0;
-            int grid1_second = 0;
-            int grid2_first = 0;
-            int grid2_second = 0;
-            int grid3_first = 0;
-            int grid3_second = 0;
-            int grid4_first = 0;
-            int grid4_second = 0;
-            int grid5_first = 0;
-            int grid5_second = 0;
-            int grid6_first = 0;
-            int grid6_second = 0;
-            int grid7_first = 0;
-            int grid7_second = 0;
-            int grid8_first = 0;
-            int grid8_second = 0;
-            int grid9_first = 0;
-            int grid9_second = 0;
+
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // on below line we are getting radio button from our group.
@@ -383,24 +446,7 @@ public class auto extends AppCompatActivity {
 
 
         row2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            int grid10_first = 0;
-            int grid10_second = 0;
-            int grid11_first = 0;
-            int grid11_second = 0;
-            int grid12_first = 0;
-            int grid12_second = 0;
-            int grid13_first = 0;
-            int grid13_second = 0;
-            int grid14_first = 0;
-            int grid14_second = 0;
-            int grid15_first = 0;
-            int grid15_second = 0;
-            int grid16_first = 0;
-            int grid16_second = 0;
-            int grid17_first = 0;
-            int grid17_second = 0;
-            int grid18_first = 0;
-            int grid18_second = 0;
+
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // on below line we are getting radio button from our group.
@@ -583,24 +629,7 @@ public class auto extends AppCompatActivity {
         });
 
         row3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            int grid19_first = 0;
-            int grid19_second = 0;
-            int grid20_first = 0;
-            int grid20_second = 0;
-            int grid21_first = 0;
-            int grid21_second = 0;
-            int grid22_first = 0;
-            int grid22_second = 0;
-            int grid23_first = 0;
-            int grid23_second = 0;
-            int grid24_first = 0;
-            int grid24_second = 0;
-            int grid25_first = 0;
-            int grid25_second = 0;
-            int grid26_first = 0;
-            int grid26_second = 0;
-            int grid27_first = 0;
-            int grid27_second = 0;
+
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // on below line we are getting radio button from our group.

@@ -72,4 +72,5 @@
     <string name="solo_climb">Solo Climb</string>
     <string name="parked">Parked</string>
     <string name="todo">TODO</string>
+    <string name="stop">Stop</string>
 </resources>

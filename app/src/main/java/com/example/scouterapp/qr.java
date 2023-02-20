@@ -54,7 +54,7 @@ public class qr extends AppCompatActivity {
             MultiFormatWriter writer = new MultiFormatWriter();
             try
             {
-                BitMatrix matrix = writer.encode("Hello world", BarcodeFormat.QR_CODE,600,600);
+                BitMatrix matrix = writer.encode("https://www.youtube.com/watch?v=dQw4w9WgXcQ", BarcodeFormat.QR_CODE,600,600);
                 BarcodeEncoder encoder = new BarcodeEncoder();
                 Bitmap bitmap = encoder.createBitmap(matrix);
                 ImageView iv_qr = findViewById(R.id.view9);
