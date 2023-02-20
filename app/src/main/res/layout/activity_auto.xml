@@ -448,8 +448,8 @@
 
         <RadioButton
             android:id="@+id/grid_19"
-            android:layout_width="87dp"
-            android:layout_height="101dp" />
+            android:layout_width="92dp"
+            android:layout_height="77dp" />
 
         <RadioButton
             android:id="@+id/grid_20"
