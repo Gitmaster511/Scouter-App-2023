@@ -96,7 +96,6 @@
         android:layout_height="85dp"
         android:layout_marginTop="359dp"
         android:background="@drawable/smaller_rect_field"
-
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
         android:text="Gave Assistance"

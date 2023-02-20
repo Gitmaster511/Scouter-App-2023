@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
         //DON'T CHANGE THIS IT WORKS WITHOUT THE CHANGE
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
         Objects.requireNonNull(getSupportActionBar()).hide();
@@ -85,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // on below line we are getting radio button from our group.
                 RadioButton radioButton = findViewById(checkedId);
-                // on below line we are displaying a toast message.
                 }
         }
         );

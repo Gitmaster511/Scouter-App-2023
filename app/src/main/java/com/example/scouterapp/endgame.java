@@ -2,6 +2,7 @@ package com.example.scouterapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
@@ -15,6 +16,7 @@ import java.util.Objects;
 
 public class endgame extends AppCompatActivity {
 
+    @SuppressLint("AppCompatMethod")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

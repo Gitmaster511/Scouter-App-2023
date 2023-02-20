@@ -185,8 +185,8 @@
         android:id="@+id/imageView"
         android:layout_width="55dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="14dp"
         android:layout_marginStart="132dp"
+        android:layout_marginBottom="14dp"
         android:contentDescription="@string/greyed_our_arrow"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -302,13 +302,17 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Driver Station"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="675dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="226dp"
+        android:text="@string/driver_station"
         android:textColor="#000000"
         android:textSize="45sp"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="676dp" />
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

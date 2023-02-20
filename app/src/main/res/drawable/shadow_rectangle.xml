@@ -10,6 +10,7 @@
         android:topLeftRadius="20dp"
         android:topRightRadius="20dp" />
     <gradient
-        android:startColor="#C40818"
+        android:startColor="#C40818">
+</gradient>
 
 </shape>
