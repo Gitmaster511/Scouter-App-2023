@@ -269,7 +269,7 @@
         tools:ignore="MissingConstraints">
 
         <RadioButton
-            android:id="@+id/Right2"
+            android:id="@+id/Red"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -283,7 +283,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/Left2"
+            android:id="@+id/Blue"
             android:layout_width="198dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

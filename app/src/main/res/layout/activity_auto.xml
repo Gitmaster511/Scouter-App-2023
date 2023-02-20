@@ -182,7 +182,10 @@
             android:layout_height="65dp"
             android:background="#5920E4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
+            <!-- android:buttonTint="@color/purple_700" -->
+
+
 
         <View
             android:layout_width="30dp"
@@ -196,8 +199,10 @@
             android:contentDescription="@string/greyed_our_arrow"
             android:rotation="-90"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent"/>
+        <!-- android:buttonTint="@color/purple_700" -->
+
+
 
         <View
             android:layout_width="30dp"
@@ -211,7 +216,10 @@
             android:backgroundTint="#C40818"
             android:contentDescription="@string/x"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <!-- android:buttonTint="@color/purple_700" -->
+
     </RadioGroup>
 
 

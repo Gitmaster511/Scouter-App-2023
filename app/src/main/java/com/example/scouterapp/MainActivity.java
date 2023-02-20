@@ -64,13 +64,55 @@ public class MainActivity extends AppCompatActivity {
 
         Button forward = (Button) findViewById(R.id.Forward_page_1);
         forward.setOnClickListener(new View.OnClickListener() {
+            RadioButton Red = (RadioButton) findViewById(R.id.Red);
+            RadioButton Blue = (RadioButton) findViewById(R.id.Blue);
+
+            RadioButton Left = (RadioButton) findViewById(R.id.Left);
+            RadioButton Mid = (RadioButton) findViewById(R.id.Middle);
+            RadioButton Right = (RadioButton) findViewById(R.id.Right);
+
+
+
             @Override
             public void onClick(View v) {
+                String Alliance = "";
+                String DriverStation = "";
+
+
+
+                if (Red.isChecked())
+                {
+                    Alliance = "Red";
+                }
+
+                else
+                {
+                    Alliance = "Blue";
+                }
+
+
+                if(Left.isChecked())
+                {
+                    DriverStation = "Left";
+                }
+                if(Mid.isChecked())
+                {
+                    DriverStation = "Middle";
+                }
+                if(Right.isChecked())
+                {
+                    DriverStation = "Right";
+                }
+
                 Intent signup = new Intent(MainActivity.this, auto.class);
                 String match_number_final = matchNumber.getText().toString();
                 String teamNumber_final = teamNumber.getText().toString();
-                signup.putExtra("Match_Number",match_number_final);
-                signup.putExtra("Team_Number",teamNumber_final);
+                signup.putExtra("Match_Number: ",match_number_final);
+                signup.putExtra("Team_Number: ",teamNumber_final);
+
+                signup.putExtra("Alliance: ",Alliance);
+                signup.putExtra("Driver_Station: ",DriverStation);
+
                 startActivity(signup);
                 finish();
             }

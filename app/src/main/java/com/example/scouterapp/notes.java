@@ -29,7 +29,7 @@ public class notes extends AppCompatActivity {
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signup = new Intent(notes.this, teleop.class);
+                Intent signup = new Intent(notes.this, qr.class);
                 startActivity(signup);
             }
         });
@@ -37,7 +37,7 @@ public class notes extends AppCompatActivity {
         backward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signup = new Intent(notes.this, qr.class);
+                Intent signup = new Intent(notes.this, teleop.class);
                 startActivity(signup);
             }
         });

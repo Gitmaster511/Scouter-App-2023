@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.example.scouterapp"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -30,7 +30,8 @@ android {
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'

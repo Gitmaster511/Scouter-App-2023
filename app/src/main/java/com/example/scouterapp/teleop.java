@@ -26,8 +26,7 @@ public class teleop extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_teleop);
 
-        Button forward = (Button) findViewById(R.id.Forward_page_3);
-        Button backward = (Button) findViewById(R.id.Backward_page_3);
+
         Button startOrStopTextView = (Button) findViewById(R.id.startOrStopTextView);
 
         Button resetButton = (Button) findViewById(R.id.resetButton);
@@ -57,7 +56,8 @@ public class teleop extends AppCompatActivity {
             }
         });
 
-
+        Button forward = (Button) findViewById(R.id.Forward_page_3);
+        Button backward = (Button) findViewById(R.id.Backward_page_3);
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

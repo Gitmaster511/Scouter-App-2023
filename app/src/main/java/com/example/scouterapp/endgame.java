@@ -3,6 +3,7 @@ package com.example.scouterapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
@@ -24,6 +25,25 @@ public class endgame extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_endgame);
+
+        Button forward = (Button) findViewById(R.id.Forward_page_4);
+        Button backward = (Button) findViewById(R.id.Backward_page_4);
+        forward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signup = new Intent(endgame.this, notes.class);
+                startActivity(signup);
+            }
+        });
+
+        backward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signup = new Intent(endgame.this, auto.class);
+                startActivity(signup);
+            }
+        });
+
 
 
         Chronometer simpleChronometer = (Chronometer) findViewById(R.id.endgameStopwatch); // initiate a chronometer
