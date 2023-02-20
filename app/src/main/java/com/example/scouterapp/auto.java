@@ -67,6 +67,16 @@ public class auto extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_auto);
 
+
+        View decorView = getWindow().getDecorView();
+// Hide both the navigation bar and the status bar.
+// SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
+// a general rule, you should design your app to hide the status bar whenever you
+// hide the navigation bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+
         Chronometer simpleChronometer = (Chronometer) findViewById(R.id.textViewStopWatch); // initiate a chronometer
 
         //simpleChronometer.setFormat(""); // set the format for a chronometer
@@ -520,7 +530,7 @@ public class auto extends AppCompatActivity {
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid16 X Selected", Toast.LENGTH_SHORT).show();
                 }
-                if (grid7.isChecked() && cube.isChecked()) {
+                if (grid17.isChecked() && cube.isChecked()) {
                     grid17_first += 1;
                     row2.clearCheck();
                     shape.clearCheck();
@@ -596,163 +606,163 @@ public class auto extends AppCompatActivity {
                 // on below line we are getting radio button from our group.
                 if (grid19.isChecked() && cube.isChecked()) {
                     grid19_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid19 Cube Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid19.isChecked() && cone.isChecked()) {
                     grid19_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid19 Cone Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid19.isChecked() && x.isChecked()) {
                     grid19_second += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid19 X Selected", Toast.LENGTH_SHORT).show();
                 }
                 if (grid20.isChecked() && cube.isChecked()) {
                     grid20_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid20 Cube Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid20.isChecked() && cone.isChecked()) {
                     grid20_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid20 Cone Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid20.isChecked() && x.isChecked()) {
                     grid20_second += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid20 X Selected", Toast.LENGTH_SHORT).show();
                 }
                 if (grid21.isChecked() && cube.isChecked()) {
                     grid21_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid21 Cube Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid21.isChecked() && cone.isChecked()) {
                     grid21_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid21 Cone Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid21.isChecked() && x.isChecked()) {
                     grid21_second += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid21 X Selected", Toast.LENGTH_SHORT).show();
                 }
                 if (grid22.isChecked() && cube.isChecked()) {
                     grid22_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid22 Cube Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid22.isChecked() && cone.isChecked()) {
                     grid22_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid22 Cone Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid22.isChecked() && x.isChecked()) {
                     grid22_second += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid22 X Selected", Toast.LENGTH_SHORT).show();
                 }
                 if (grid23.isChecked() && cube.isChecked()) {
                     grid23_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid23 Cube Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid23.isChecked() && cone.isChecked()) {
                     grid23_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid23 Cone Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid23.isChecked() && x.isChecked()) {
                     grid23_second += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid23 X Selected", Toast.LENGTH_SHORT).show();
                 }
                 if (grid24.isChecked() && cube.isChecked()) {
                     grid24_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid24 Cube Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid24.isChecked() && cone.isChecked()) {
                     grid24_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid24 Cone Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid24.isChecked() && x.isChecked()) {
                     grid24_second += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid24 X Selected", Toast.LENGTH_SHORT).show();
                 }
                 if (grid25.isChecked() && cube.isChecked()) {
                     grid25_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid25 Cube Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid25.isChecked() && cone.isChecked()) {
                     grid25_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid25 Cone Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid25.isChecked() && x.isChecked()) {
                     grid25_second += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid25 X Selected", Toast.LENGTH_SHORT).show();
                 }
                 if (grid26.isChecked() && cube.isChecked()) {
                     grid26_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid26 Cube Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid26.isChecked() && cone.isChecked()) {
                     grid26_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid26 Cone Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid26.isChecked() && x.isChecked()) {
                     grid26_second += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid26 X Selected", Toast.LENGTH_SHORT).show();
                 }
                 if (grid27.isChecked() && cube.isChecked()) {
                     grid27_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid27 Cube Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid27.isChecked() && cone.isChecked()) {
                     grid27_first += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid27 Cone Selected", Toast.LENGTH_SHORT).show();
                 }
                 else if (grid27.isChecked() && x.isChecked()) {
                     grid27_second += 1;
-                    row2.clearCheck();
+                    row3.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid27 X Selected", Toast.LENGTH_SHORT).show();
                 }
