@@ -33,10 +33,12 @@ public class notes extends AppCompatActivity {
         String Alliance = intent.getStringExtra("Alliance");
         String Driver_Station = intent.getStringExtra("Driver_Station");
 
+
+
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
-        String First_array = intent.getStringExtra("First_array");
-        String Second_array = intent.getStringExtra("Second_array");
+        int First_array = intent.getIntExtra("First_array", 0);
+        int Second_array = intent.getIntExtra("Second_array", 0);
         String Left_Community = intent.getStringExtra("Left_Community");
         String Docked_Engaged = intent.getStringExtra("Docked_Engaged");
         String assisted = intent.getStringExtra("assisted");
@@ -50,8 +52,8 @@ public class notes extends AppCompatActivity {
         String station_cube_checked = intent.getStringExtra("station_cube_checked");
         String ground_cone_checked = intent.getStringExtra("ground_cone_checked");
         String ground_cube_checked = intent.getStringExtra("ground_cube_checked");
-        String final3 = intent.getStringExtra("final3");
-        String final4 = intent.getStringExtra("final4");
+        int final3 = intent.getIntExtra("final3", 0);
+        int final4 = intent.getIntExtra("final4", 0);
         String climb_time2 = intent.getStringExtra("climb_time2");
 
         //Endgame
@@ -108,8 +110,8 @@ public class notes extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(notes.this, qr.class);
                 //First Page
-                i.putExtra("Match_Number: ",Match_Number);
-                i.putExtra("Team_Number: ",Team_Number);
+                i.putExtra ( "Match_Number", Match_Number);
+                i.putExtra ( "Team_Number", Team_Number);
                 i.putExtra("Alliance: ",Alliance);
                 i.putExtra("Driver_Station: ",Driver_Station);
 

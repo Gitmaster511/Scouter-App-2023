@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
@@ -38,10 +39,11 @@ public class qr extends AppCompatActivity {
         String Alliance = intent.getStringExtra("Alliance");
         String Driver_Station = intent.getStringExtra("Driver_Station");
 
+
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
-        String First_array = intent.getStringExtra("First_array");
-        String Second_array = intent.getStringExtra("Second_array");
+        int First_array = intent.getIntExtra("First_array", 0);
+        int Second_array = intent.getIntExtra("Second_array", 0);
         String Left_Community = intent.getStringExtra("Left_Community");
         String Docked_Engaged = intent.getStringExtra("Docked_Engaged");
         String assisted = intent.getStringExtra("assisted");
@@ -55,8 +57,8 @@ public class qr extends AppCompatActivity {
         String station_cube_checked = intent.getStringExtra("station_cube_checked");
         String ground_cone_checked = intent.getStringExtra("ground_cone_checked");
         String ground_cube_checked = intent.getStringExtra("ground_cube_checked");
-        String final3 = intent.getStringExtra("final3");
-        String final4 = intent.getStringExtra("final4");
+        int final3 = intent.getIntExtra("final3", 0);
+        int final4 = intent.getIntExtra("final4", 0);
         String climb_time2 = intent.getStringExtra("climb_time2");
 
         //Endgame
@@ -72,12 +74,25 @@ public class qr extends AppCompatActivity {
         String aggression = intent.getStringExtra("aggression");
         String additional = intent.getStringExtra("additional");
         String win = intent.getStringExtra("win");
+        
 
 
-        String[] finalresult = {Match_Number, Team_Number, Alliance, Driver_Station,climb_time,First_array,Second_array,Left_Community,Docked_Engaged,assisted,docked,engaged,
-                cone_pickup_checked,cube_pickup_checked,station_cone_checked,station_cube_checked,ground_cone_checked,ground_cube_checked,final3,final4,climb_time2,
+        String f = String.valueOf(First_array);
+
+        String s = String.valueOf(Second_array);
+
+        String f3 = String.valueOf(final3);
+
+        String f4 = String.valueOf(final4);
+
+
+
+
+        String[] finalresult = {Match_Number, Team_Number, Alliance, Driver_Station,climb_time,f,s,Left_Community,Docked_Engaged,assisted,docked,engaged,
+                cone_pickup_checked,cube_pickup_checked,station_cone_checked,station_cube_checked,ground_cone_checked,ground_cube_checked,f3,f4,climb_time2,
                 attempted_checked,docked2_checked,engaged2_checked,soloclimb_checked,gave_assistance_checked,recieved_assistance_checked,parked_checked,climb_time3,
                 aggression,additional,win};
+
         String str = String.join(",", finalresult);
 
 
@@ -110,6 +125,9 @@ public class qr extends AppCompatActivity {
 
         Button bt_generate = findViewById(R.id.button);
         bt_generate.setOnClickListener(v->{
+
+
+
             MultiFormatWriter writer = new MultiFormatWriter();
             try
             {

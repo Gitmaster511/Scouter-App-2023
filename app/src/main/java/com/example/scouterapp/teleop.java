@@ -89,6 +89,7 @@ public class teleop extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         Intent intent = getIntent();
 
         //First Page
@@ -100,8 +101,8 @@ public class teleop extends AppCompatActivity {
 
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
-        String First_array = intent.getStringExtra("First_array");
-        String Second_array = intent.getStringExtra("Second_array");
+        int First_array = intent.getIntExtra("First_array", 0);
+        int Second_array = intent.getIntExtra("Second_array", 0);
         String Left_Community = intent.getStringExtra("Left_Community");
         String Docked_Engaged = intent.getStringExtra("Docked_Engaged");
         String assisted = intent.getStringExtra("assisted");
@@ -156,6 +157,7 @@ public class teleop extends AppCompatActivity {
                 climb_time2 = (String) simpleChronometer.getText();
 
                 Toast.makeText(teleop.this, "Climb time was : " + simpleChronometer.getText(), Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -197,9 +199,10 @@ public class teleop extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(teleop.this, endgame.class);
 
+
                 //First Page
-                i.putExtra("Match_Number: ",Match_Number);
-                i.putExtra("Team_Number: ",Team_Number);
+                i.putExtra ( "Match_Number", Match_Number);
+                i.putExtra ( "Team_Number", Team_Number);
                 i.putExtra("Alliance: ",Alliance);
                 i.putExtra("Driver_Station: ",Driver_Station);
 

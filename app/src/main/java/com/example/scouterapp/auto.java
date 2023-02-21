@@ -112,7 +112,7 @@ public class auto extends AppCompatActivity {
 
     String Team_Number;
     String Match_Number;
-    // Is the stopwatch running?
+
     @SuppressLint("AppCompatMethod")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,8 +124,6 @@ public class auto extends AppCompatActivity {
         String Team_Number = intent.getStringExtra("Team_Number");
         String Alliance = intent.getStringExtra("Alliance");
         String Driver_Station = intent.getStringExtra("Driver_Station");
-
-
 
 
 
@@ -229,8 +227,9 @@ public class auto extends AppCompatActivity {
                 Intent i = new Intent(auto.this, teleop.class);
 
                 // Old
-                i.putExtra("Match_Number: ",Match_Number);
-                i.putExtra("Team_Number: ",Team_Number);
+                i.putExtra ( "Match_Number", Match_Number);
+                i.putExtra ( "Team_Number", Team_Number);
+
                 i.putExtra("Alliance: ",Alliance);
                 i.putExtra("Driver_Station: ",Driver_Station);
 
@@ -307,7 +306,6 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid1 Cube Selected", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(auto.this, "The number is: " + grid1_first, Toast.LENGTH_SHORT).show();
 
                 }
                 else if (grid1.isChecked() && cone.isChecked()) {
@@ -825,6 +823,16 @@ public class auto extends AppCompatActivity {
                     shape.clearCheck();
                     Toast.makeText(auto.this, "Grid27 X Selected", Toast.LENGTH_SHORT).show();
                 }
+
+
+                backward.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent signup = new Intent(auto.this, MainActivity.class);
+                        startActivity(signup);
+                    }
+                });
+
 
 
 
