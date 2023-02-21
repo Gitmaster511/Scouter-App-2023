@@ -182,7 +182,6 @@ public class auto extends AppCompatActivity {
 
 
         Button forward = (Button) findViewById(R.id.Forward_page_2);
-        Button backward = (Button) findViewById(R.id.Backward_page_2);
 
         CheckBox left_community = (CheckBox) findViewById(R.id.left_community);
         Boolean left_community_checked = left_community.isChecked();
@@ -295,6 +294,15 @@ public class auto extends AppCompatActivity {
         RadioGroup row1 = (RadioGroup) findViewById(R.id.row1);
         RadioGroup row2 = (RadioGroup) findViewById(R.id.row2);
         RadioGroup row3 = (RadioGroup) findViewById(R.id.row3);
+
+        Button backward = (Button) findViewById(R.id.Backward_page_2);
+        backward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signup = new Intent(auto.this, MainActivity.class);
+                startActivity(signup);
+            }
+        });
 
         row1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
@@ -825,13 +833,6 @@ public class auto extends AppCompatActivity {
                 }
 
 
-                backward.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent signup = new Intent(auto.this, MainActivity.class);
-                        startActivity(signup);
-                    }
-                });
 
 
 

@@ -73,6 +73,7 @@ public class qr extends AppCompatActivity {
 
         String aggression = intent.getStringExtra("aggression");
         String additional = intent.getStringExtra("additional");
+
         String win = intent.getStringExtra("win");
         
 
@@ -93,7 +94,7 @@ public class qr extends AppCompatActivity {
                 attempted_checked,docked2_checked,engaged2_checked,soloclimb_checked,gave_assistance_checked,recieved_assistance_checked,parked_checked,climb_time3,
                 aggression,additional,win};
 
-        String str = String.join(",", finalresult);
+        String str = String.join(";", finalresult);
 
 
 

@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.slider.Slider;
 
@@ -32,6 +33,8 @@ public class notes extends AppCompatActivity {
         String Team_Number = intent.getStringExtra("Team_Number");
         String Alliance = intent.getStringExtra("Alliance");
         String Driver_Station = intent.getStringExtra("Driver_Station");
+        Toast.makeText(notes.this, Alliance, Toast.LENGTH_SHORT).show();
+
 
 
 
@@ -89,7 +92,6 @@ public class notes extends AppCompatActivity {
         int aggression = (int) slider.getProgress();
 
         TextView additional = (EditText)findViewById(R.id.text_input);
-        additional.getText().toString();
 
         RadioButton yes = (RadioButton) findViewById(R.id.yes);
 
@@ -150,7 +152,7 @@ public class notes extends AppCompatActivity {
 
                 //Fifth Page
                 i.putExtra("aggression", aggression);
-                i.putExtra("additional", String.valueOf(additional));
+                i.putExtra ( "Match_Number", additional.getText().toString());
                 i.putExtra("win", win);
                 startActivity(i);
             }
