@@ -117,6 +117,19 @@ public class auto extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Old data
+
+        Intent intent = getIntent();
+        String Match_Number = intent.getStringExtra("Match_Number");
+        String Team_Number = intent.getStringExtra("Team_Number");
+        String Alliance = intent.getStringExtra("Alliance");
+        String Driver_Station = intent.getStringExtra("Driver_Station");
+
+
+
+
+
+
 
 
         //Remove Topbar + bottom Bar
@@ -142,6 +155,7 @@ public class auto extends AppCompatActivity {
         Button startOrStopTextView = (Button) findViewById(R.id.start_button);
 
         Button resetButton = (Button) findViewById(R.id.reset_button);
+
 
 
         startOrStopTextView.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +186,19 @@ public class auto extends AppCompatActivity {
         Button forward = (Button) findViewById(R.id.Forward_page_2);
         Button backward = (Button) findViewById(R.id.Backward_page_2);
 
+        CheckBox left_community = (CheckBox) findViewById(R.id.left_community);
+        Boolean left_community_checked = left_community.isChecked();
+        CheckBox Docked_Engaged = (CheckBox) findViewById(R.id.Docked_Engaged);
+        Boolean Docked_Engaged_checked = Docked_Engaged.isChecked();
+        CheckBox assisted = (CheckBox) findViewById(R.id.Assisted);
+        Boolean assisted_checked = assisted.isChecked();
+
+        CheckBox docked = (CheckBox) findViewById(R.id.Docked);
+        Boolean docked_checked = docked.isChecked();
+
+        CheckBox engaged = (CheckBox) findViewById(R.id.Engaged);
+        Boolean engaged_engaged = engaged.isChecked();
+
         //Int first_array = [[grid1_first]]
         /*int[][] scores = new int[3][9];
 
@@ -196,22 +223,33 @@ public class auto extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+
+
                 Intent i = new Intent(auto.this, teleop.class);
+
+                // Old
+                i.putExtra("Match_Number: ",Match_Number);
+                i.putExtra("Team_Number: ",Team_Number);
+                i.putExtra("Alliance: ",Alliance);
+                i.putExtra("Driver_Station: ",Driver_Station);
+
+
                 i.putExtra("climb_time", climb_time);
                 i.putExtra("First_array",final1);
-                i.putExtra("First_array",final2);
+                i.putExtra("Second_array",final2);
 
+
+
+                i.putExtra("Left_Community",left_community_checked);
+                i.putExtra("Docked_Engaged",Docked_Engaged_checked);
+                i.putExtra("assisted",assisted_checked);
+                i.putExtra("docked",docked_checked);
+                i.putExtra("engaged",engaged_engaged);
                 startActivity(i);
             }
         });
 
-
-
-        CheckBox left_community = (CheckBox) findViewById(R.id.left_community);
-        Boolean left_community_checked = left_community.isChecked();
-
-        CheckBox Docked_Engaged = (CheckBox) findViewById(R.id.Docked_Engaged);
-        Boolean Docked_Engaged_checked = Docked_Engaged.isChecked();
 
 
 
@@ -245,14 +283,6 @@ public class auto extends AppCompatActivity {
         RadioButton grid27 = (RadioButton) findViewById(R.id.grid_27);
 
 
-        CheckBox assisted = (CheckBox) findViewById(R.id.Assisted);
-        Boolean assisted_checked = assisted.isChecked();
-
-        CheckBox docked = (CheckBox) findViewById(R.id.Docked);
-        Boolean docked_checked = docked.isChecked();
-
-        CheckBox engaged = (CheckBox) findViewById(R.id.Engaged);
-        Boolean engaged_engaged = engaged.isChecked();
 
 
 

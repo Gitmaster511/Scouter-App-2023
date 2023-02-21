@@ -190,6 +190,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/text_input"
         android:layout_width="603dp"
         android:layout_height="360dp"
         android:layout_marginTop="373dp"
@@ -230,33 +231,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/yescheckBox"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="749dp"
-        android:layout_marginEnd="211dp"
-        android:background="@drawable/smaller_rect_field"
-        android:text=" Yes"
-        android:textColor="#FFFFFF"
-        android:textSize="45sp"
+
+    <RadioGroup
+        android:layout_width="392dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="209dp"
+        android:layout_marginTop="744dp"
+        android:layout_marginBottom="99dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <CheckBox
-        android:id="@+id/nocheckBox3"
-        android:layout_width="146dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="748dp"
-        android:layout_marginEnd="36dp"
-        android:background="@drawable/smaller_rect_field"
-        android:text=" No"
-        android:textColor="#FFFFFF"
-        android:textSize="45sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <RadioButton
+            android:id="@+id/yes"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/smaller_rect_field"
+            android:text="Yes"
+            android:textColor="#FFFFFF"
+            android:textSize="45sp" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="0dp">
+
+        </View>
+
+        <RadioButton
+            android:id="@+id/no"
+            android:layout_width="146dp"
+            android:layout_height="64dp"
+            android:background="@drawable/smaller_rect_field"
+            android:text="No"
+            android:textColor="#FFFFFF"
+            android:textSize="45sp" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

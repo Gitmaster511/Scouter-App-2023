@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
         forward.setOnClickListener(new View.OnClickListener() {
             RadioButton Red = (RadioButton) findViewById(R.id.Red);
             RadioButton Blue = (RadioButton) findViewById(R.id.Blue);
-
             RadioButton Left = (RadioButton) findViewById(R.id.Left);
             RadioButton Mid = (RadioButton) findViewById(R.id.Middle);
             RadioButton Right = (RadioButton) findViewById(R.id.Right);
@@ -116,11 +115,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent signup = new Intent(MainActivity.this, auto.class);
                 String match_number_final = matchNumber.getText().toString();
                 String teamNumber_final = teamNumber.getText().toString();
+
+
                 signup.putExtra("Match_Number: ",match_number_final);
                 signup.putExtra("Team_Number: ",teamNumber_final);
-
                 signup.putExtra("Alliance: ",Alliance);
                 signup.putExtra("Driver_Station: ",DriverStation);
+
 
                 startActivity(signup);
                 finish();

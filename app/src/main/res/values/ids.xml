@@ -7,4 +7,7 @@
     <item name="view8" type="id" />
     <item name="left_community" type="id" />
     <item name="startOrStopTextView" type="id" />
+    <item name="attempted" type="id" />
+    <item name="docked" type="id" />
+    <item name="engaged" type="id" />
 </resources>

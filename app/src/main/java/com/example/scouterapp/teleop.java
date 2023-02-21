@@ -23,7 +23,6 @@ public class teleop extends AppCompatActivity {
     private boolean isRunning;
     private boolean wasRunning;
     String climb_time = "";
-
     int grid1_first = 0;
     int grid1_second = 0;
     int grid2_first = 0;
@@ -61,7 +60,6 @@ public class teleop extends AppCompatActivity {
     int grid17_second = 0;
     int grid18_first = 0;
     int grid18_second = 0;
-
     int grid19_first = 0;
     int grid19_second = 0;
     int grid20_first = 0;
@@ -81,6 +79,8 @@ public class teleop extends AppCompatActivity {
     int grid27_first = 0;
     int grid27_second = 0;
 
+    String climb_time2 = "";
+
 
     String Team_Number;
     String Match_Number;
@@ -88,6 +88,34 @@ public class teleop extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+
+        //First Page
+        String Match_Number = intent.getStringExtra("Match_Number");
+        String Team_Number = intent.getStringExtra("Team_Number");
+        String Alliance = intent.getStringExtra("Alliance");
+        String Driver_Station = intent.getStringExtra("Driver_Station");
+
+
+        //Auto
+        String climb_time = intent.getStringExtra("climb_time");
+        String First_array = intent.getStringExtra("First_array");
+        String Second_array = intent.getStringExtra("Second_array");
+        String Left_Community = intent.getStringExtra("Left_Community");
+        String Docked_Engaged = intent.getStringExtra("Docked_Engaged");
+        String assisted = intent.getStringExtra("assisted");
+        String docked = intent.getStringExtra("docked");
+        String engaged = intent.getStringExtra("engaged");
+
+
+
+
+
+
+
+
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
@@ -125,30 +153,14 @@ public class teleop extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 simpleChronometer.stop();
-                simpleChronometer.setBase(SystemClock.elapsedRealtime());
+                climb_time2 = (String) simpleChronometer.getText();
+
                 Toast.makeText(teleop.this, "Climb time was : " + simpleChronometer.getText(), Toast.LENGTH_LONG).show();
-                simpleChronometer.stop();
             }
         });
 
         Button forward = (Button) findViewById(R.id.Forward_page_3);
         Button backward = (Button) findViewById(R.id.Backward_page_3);
-
-        forward.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent signup = new Intent(teleop.this, endgame.class);
-                startActivity(signup);
-            }
-        });
-
-        backward.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent signup = new Intent(teleop.this, teleop.class);
-                startActivity(signup);
-            }
-        });
 
         CheckBox cone_pickup = (CheckBox) findViewById(R.id.Conepickup);
         Boolean cone_pickup_checked = cone_pickup.isChecked();
@@ -168,28 +180,63 @@ public class teleop extends AppCompatActivity {
         CheckBox ground_cube = (CheckBox) findViewById(R.id.Ground_cube);
         Boolean ground_cube_checked = ground_cube.isChecked();
 
-        int [][] final1 = new int[3][9];
-        final1[0] = new int[]{grid1_first, grid2_first, grid3_first, grid4_first, grid5_first, grid6_first, grid7_first, grid8_first, grid9_first};
-        final1[1] = new int[]{grid10_first, grid11_first, grid12_first, grid13_first, grid14_first, grid15_first, grid16_first, grid17_first, grid18_first};
-        final1[2] = new int[]{grid19_first, grid20_first, grid21_first, grid22_first, grid23_first, grid24_first, grid25_first, grid26_first, grid27_first};
 
-        int [][] final2 = new int[3][9];
-        final2[0] = new int[]{grid1_second, grid2_second, grid3_second, grid4_second, grid5_second, grid6_second, grid7_second, grid8_second, grid9_second};
-        final2[1] = new int[]{grid10_second, grid11_second, grid12_second, grid13_second, grid14_second, grid15_second, grid16_second, grid17_second, grid18_second};
-        final2[2] = new int[]{grid19_second, grid20_second, grid21_second, grid22_second, grid23_second, grid24_second, grid25_second, grid26_second, grid27_second};
+        int [][] final3 = new int[3][9];
+        final3[0] = new int[]{grid1_first, grid2_first, grid3_first, grid4_first, grid5_first, grid6_first, grid7_first, grid8_first, grid9_first};
+        final3[1] = new int[]{grid10_first, grid11_first, grid12_first, grid13_first, grid14_first, grid15_first, grid16_first, grid17_first, grid18_first};
+        final3[2] = new int[]{grid19_first, grid20_first, grid21_first, grid22_first, grid23_first, grid24_first, grid25_first, grid26_first, grid27_first};
+
+        int [][] final4 = new int[3][9];
+        final4[0] = new int[]{grid1_second, grid2_second, grid3_second, grid4_second, grid5_second, grid6_second, grid7_second, grid8_second, grid9_second};
+        final4[1] = new int[]{grid10_second, grid11_second, grid12_second, grid13_second, grid14_second, grid15_second, grid16_second, grid17_second, grid18_second};
+        final4[2] = new int[]{grid19_second, grid20_second, grid21_second, grid22_second, grid23_second, grid24_second, grid25_second, grid26_second, grid27_second};
 
 
         forward.setOnClickListener(new View.OnClickListener() {
-
-//************************This Here******************* the intent i variable maybe needs fixing
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(teleop.this, teleop.class);
+                Intent i = new Intent(teleop.this, endgame.class);
+
+                //First Page
+                i.putExtra("Match_Number: ",Match_Number);
+                i.putExtra("Team_Number: ",Team_Number);
+                i.putExtra("Alliance: ",Alliance);
+                i.putExtra("Driver_Station: ",Driver_Station);
+
+
+                //Second page
                 i.putExtra("climb_time", climb_time);
-                i.putExtra("First_array",final1);
-                i.putExtra("First_array",final2);
+                i.putExtra("First_array",First_array);
+                i.putExtra("Second_array",Second_array);
+                i.putExtra("Left_Community",Left_Community);
+                i.putExtra("Docked_Engaged",Docked_Engaged);
+                i.putExtra("assisted",assisted);
+                i.putExtra("docked",docked);
+                i.putExtra("engaged",engaged);
+
+
+                //Third Page
+                i.putExtra("cone_pickup_checked", cone_pickup_checked);
+                i.putExtra("cube_pickup_checked",cube_pickup_checked);
+                i.putExtra("station_cone_checked",station_cone_checked);
+                i.putExtra("station_cube_checked",station_cube_checked);
+                i.putExtra("ground_cone_checked",ground_cone_checked);
+                i.putExtra("ground_cube_checked",ground_cube_checked);
+                i.putExtra("final3",final3);
+                i.putExtra("final4",final4);
+                i.putExtra("climb_time2",climb_time2);
+
+
 
                 startActivity(i);
+            }
+        });
+
+        backward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signup = new Intent(teleop.this, auto.class);
+                startActivity(signup);
             }
         });
 
@@ -244,6 +291,19 @@ public class teleop extends AppCompatActivity {
         RadioGroup row2 = (RadioGroup) findViewById(R.id.row2);
         RadioGroup row3 = (RadioGroup) findViewById(R.id.row3);
 
+        Button reset = (Button) findViewById(R.id.button2);
+
+        reset.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                shape.clearCheck();
+                row1.clearCheck();
+                row2.clearCheck();
+                row3.clearCheck();
+            }
+        });
+
         row1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
             @Override
@@ -254,8 +314,6 @@ public class teleop extends AppCompatActivity {
                     row1.clearCheck();
                     shape.clearCheck();
                     Toast.makeText(teleop.this, "Grid1 Cube Selected", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(teleop.this, "The number is: " + grid1_first, Toast.LENGTH_SHORT).show();
-
                 }
                 else if (grid1.isChecked() && cone.isChecked()) {
                     grid1_first += 1;
