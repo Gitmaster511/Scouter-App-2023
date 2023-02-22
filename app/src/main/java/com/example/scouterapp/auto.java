@@ -252,21 +252,7 @@ public class auto extends AppCompatActivity {
         scores[0] = new int[1,1,1,1,1,1,1,1];
         */
 
-        int [][] final1 = new int[3][9];
-        final1[0] = new int[]{grid1_first, grid2_first, grid3_first, grid4_first, grid5_first, grid6_first, grid7_first, grid8_first, grid9_first};
-        final1[1] = new int[]{grid10_first, grid11_first, grid12_first, grid13_first, grid14_first, grid15_first, grid16_first, grid17_first, grid18_first};
-        final1[2] = new int[]{grid19_first, grid20_first, grid21_first, grid22_first, grid23_first, grid24_first, grid25_first, grid26_first, grid27_first};
 
-        int [][] final2 = new int[3][9];
-        final2[0] = new int[]{grid1_second, grid2_second, grid3_second, grid4_second, grid5_second, grid6_second, grid7_second, grid8_second, grid9_second};
-        final2[1] = new int[]{grid10_second, grid11_second, grid12_second, grid13_second, grid14_second, grid15_second, grid16_second, grid17_second, grid18_second};
-        final2[2] = new int[]{grid19_second, grid20_second, grid21_second, grid22_second, grid23_second, grid24_second, grid25_second, grid26_second, grid27_second};
-
-        //String final11 = Arrays.toString(final1);
-        String final22 = Arrays.toString(final2);
-
-
-        String final11 = Arrays.toString(final1).replaceAll("\\[|\\]|,|\\s", "");
 
 
 
@@ -280,7 +266,20 @@ public class auto extends AppCompatActivity {
                 if (Docked_Engaged.isChecked()) {
                     String Docked_Engaged_checked = "1";
                 }
-                Toast.makeText(auto.this, final11, Toast.LENGTH_SHORT).show();
+                int [][] final1 = new int[3][9];
+                final1[0] = new int[]{grid1_first, grid2_first, grid3_first, grid4_first, grid5_first, grid6_first, grid7_first, grid8_first, grid9_first};
+                final1[1] = new int[]{grid10_first, grid11_first, grid12_first, grid13_first, grid14_first, grid15_first, grid16_first, grid17_first, grid18_first};
+                final1[2] = new int[]{grid19_first, grid20_first, grid21_first, grid22_first, grid23_first, grid24_first, grid25_first, grid26_first, grid27_first};
+
+                int [][] final2 = new int[3][9];
+                final2[0] = new int[]{grid1_second, grid2_second, grid3_second, grid4_second, grid5_second, grid6_second, grid7_second, grid8_second, grid9_second};
+                final2[1] = new int[]{grid10_second, grid11_second, grid12_second, grid13_second, grid14_second, grid15_second, grid16_second, grid17_second, grid18_second};
+                final2[2] = new int[]{grid19_second, grid20_second, grid21_second, grid22_second, grid23_second, grid24_second, grid25_second, grid26_second, grid27_second};
+
+                //String final11 = Arrays.toString(final1);
+                String final11 = Arrays.deepToString(final1);
+                String final22 = Arrays.deepToString(final2);
+
 
 
 
@@ -296,8 +295,8 @@ public class auto extends AppCompatActivity {
 
 
                 i.putExtra("climb_time", climb_time);
-                i.putExtra("First_array",final1);
-                i.putExtra("Second_array",final2);
+                i.putExtra("First_array",final11);
+                i.putExtra("Second_array",final22);
 
 
 

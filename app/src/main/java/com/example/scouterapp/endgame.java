@@ -24,6 +24,14 @@ public class endgame extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        String docked2_checked = "0";
+        String attempted_checked = "0";
+        String engaged2_checked = "0";
+        String soloclimb_checked = "0";
+        String gave_assistance_checked = "0";
+        String recieved_assistance_checked = "0";
+        String parked_checked = "0";
+
 
 
 
@@ -74,26 +82,83 @@ public class endgame extends AppCompatActivity {
 
 
         CheckBox attempted = (CheckBox) findViewById(R.id.attempted);
-        Boolean attempted_checked = attempted.isChecked();
+        attempted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (attempted.isChecked()) {
+                    String attempted_checked = "0";
+                }
+
+            }
+        });
+
+
+
 
         CheckBox docked2 = (CheckBox) findViewById(R.id.docked);
-        Boolean docked2_checked = docked2.isChecked();
+        docked2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (docked2.isChecked()) {
+                    String docked2_checked = "1";
+                }
+            }
+        });
 
         CheckBox engaged2 = (CheckBox) findViewById(R.id.engaged);
-        Boolean engaged2_checked = engaged2.isChecked();
+
+        engaged2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( engaged2.isChecked()) {
+                    String engaged2_checked = "1";
+                }
+
+            }
+        });
 
         CheckBox soloclimb = (CheckBox) findViewById(R.id.soloclimb);
-        Boolean soloclimb_checked = soloclimb.isChecked();
+        soloclimb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (soloclimb.isChecked()) {
+                    String soloclimb_checked = "1";
+                }
+            }
+        });
 
         CheckBox gave_assistance = (CheckBox) findViewById(R.id.gave_assistance);
-        Boolean gave_assistance_checked = gave_assistance.isChecked();
+
+        gave_assistance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(gave_assistance.isChecked()) {
+                    String gave_assistance_checked = "1";
+                }
+
+            }
+        });
 
 
         CheckBox recieved_assistance = (CheckBox) findViewById(R.id.recieved_assistance);
-        Boolean recieved_assistance_checked = recieved_assistance.isChecked();
+
+        recieved_assistance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String recieved_assistance_checked = "1";
+            }
+        });
 
         CheckBox parked = (CheckBox) findViewById(R.id.parked);
-        Boolean parked_checked = parked.isChecked();
+
+        parked.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (parked.isChecked()) {
+                    String parked_checked = "1";
+                }
+            }
+        });
 
 
         Chronometer simpleChronometer = (Chronometer) findViewById(R.id.endgameStopwatch); // initiate a chronometer

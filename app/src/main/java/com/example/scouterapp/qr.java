@@ -41,16 +41,16 @@ public class qr extends AppCompatActivity {
 
 
 
+
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
-        int First_array = intent.getIntExtra("First_array", 0);
-        int Second_array = intent.getIntExtra("Second_array", 0);
         String left_community_checked = intent.getStringExtra("left_community_checked");
         String Docked_Engaged_checked = intent.getStringExtra("Docked_Engaged_checked");
         String assisted_checked = intent.getStringExtra("assisted_checked");
         String docked_checked = intent.getStringExtra("docked_checked");
         String engaged_checked = intent.getStringExtra("engaged_checked");
-
+        String First_array = intent.getStringExtra("First_array");
+        String Second_array = intent.getStringExtra("Second_array");
 
 
 
@@ -81,20 +81,14 @@ public class qr extends AppCompatActivity {
         String win = intent.getStringExtra("win");
         
 
-
-        //String First_array = String.valueOf(First_array);
-
-        //String Second_array = String.valueOf(Second_array);
-
         String Third_array = String.valueOf(final3);
 
         String Fourth_array = String.valueOf(final4);
 
 
-
         //Second page
 
-        String[] finalresult = {Match_Number, Team_Number, Alliance, Driver_Station,climb_time,left_community_checked,Docked_Engaged_checked,assisted_checked,docked_checked,engaged_checked,
+        String[] finalresult = {Match_Number, Team_Number, Alliance, Driver_Station,climb_time,First_array,Second_array,left_community_checked,Docked_Engaged_checked,assisted_checked,docked_checked,engaged_checked,
                 cone_pickup_checked,cube_pickup_checked,station_cone_checked,station_cube_checked,ground_cone_checked,ground_cube_checked,climb_time2,
                 attempted_checked,docked2_checked,engaged2_checked,soloclimb_checked,gave_assistance_checked,recieved_assistance_checked,parked_checked,climb_time3,
                 aggression,additional,win};

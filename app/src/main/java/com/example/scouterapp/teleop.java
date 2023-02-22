@@ -16,6 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class teleop extends AppCompatActivity {
@@ -78,6 +79,13 @@ public class teleop extends AppCompatActivity {
     int grid26_second = 0;
     int grid27_first = 0;
     int grid27_second = 0;
+    String cone_pickup_checked = "0";
+    String ground_cone_checked = "0";
+    String station_cube_checked = "0";
+    String station_cone_checked = "0";
+    String cube_pickup_checked = "0";
+    String ground_cube_checked = "0";
+
 
     String climb_time2 = "";
 
@@ -174,39 +182,90 @@ public class teleop extends AppCompatActivity {
         Button backward = (Button) findViewById(R.id.Backward_page_3);
 
         CheckBox cone_pickup = (CheckBox) findViewById(R.id.Conepickup);
-        Boolean cone_pickup_checked = cone_pickup.isChecked();
+
+        cone_pickup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String cone_pickup_checked = "1";
+
+
+            }
+        });
+
 
         CheckBox cube_pickup = (CheckBox) findViewById(R.id.Cubepickup);
-        Boolean cube_pickup_checked = cube_pickup.isChecked();
+        cube_pickup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String cube_pickup_checked = "1";
+
+            }
+        });
+
+
 
         CheckBox station_cone = (CheckBox) findViewById(R.id.Station_cone);
-        Boolean station_cone_checked = station_cone.isChecked();
+
+        station_cone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String station_cone_checked = "1";
+
+            }
+        });
 
         CheckBox station_cube = (CheckBox) findViewById(R.id.Station_cube);
-        Boolean station_cube_checked = station_cube.isChecked();
+
+        station_cube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String station_cube_checked = "1";
+            }
+        });
 
         CheckBox ground_cone = (CheckBox) findViewById(R.id.Ground_cone);
-        Boolean ground_cone_checked = ground_cone.isChecked();
+        ground_cone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String ground_cone_checked = "1";
+            }
+        });
 
         CheckBox ground_cube = (CheckBox) findViewById(R.id.Ground_cube);
-        Boolean ground_cube_checked = ground_cube.isChecked();
+        ground_cube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String ground_cube_checked = "1";
 
 
-        int [][] final3 = new int[3][9];
-        final3[0] = new int[]{grid1_first, grid2_first, grid3_first, grid4_first, grid5_first, grid6_first, grid7_first, grid8_first, grid9_first};
-        final3[1] = new int[]{grid10_first, grid11_first, grid12_first, grid13_first, grid14_first, grid15_first, grid16_first, grid17_first, grid18_first};
-        final3[2] = new int[]{grid19_first, grid20_first, grid21_first, grid22_first, grid23_first, grid24_first, grid25_first, grid26_first, grid27_first};
+            }
+        });
 
-        int [][] final4 = new int[3][9];
-        final4[0] = new int[]{grid1_second, grid2_second, grid3_second, grid4_second, grid5_second, grid6_second, grid7_second, grid8_second, grid9_second};
-        final4[1] = new int[]{grid10_second, grid11_second, grid12_second, grid13_second, grid14_second, grid15_second, grid16_second, grid17_second, grid18_second};
-        final4[2] = new int[]{grid19_second, grid20_second, grid21_second, grid22_second, grid23_second, grid24_second, grid25_second, grid26_second, grid27_second};
+
 
 
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                int [][] final3 = new int[3][9];
+                final3[0] = new int[]{grid1_first, grid2_first, grid3_first, grid4_first, grid5_first, grid6_first, grid7_first, grid8_first, grid9_first};
+                final3[1] = new int[]{grid10_first, grid11_first, grid12_first, grid13_first, grid14_first, grid15_first, grid16_first, grid17_first, grid18_first};
+                final3[2] = new int[]{grid19_first, grid20_first, grid21_first, grid22_first, grid23_first, grid24_first, grid25_first, grid26_first, grid27_first};
+
+                int [][] final4 = new int[3][9];
+                final4[0] = new int[]{grid1_second, grid2_second, grid3_second, grid4_second, grid5_second, grid6_second, grid7_second, grid8_second, grid9_second};
+                final4[1] = new int[]{grid10_second, grid11_second, grid12_second, grid13_second, grid14_second, grid15_second, grid16_second, grid17_second, grid18_second};
+                final4[2] = new int[]{grid19_second, grid20_second, grid21_second, grid22_second, grid23_second, grid24_second, grid25_second, grid26_second, grid27_second};
+
+                String final33 = Arrays.deepToString(final3);
+                String final44 = Arrays.deepToString(final4);
+
+
+
                 Intent i = new Intent(teleop.this, endgame.class);
+
+
 
 
                 //First Page
@@ -235,10 +294,9 @@ public class teleop extends AppCompatActivity {
                 i.putExtra("station_cube_checked",station_cube_checked);
                 i.putExtra("ground_cone_checked",ground_cone_checked);
                 i.putExtra("ground_cube_checked",ground_cube_checked);
-                i.putExtra("final3",final3);
-                i.putExtra("final4",final4);
+                i.putExtra("final3",final33);
+                i.putExtra("final4",final44);
                 i.putExtra("climb_time2",climb_time2);
-
 
 
                 startActivity(i);
