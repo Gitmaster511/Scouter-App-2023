@@ -13,6 +13,8 @@ import android.os.SystemClock;
 import android.provider.CalendarContract;
 import android.view.View;
 import android.os.Bundle;
+
+import java.util.Arrays;
 import java.util.Locale;
 
 import android.widget.Chronometer;
@@ -52,6 +54,11 @@ public class auto extends AppCompatActivity {
     private boolean wasRunning;
     String climb_time = "";
 
+    String Docked_Engaged_checked = "0";
+    String left_community_checked = "0";
+    String assisted_checked = "0";
+    String docked_checked = "0";
+    String engaged_checked = "0";
     int grid1_first = 0;
     int grid1_second = 0;
     int grid2_first = 0;
@@ -186,17 +193,56 @@ public class auto extends AppCompatActivity {
         Button forward = (Button) findViewById(R.id.Forward_page_2);
 
         CheckBox left_community = (CheckBox) findViewById(R.id.left_community);
-        Boolean left_community_checked = left_community.isChecked();
+        left_community.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (left_community.isChecked()) {
+                    left_community_checked = "1";
+                }
+            }
+        });
+
         CheckBox Docked_Engaged = (CheckBox) findViewById(R.id.Docked_Engaged);
-        Boolean Docked_Engaged_checked = Docked_Engaged.isChecked();
+    Docked_Engaged.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (Docked_Engaged.isChecked()) {
+                Docked_Engaged_checked = "1";
+            }
+        }
+    });
+
+
         CheckBox assisted = (CheckBox) findViewById(R.id.Assisted);
-        Boolean assisted_checked = assisted.isChecked();
+        assisted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (assisted.isChecked()) {
+                    assisted_checked = "1";
+                }
+            }
+        });
+
 
         CheckBox docked = (CheckBox) findViewById(R.id.Docked);
-        Boolean docked_checked = docked.isChecked();
+        docked.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (docked.isChecked()) {
+                    docked_checked = "1";
+                }
+            }
+        });
 
         CheckBox engaged = (CheckBox) findViewById(R.id.Engaged);
-        Boolean engaged_engaged = engaged.isChecked();
+        engaged.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (engaged.isChecked()) {
+                    engaged_checked = "1";
+                }
+            }
+        });
 
         //Int first_array = [[grid1_first]]
         /*int[][] scores = new int[3][9];
@@ -216,12 +262,26 @@ public class auto extends AppCompatActivity {
         final2[1] = new int[]{grid10_second, grid11_second, grid12_second, grid13_second, grid14_second, grid15_second, grid16_second, grid17_second, grid18_second};
         final2[2] = new int[]{grid19_second, grid20_second, grid21_second, grid22_second, grid23_second, grid24_second, grid25_second, grid26_second, grid27_second};
 
+        //String final11 = Arrays.toString(final1);
+        String final22 = Arrays.toString(final2);
+
+
+        String final11 = Arrays.toString(final1).replaceAll("\\[|\\]|,|\\s", "");
+
+
+
 
         forward.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
             public void onClick(View v) {
+
+                if (Docked_Engaged.isChecked()) {
+                    String Docked_Engaged_checked = "1";
+                }
+                Toast.makeText(auto.this, final11, Toast.LENGTH_SHORT).show();
+
 
 
 
@@ -231,10 +291,8 @@ public class auto extends AppCompatActivity {
                 // Old
                 i.putExtra ( "Match_Number", Match_Number);
                 i.putExtra ( "Team_Number", Team_Number);
-
                 i.putExtra("Alliance", Alliance);
-                i.putExtra("Driver_Station: ",Driver_Station);
-                Toast.makeText(auto.this, Driver_Station, Toast.LENGTH_SHORT).show();
+                i.putExtra("Driver_Station",Driver_Station);
 
 
                 i.putExtra("climb_time", climb_time);
@@ -243,11 +301,17 @@ public class auto extends AppCompatActivity {
 
 
 
-                i.putExtra("Left_Community",left_community_checked);
-                i.putExtra("Docked_Engaged",Docked_Engaged_checked);
-                i.putExtra("assisted",assisted_checked);
-                i.putExtra("docked",docked_checked);
-                i.putExtra("engaged",engaged_engaged);
+                i.putExtra("left_community_checked",left_community_checked);
+                i.putExtra("Docked_Engaged_checked",Docked_Engaged_checked);
+                i.putExtra("assisted_checked",assisted_checked);
+                i.putExtra("docked_checked",docked_checked);
+                i.putExtra("engaged_checked",engaged_checked);
+
+
+
+
+
+
                 startActivity(i);
             }
         });

@@ -120,8 +120,6 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra ( "Team_Number", teamNumber.getText().toString());
                 i.putExtra ( "Alliance", Alliance.toString());
                 i.putExtra("Driver_Station", DriverStation);
-                Toast.makeText(MainActivity.this, DriverStation, Toast.LENGTH_SHORT).show();
-
 
                 startActivity(i);
             }

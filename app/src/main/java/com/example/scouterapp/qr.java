@@ -40,15 +40,19 @@ public class qr extends AppCompatActivity {
         String Driver_Station = intent.getStringExtra("Driver_Station");
 
 
+
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
         int First_array = intent.getIntExtra("First_array", 0);
         int Second_array = intent.getIntExtra("Second_array", 0);
-        String Left_Community = intent.getStringExtra("Left_Community");
-        String Docked_Engaged = intent.getStringExtra("Docked_Engaged");
-        String assisted = intent.getStringExtra("assisted");
-        String docked = intent.getStringExtra("docked");
-        String engaged = intent.getStringExtra("engaged");
+        String left_community_checked = intent.getStringExtra("left_community_checked");
+        String Docked_Engaged_checked = intent.getStringExtra("Docked_Engaged_checked");
+        String assisted_checked = intent.getStringExtra("assisted_checked");
+        String docked_checked = intent.getStringExtra("docked_checked");
+        String engaged_checked = intent.getStringExtra("engaged_checked");
+
+
+
 
         //Teleop
         String cone_pickup_checked = intent.getStringExtra("cone_pickup_checked");
@@ -78,19 +82,20 @@ public class qr extends AppCompatActivity {
         
 
 
-        String f = String.valueOf(First_array);
+        //String First_array = String.valueOf(First_array);
 
-        String s = String.valueOf(Second_array);
+        //String Second_array = String.valueOf(Second_array);
 
-        String f3 = String.valueOf(final3);
+        String Third_array = String.valueOf(final3);
 
-        String f4 = String.valueOf(final4);
-
-
+        String Fourth_array = String.valueOf(final4);
 
 
-        String[] finalresult = {Match_Number, Team_Number, Alliance, Driver_Station,climb_time,f,s,Left_Community,Docked_Engaged,assisted,docked,engaged,
-                cone_pickup_checked,cube_pickup_checked,station_cone_checked,station_cube_checked,ground_cone_checked,ground_cube_checked,f3,f4,climb_time2,
+
+        //Second page
+
+        String[] finalresult = {Match_Number, Team_Number, Alliance, Driver_Station,climb_time,left_community_checked,Docked_Engaged_checked,assisted_checked,docked_checked,engaged_checked,
+                cone_pickup_checked,cube_pickup_checked,station_cone_checked,station_cube_checked,ground_cone_checked,ground_cube_checked,climb_time2,
                 attempted_checked,docked2_checked,engaged2_checked,soloclimb_checked,gave_assistance_checked,recieved_assistance_checked,parked_checked,climb_time3,
                 aggression,additional,win};
 
