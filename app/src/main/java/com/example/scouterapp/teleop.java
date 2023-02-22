@@ -90,6 +90,8 @@ public class teleop extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
+
+
         Intent intent = getIntent();
 
         //First Page
@@ -97,6 +99,12 @@ public class teleop extends AppCompatActivity {
         String Team_Number = intent.getStringExtra("Team_Number");
         String Alliance = intent.getStringExtra("Alliance");
         String Driver_Station = intent.getStringExtra("Driver_Station");
+        Toast.makeText(teleop.this, Driver_Station, Toast.LENGTH_SHORT).show();
+
+
+
+
+
 
 
         //Auto
@@ -203,7 +211,7 @@ public class teleop extends AppCompatActivity {
                 //First Page
                 i.putExtra ( "Match_Number", Match_Number);
                 i.putExtra ( "Team_Number", Team_Number);
-                i.putExtra("Alliance: ",Alliance);
+                i.putExtra ( "Alliance", Alliance.toString());
                 i.putExtra("Driver_Station: ",Driver_Station);
 
 

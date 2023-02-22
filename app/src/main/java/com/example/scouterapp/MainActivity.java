@@ -115,14 +115,15 @@ public class MainActivity extends AppCompatActivity {
                     DriverStation = (String) "Right";
                 }
 
-                Intent signup = new Intent(MainActivity.this, auto.class);
-                signup.putExtra ( "Match_Number", matchNumber.getText().toString());
-                signup.putExtra ( "Team_Number", teamNumber.getText().toString());
-                signup.putExtra("Alliance", Alliance);
-                signup.putExtra("Driver_Station", DriverStation);
+                Intent i = new Intent(MainActivity.this, auto.class);
+                i.putExtra ( "Match_Number", matchNumber.getText().toString());
+                i.putExtra ( "Team_Number", teamNumber.getText().toString());
+                i.putExtra ( "Alliance", Alliance.toString());
+                i.putExtra("Driver_Station", DriverStation);
+                Toast.makeText(MainActivity.this, DriverStation, Toast.LENGTH_SHORT).show();
 
 
-                startActivity(signup);
+                startActivity(i);
             }
         });
 

@@ -33,7 +33,6 @@ public class notes extends AppCompatActivity {
         String Team_Number = intent.getStringExtra("Team_Number");
         String Alliance = intent.getStringExtra("Alliance");
         String Driver_Station = intent.getStringExtra("Driver_Station");
-        Toast.makeText(notes.this, Alliance, Toast.LENGTH_SHORT).show();
 
 
 
@@ -114,7 +113,7 @@ public class notes extends AppCompatActivity {
                 //First Page
                 i.putExtra ( "Match_Number", Match_Number);
                 i.putExtra ( "Team_Number", Team_Number);
-                i.putExtra("Alliance: ",Alliance);
+                i.putExtra ( "Alliance", Alliance);
                 i.putExtra("Driver_Station: ",Driver_Station);
 
 

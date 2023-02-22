@@ -130,6 +130,7 @@ public class auto extends AppCompatActivity {
 
 
 
+
         //Remove Topbar + bottom Bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -153,6 +154,7 @@ public class auto extends AppCompatActivity {
         Button startOrStopTextView = (Button) findViewById(R.id.start_button);
 
         Button resetButton = (Button) findViewById(R.id.reset_button);
+
 
 
 
@@ -225,12 +227,14 @@ public class auto extends AppCompatActivity {
 
                 Intent i = new Intent(auto.this, teleop.class);
 
+
                 // Old
                 i.putExtra ( "Match_Number", Match_Number);
                 i.putExtra ( "Team_Number", Team_Number);
 
-                i.putExtra("Alliance: ",Alliance);
+                i.putExtra("Alliance", Alliance);
                 i.putExtra("Driver_Station: ",Driver_Station);
+                Toast.makeText(auto.this, Driver_Station, Toast.LENGTH_SHORT).show();
 
 
                 i.putExtra("climb_time", climb_time);

@@ -38,6 +38,7 @@ public class endgame extends AppCompatActivity {
 
 
 
+
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
         int First_array = intent.getIntExtra("First_array", 0);
@@ -133,8 +134,9 @@ public class endgame extends AppCompatActivity {
                 //First Page
                 i.putExtra ( "Match_Number", Match_Number);
                 i.putExtra ( "Team_Number", Team_Number);
-                i.putExtra("Alliance: ",Alliance);
+                i.putExtra ( "Alliance", Alliance.toString());
                 i.putExtra("Driver_Station: ",Driver_Station);
+
 
 
 
