@@ -49,8 +49,8 @@ public class endgame extends AppCompatActivity {
 
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
-        int First_array = intent.getIntExtra("First_array", 0);
-        int Second_array = intent.getIntExtra("Second_array", 0);
+        String First_array = intent.getStringExtra("First_array");
+        String Second_array = intent.getStringExtra("Second_array");
         String left_community_checked = intent.getStringExtra("left_community_checked");
         String Docked_Engaged_checked = intent.getStringExtra("Docked_Engaged_checked");
         String assisted_checked = intent.getStringExtra("assisted_checked");
@@ -65,8 +65,8 @@ public class endgame extends AppCompatActivity {
         String station_cube_checked = intent.getStringExtra("station_cube_checked");
         String ground_cone_checked = intent.getStringExtra("ground_cone_checked");
         String ground_cube_checked = intent.getStringExtra("ground_cube_checked");
-        int final3 = intent.getIntExtra("final3", 0);
-        int final4 = intent.getIntExtra("final4", 0);
+        String final3 = intent.getStringExtra("final3");
+        String final4 = intent.getStringExtra("final4");
         String climb_time2 = intent.getStringExtra("climb_time2");
 
 
@@ -193,6 +193,7 @@ public class endgame extends AppCompatActivity {
 
 
 
+
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -215,16 +216,6 @@ public class endgame extends AppCompatActivity {
                 i.putExtra("assisted_checked",assisted_checked);
                 i.putExtra("docked_checked",docked_checked);
                 i.putExtra("engaged_checked",engaged_checked);
-
-                Toast.makeText(endgame.this, left_community_checked, Toast.LENGTH_SHORT).show();
-                Toast.makeText(endgame.this, Docked_Engaged_checked, Toast.LENGTH_SHORT).show();
-
-                Toast.makeText(endgame.this, assisted_checked, Toast.LENGTH_SHORT).show();
-
-                Toast.makeText(endgame.this, docked_checked, Toast.LENGTH_SHORT).show();
-                Toast.makeText(endgame.this, engaged_checked, Toast.LENGTH_SHORT).show();
-
-
 
 
                 //Third Page

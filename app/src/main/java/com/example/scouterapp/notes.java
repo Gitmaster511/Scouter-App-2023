@@ -21,6 +21,7 @@ import java.util.Objects;
 
 public class notes extends AppCompatActivity {
     String win = "";
+    int aggression = 0;
     @SuppressLint("AppCompatMethod")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +39,8 @@ public class notes extends AppCompatActivity {
 
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
-        int First_array = intent.getIntExtra("First_array", 0);
-        int Second_array = intent.getIntExtra("Second_array", 0);
+        String First_array = intent.getStringExtra("First_array");
+        String Second_array = intent.getStringExtra("Second_array");
         String left_community_checked = intent.getStringExtra("left_community_checked");
         String Docked_Engaged_checked = intent.getStringExtra("Docked_Engaged_checked");
         String assisted_checked = intent.getStringExtra("assisted_checked");
@@ -53,8 +54,8 @@ public class notes extends AppCompatActivity {
         String station_cube_checked = intent.getStringExtra("station_cube_checked");
         String ground_cone_checked = intent.getStringExtra("ground_cone_checked");
         String ground_cube_checked = intent.getStringExtra("ground_cube_checked");
-        int final3 = intent.getIntExtra("final3", 0);
-        int final4 = intent.getIntExtra("final4", 0);
+        String final3 = intent.getStringExtra("final3");
+        String final4 = intent.getStringExtra("final4");
         String climb_time2 = intent.getStringExtra("climb_time2");
 
         //Endgame
@@ -74,40 +75,56 @@ public class notes extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_notes);
-        View decorView = getWindow().getDecorView();
-// Hide both the navigation bar and the status bar.
-// SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
-// a general rule, you should design your app to hide the status bar whenever you
-// hide the navigation bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
+
 
 
         Button forward = (Button) findViewById(R.id.Forward_page_4);
         Button backward = (Button) findViewById(R.id.Backward_page_4);
         ProgressBar slider = findViewById(R.id.seekBar);
-        int aggression = (int) slider.getProgress();
+
+        slider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(notes.this,"Current value is "+ slider.getProgress(),Toast.LENGTH_SHORT).show();
+                aggression = (int)slider.getProgress();
+            }
+        });
+
 
         TextView additional = (EditText)findViewById(R.id.text_input);
 
+
         RadioButton yes = (RadioButton) findViewById(R.id.yes);
 
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (yes.isChecked())
+                {
+                    win = (String) "1";
+                }
+                else
+                {
+                    win = (String) "0";
+                }
 
-        if (yes.isChecked())
-        {
-            win = "Yes";
-        }
+            }
+        });
 
-        else
-        {
-            win = "No";
-        }
+
 
 
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String aggression_final = String.valueOf(aggression);
+
+
+                String text = (String) additional.getText().toString();
+                String strNew = text.replace(";", " ");
+                String finalstr = strNew.replace(",", " ");
+
                 Intent i = new Intent(notes.this, qr.class);
                 //First Page
                 i.putExtra ( "Match_Number", Match_Number);
@@ -124,7 +141,6 @@ public class notes extends AppCompatActivity {
                 i.putExtra("assisted_checked",assisted_checked);
                 i.putExtra("docked_checked",docked_checked);
                 i.putExtra("engaged_checked",engaged_checked);
-
 
 
                 //Third Page
@@ -149,8 +165,8 @@ public class notes extends AppCompatActivity {
                 i.putExtra("climb_time3", climb_time3);
 
                 //Fifth Page
-                i.putExtra("aggression", aggression);
-                i.putExtra ( "Match_Number", additional.getText().toString());
+                i.putExtra("aggression", aggression_final);
+                i.putExtra ( "additional",finalstr);
                 i.putExtra("win", win);
                 startActivity(i);
             }

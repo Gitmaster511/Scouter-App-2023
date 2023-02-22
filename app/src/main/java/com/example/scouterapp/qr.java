@@ -61,8 +61,8 @@ public class qr extends AppCompatActivity {
         String station_cube_checked = intent.getStringExtra("station_cube_checked");
         String ground_cone_checked = intent.getStringExtra("ground_cone_checked");
         String ground_cube_checked = intent.getStringExtra("ground_cube_checked");
-        int final3 = intent.getIntExtra("final3", 0);
-        int final4 = intent.getIntExtra("final4", 0);
+        String final3 = intent.getStringExtra("final3");
+        String final4 = intent.getStringExtra("final4");
         String climb_time2 = intent.getStringExtra("climb_time2");
 
         //Endgame
@@ -79,21 +79,21 @@ public class qr extends AppCompatActivity {
         String additional = intent.getStringExtra("additional");
 
         String win = intent.getStringExtra("win");
-        
-
-        String Third_array = String.valueOf(final3);
-
-        String Fourth_array = String.valueOf(final4);
 
 
         //Second page
 
+        /*
         String[] finalresult = {Match_Number, Team_Number, Alliance, Driver_Station,climb_time,First_array,Second_array,left_community_checked,Docked_Engaged_checked,assisted_checked,docked_checked,engaged_checked,
-                cone_pickup_checked,cube_pickup_checked,station_cone_checked,station_cube_checked,ground_cone_checked,ground_cube_checked,climb_time2,
+                cone_pickup_checked,cube_pickup_checked,station_cone_checked,station_cube_checked,ground_cone_checked,ground_cube_checked,final3, final4, climb_time2,
                 attempted_checked,docked2_checked,engaged2_checked,soloclimb_checked,gave_assistance_checked,recieved_assistance_checked,parked_checked,climb_time3,
                 aggression,additional,win};
+          String str = String.join(";", finalresult);
 
-        String str = String.join(";", finalresult);
+        */
+
+        String finalresult = Match_Number + ";" + Team_Number + ";" + Alliance + ";" + Driver_Station + ";" + climb_time + ";" + First_array + ";" + Second_array + ";" + left_community_checked + ";" + Docked_Engaged_checked + ";" + assisted_checked + ";" + docked_checked + ";" + engaged_checked + ";" + cone_pickup_checked + ";" + cube_pickup_checked + ";" + station_cone_checked + ";" + station_cube_checked + ";" + ground_cone_checked + ";" + ground_cube_checked + ";" + final3 + ";" + final4 + ";" + climb_time2 + ";" + attempted_checked + ";" + docked2_checked + ";" + engaged2_checked + ";" + soloclimb_checked + ";" + gave_assistance_checked + ";" + recieved_assistance_checked + ";" + parked_checked + ";" + climb_time3 + ";" + aggression + ";" + additional + ";" + win;
+
 
 
 
@@ -102,14 +102,6 @@ public class qr extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_qr);
 
-        View decorView = getWindow().getDecorView();
-// Hide both the navigation bar and the status bar.
-// SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
-// a general rule, you should design your app to hide the status bar whenever you
-// hide the navigation bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
 
         Button backward = (Button) findViewById(R.id.Backward_page_5);
 
@@ -131,7 +123,7 @@ public class qr extends AppCompatActivity {
             MultiFormatWriter writer = new MultiFormatWriter();
             try
             {
-                BitMatrix matrix = writer.encode((str),
+                BitMatrix matrix = writer.encode((finalresult),
                         BarcodeFormat.QR_CODE,
                         800,
                         800);

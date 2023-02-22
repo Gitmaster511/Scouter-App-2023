@@ -117,8 +117,8 @@ public class teleop extends AppCompatActivity {
 
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
-        int First_array = intent.getIntExtra("First_array", 0);
-        int Second_array = intent.getIntExtra("Second_array", 0);
+        String First_array = intent.getStringExtra("First_array");
+        String Second_array = intent.getStringExtra("Second_array");
         String left_community_checked = intent.getStringExtra("left_community_checked");
         String Docked_Engaged_checked = intent.getStringExtra("Docked_Engaged_checked");
         String assisted_checked = intent.getStringExtra("assisted_checked");
@@ -279,6 +279,7 @@ public class teleop extends AppCompatActivity {
                 i.putExtra("climb_time", climb_time);
                 i.putExtra("First_array",First_array);
                 i.putExtra("Second_array",Second_array);
+
 
                 i.putExtra("left_community_checked",left_community_checked);
                 i.putExtra("Docked_Engaged_checked",Docked_Engaged_checked);
