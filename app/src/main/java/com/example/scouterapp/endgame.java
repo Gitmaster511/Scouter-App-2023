@@ -19,23 +19,18 @@ import java.util.Objects;
 public class endgame extends AppCompatActivity {
     String climb_time3 = "";
 
+    String docked2_checked = "0";
+    String attempted_checked = "0";
+    String engaged2_checked = "0";
+    String soloclimb_checked = "0";
+    String gave_assistance_checked = "0";
+    String recieved_assistance_checked = "0";
+    String parked_checked = "0";
+
     @SuppressLint("AppCompatMethod")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        String docked2_checked = "0";
-        String attempted_checked = "0";
-        String engaged2_checked = "0";
-        String soloclimb_checked = "0";
-        String gave_assistance_checked = "0";
-        String recieved_assistance_checked = "0";
-        String parked_checked = "0";
-
-
-
-
-
         Intent intent = getIntent();
 
         //Main
@@ -81,12 +76,13 @@ public class endgame extends AppCompatActivity {
         Button backward = (Button) findViewById(R.id.Backward_page_4);
 
 
+
         CheckBox attempted = (CheckBox) findViewById(R.id.attempted);
         attempted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (attempted.isChecked()) {
-                    String attempted_checked = "0";
+                    attempted_checked = (String) "0";
                 }
 
             }
@@ -100,7 +96,7 @@ public class endgame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (docked2.isChecked()) {
-                    String docked2_checked = "1";
+                    docked2_checked = (String) "1";
                 }
             }
         });
@@ -111,7 +107,7 @@ public class endgame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if ( engaged2.isChecked()) {
-                    String engaged2_checked = "1";
+                    engaged2_checked = (String) "1";
                 }
 
             }
@@ -122,7 +118,7 @@ public class endgame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (soloclimb.isChecked()) {
-                    String soloclimb_checked = "1";
+                    soloclimb_checked = (String) "1";
                 }
             }
         });
@@ -133,7 +129,7 @@ public class endgame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(gave_assistance.isChecked()) {
-                    String gave_assistance_checked = "1";
+                    gave_assistance_checked = (String) "1";
                 }
 
             }
@@ -144,8 +140,9 @@ public class endgame extends AppCompatActivity {
 
         recieved_assistance.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String recieved_assistance_checked = "1";
+            public void onClick(View v)
+            {
+                recieved_assistance_checked = (String) "1";
             }
         });
 
@@ -155,7 +152,7 @@ public class endgame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (parked.isChecked()) {
-                    String parked_checked = "1";
+                    parked_checked = (String) "1";
                 }
             }
         });
@@ -207,6 +204,7 @@ public class endgame extends AppCompatActivity {
 
 
 
+
                 //Second page
                 i.putExtra("climb_time", climb_time);
                 i.putExtra("First_array",First_array);
@@ -228,6 +226,8 @@ public class endgame extends AppCompatActivity {
                 i.putExtra("final3",final3);
                 i.putExtra("final4",final4);
                 i.putExtra("climb_time2",climb_time2);
+
+
 
                 //Fourth Page
                 i.putExtra("attempted_checked", attempted_checked);

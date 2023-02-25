@@ -139,14 +139,6 @@ public class teleop extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_teleop);
 
-        View decorView = getWindow().getDecorView();
-// Hide both the navigation bar and the status bar.
-// SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
-// a general rule, you should design your app to hide the status bar whenever you
-// hide the navigation bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-
 
         Button startOrStopTextView = (Button) findViewById(R.id.startOrStopTextView);
 
@@ -186,7 +178,7 @@ public class teleop extends AppCompatActivity {
         cone_pickup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String cone_pickup_checked = "1";
+                cone_pickup_checked = (String) "1";
 
 
             }
@@ -197,7 +189,7 @@ public class teleop extends AppCompatActivity {
         cube_pickup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String cube_pickup_checked = "1";
+                cube_pickup_checked = (String) "1";
 
             }
         });
@@ -209,17 +201,17 @@ public class teleop extends AppCompatActivity {
         station_cone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String station_cone_checked = "1";
+                station_cone_checked = (String) "1";
 
             }
         });
 
         CheckBox station_cube = (CheckBox) findViewById(R.id.Station_cube);
-
         station_cube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String station_cube_checked = "1";
+
+                station_cube_checked = (String) "1";
             }
         });
 
@@ -227,15 +219,16 @@ public class teleop extends AppCompatActivity {
         ground_cone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String ground_cone_checked = "1";
+                ground_cone_checked = (String) "1";
             }
         });
+
 
         CheckBox ground_cube = (CheckBox) findViewById(R.id.Ground_cube);
         ground_cube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String ground_cube_checked = "1";
+                ground_cube_checked = (String) "1";
 
 
             }

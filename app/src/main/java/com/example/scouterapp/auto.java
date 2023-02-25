@@ -186,7 +186,7 @@ public class auto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (left_community.isChecked()) {
-                    left_community_checked = "1";
+                    left_community_checked = (String) "1";
                 }
             }
         });
@@ -196,7 +196,7 @@ public class auto extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             if (Docked_Engaged.isChecked()) {
-                Docked_Engaged_checked = "1";
+                Docked_Engaged_checked = (String) "1";
             }
         }
     });
@@ -207,7 +207,7 @@ public class auto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (assisted.isChecked()) {
-                    assisted_checked = "1";
+                    assisted_checked = (String) "1";
                 }
             }
         });
@@ -218,7 +218,7 @@ public class auto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (docked.isChecked()) {
-                    docked_checked = "1";
+                    docked_checked = (String) "1";
                 }
             }
         });
@@ -228,21 +228,10 @@ public class auto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (engaged.isChecked()) {
-                    engaged_checked = "1";
+                    engaged_checked = (String) "1";
                 }
             }
         });
-
-        //Int first_array = [[grid1_first]]
-        /*int[][] scores = new int[3][9];
-
-        //scores[0] = [grid1_first, grid2_first];
-
-        scores[0] = new int[1,1,1,1,1,1,1,1];
-        */
-
-
-
 
 
 
@@ -253,7 +242,7 @@ public class auto extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (Docked_Engaged.isChecked()) {
-                    String Docked_Engaged_checked = "1";
+                    String Docked_Engaged_checked = (String) "1";
                 }
                 int [][] final1 = new int[3][9];
                 final1[0] = new int[]{grid1_first, grid2_first, grid3_first, grid4_first, grid5_first, grid6_first, grid7_first, grid8_first, grid9_first};
@@ -268,9 +257,6 @@ public class auto extends AppCompatActivity {
                 //String final11 = Arrays.toString(final1);
                 String final11 = Arrays.deepToString(final1);
                 String final22 = Arrays.deepToString(final2);
-
-
-
 
 
                 Intent i = new Intent(auto.this, teleop.class);
@@ -289,16 +275,12 @@ public class auto extends AppCompatActivity {
 
 
 
+
                 i.putExtra("left_community_checked",left_community_checked);
                 i.putExtra("Docked_Engaged_checked",Docked_Engaged_checked);
                 i.putExtra("assisted_checked",assisted_checked);
                 i.putExtra("docked_checked",docked_checked);
                 i.putExtra("engaged_checked",engaged_checked);
-
-
-
-
-
 
                 startActivity(i);
             }

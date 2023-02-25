@@ -22,7 +22,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroup;
 
-    String Alliance;
+    String Alliance= "";
     String driver_station;
     String d = "sharedPrefs";
 
@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         EditText teamNumber = (EditText) findViewById(R.id.team_number_input);
         teamNumber.setTextColor(Color.WHITE);//set the red text color
         //String teamNumberOutput = teamNumber.getText().toString();
-
+        RadioButton Red = (RadioButton) findViewById(R.id.Red);
+        RadioButton Blue = (RadioButton) findViewById(R.id.Blue);
 
 
 
@@ -66,8 +67,7 @@ public class MainActivity extends AppCompatActivity {
         Button forward = (Button) findViewById(R.id.Forward_page_1);
         forward.setOnClickListener(new View.OnClickListener() {
 
-            RadioButton Red = (RadioButton) findViewById(R.id.Red);
-            RadioButton Blue = (RadioButton) findViewById(R.id.Blue);
+
             RadioButton Left = (RadioButton) findViewById(R.id.Left);
             RadioButton Mid = (RadioButton) findViewById(R.id.Middle);
             RadioButton Right = (RadioButton) findViewById(R.id.Right);
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                     Alliance = (String) "Red";
                 }
 
-                else
+                if (Blue.isChecked())
                 {
                     Alliance = (String) "Blue";
                 }

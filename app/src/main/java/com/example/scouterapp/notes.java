@@ -20,7 +20,7 @@ import com.google.android.material.slider.Slider;
 import java.util.Objects;
 
 public class notes extends AppCompatActivity {
-    String win = "";
+    String win = "0";
     int aggression = 0;
     @SuppressLint("AppCompatMethod")
     @Override
@@ -103,11 +103,6 @@ public class notes extends AppCompatActivity {
                 {
                     win = (String) "1";
                 }
-                else
-                {
-                    win = (String) "0";
-                }
-
             }
         });
 

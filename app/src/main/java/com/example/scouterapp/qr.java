@@ -51,6 +51,9 @@ public class qr extends AppCompatActivity {
         String engaged_checked = intent.getStringExtra("engaged_checked");
         String First_array = intent.getStringExtra("First_array");
         String Second_array = intent.getStringExtra("Second_array");
+        First_array = (String) First_array.replace(",",".");
+        Second_array = (String) Second_array.replace(",",".");
+
 
 
 
@@ -64,6 +67,7 @@ public class qr extends AppCompatActivity {
         String final3 = intent.getStringExtra("final3");
         String final4 = intent.getStringExtra("final4");
         String climb_time2 = intent.getStringExtra("climb_time2");
+
 
         //Endgame
         String attempted_checked = intent.getStringExtra("attempted_checked");
@@ -81,17 +85,7 @@ public class qr extends AppCompatActivity {
         String win = intent.getStringExtra("win");
 
 
-        //Second page
-
-        /*
-        String[] finalresult = {Match_Number, Team_Number, Alliance, Driver_Station,climb_time,First_array,Second_array,left_community_checked,Docked_Engaged_checked,assisted_checked,docked_checked,engaged_checked,
-                cone_pickup_checked,cube_pickup_checked,station_cone_checked,station_cube_checked,ground_cone_checked,ground_cube_checked,final3, final4, climb_time2,
-                attempted_checked,docked2_checked,engaged2_checked,soloclimb_checked,gave_assistance_checked,recieved_assistance_checked,parked_checked,climb_time3,
-                aggression,additional,win};
-          String str = String.join(";", finalresult);
-
-        */
-
+        //Final string output
         String finalresult = Match_Number + ";" + Team_Number + ";" + Alliance + ";" + Driver_Station + ";" + climb_time + ";" + First_array + ";" + Second_array + ";" + left_community_checked + ";" + Docked_Engaged_checked + ";" + assisted_checked + ";" + docked_checked + ";" + engaged_checked + ";" + cone_pickup_checked + ";" + cube_pickup_checked + ";" + station_cone_checked + ";" + station_cube_checked + ";" + ground_cone_checked + ";" + ground_cube_checked + ";" + final3 + ";" + final4 + ";" + climb_time2 + ";" + attempted_checked + ";" + docked2_checked + ";" + engaged2_checked + ";" + soloclimb_checked + ";" + gave_assistance_checked + ";" + recieved_assistance_checked + ";" + parked_checked + ";" + climb_time3 + ";" + aggression + ";" + additional + ";" + win + "?";
 
 
