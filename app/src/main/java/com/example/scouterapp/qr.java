@@ -44,6 +44,8 @@ public class qr extends AppCompatActivity {
 
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
+        climb_time = climb_time.replace(":", "");
+
         String left_community_checked = intent.getStringExtra("left_community_checked");
         String Docked_Engaged_checked = intent.getStringExtra("Docked_Engaged_checked");
         String assisted_checked = intent.getStringExtra("assisted_checked");
@@ -67,6 +69,8 @@ public class qr extends AppCompatActivity {
         String final3 = intent.getStringExtra("final3");
         String final4 = intent.getStringExtra("final4");
         String climb_time2 = intent.getStringExtra("climb_time2");
+        climb_time2 = climb_time2.replace(":", "");
+
 
 
         //Endgame
@@ -78,6 +82,7 @@ public class qr extends AppCompatActivity {
         String recieved_assistance_checked = intent.getStringExtra("recieved_assistance_checked");
         String parked_checked = intent.getStringExtra("parked_checked");
         String climb_time3 = intent.getStringExtra("climb_time3");
+        climb_time3 = climb_time3.replace(":", "");
 
         String aggression = intent.getStringExtra("aggression");
         String additional = intent.getStringExtra("additional");
