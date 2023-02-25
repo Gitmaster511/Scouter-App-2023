@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -80,23 +81,29 @@ public class notes extends AppCompatActivity {
 
         Button forward = (Button) findViewById(R.id.Forward_page_4);
         Button backward = (Button) findViewById(R.id.Backward_page_4);
-        ProgressBar slider = findViewById(R.id.seekBar);
+        SeekBar slider = findViewById(R.id.seekBar);
+        int maxValue=slider.getMax(); // get maximum value of the Seek bar
 
-        slider.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(notes.this,"Current value is "+ slider.getProgress(),Toast.LENGTH_SHORT).show();
-                aggression = (int)slider.getProgress();
-            }
-        });
 
 
         TextView additional = (EditText)findViewById(R.id.text_input);
 
 
         RadioButton yes = (RadioButton) findViewById(R.id.yes);
+        RadioButton no = (RadioButton) findViewById(R.id.no);
+
 
         yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (yes.isChecked())
+                {
+                    win = (String) "1";
+                }
+            }
+        });
+
+        no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (yes.isChecked())
@@ -119,6 +126,10 @@ public class notes extends AppCompatActivity {
                 String text = (String) additional.getText().toString();
                 String strNew = text.replace(";", " ");
                 String finalstr = strNew.replace(",", " ");
+
+                int seekBarValue= slider.getProgress(); // get progress value from the Seek bar
+                seekBarValue += 1;
+                String bar = (String) String.valueOf(seekBarValue);
 
                 Intent i = new Intent(notes.this, qr.class);
                 //First Page
@@ -160,7 +171,8 @@ public class notes extends AppCompatActivity {
                 i.putExtra("climb_time3", climb_time3);
 
                 //Fifth Page
-                i.putExtra("aggression", aggression_final);
+                i.putExtra("aggression", bar);
+                Toast.makeText(notes.this, bar, Toast.LENGTH_SHORT).show();
                 i.putExtra ( "additional",finalstr);
                 i.putExtra("win", win);
                 startActivity(i);

@@ -82,7 +82,7 @@ public class endgame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (attempted.isChecked()) {
-                    attempted_checked = (String) "0";
+                    attempted_checked = (String) "1";
                 }
 
             }

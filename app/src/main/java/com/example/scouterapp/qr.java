@@ -84,7 +84,6 @@ public class qr extends AppCompatActivity {
 
         String win = intent.getStringExtra("win");
 
-
         //Final string output
         String finalresult = Match_Number + ";" + Team_Number + ";" + Alliance + ";" + Driver_Station + ";" + climb_time + ";" + First_array + ";" + Second_array + ";" + left_community_checked + ";" + Docked_Engaged_checked + ";" + assisted_checked + ";" + docked_checked + ";" + engaged_checked + ";" + cone_pickup_checked + ";" + cube_pickup_checked + ";" + station_cone_checked + ";" + station_cube_checked + ";" + ground_cone_checked + ";" + ground_cube_checked + ";" + final3 + ";" + final4 + ";" + climb_time2 + ";" + attempted_checked + ";" + docked2_checked + ";" + engaged2_checked + ";" + soloclimb_checked + ";" + gave_assistance_checked + ";" + recieved_assistance_checked + ";" + parked_checked + ";" + climb_time3 + ";" + aggression + ";" + additional + ";" + win + "?";
 
