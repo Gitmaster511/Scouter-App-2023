@@ -47,9 +47,9 @@
 
     <CheckBox
         android:id="@+id/Ground_cube"
-        android:layout_width="181dp"
+        android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="400dp"
+        android:layout_marginStart="408dp"
         android:layout_marginTop="256dp"
         android:background="@drawable/red"
         android:buttonTint="#ffffff"
@@ -99,9 +99,9 @@
 
     <CheckBox
         android:id="@+id/Ground_cone"
-        android:layout_width="182dp"
+        android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="400dp"
+        android:layout_marginStart="408dp"
         android:layout_marginTop="124dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
@@ -502,16 +502,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="178dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="674dp"
-        android:layout_marginEnd="415dp"
-        android:text="@string/reset"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/button3"
+        android:layout_width="115dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#FF0000"
+        android:text="Reset Field"
+        android:textSize="12dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="670dp" />/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

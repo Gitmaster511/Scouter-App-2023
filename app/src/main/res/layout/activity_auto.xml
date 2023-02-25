@@ -164,6 +164,7 @@
         android:id="@+id/shape"
         android:layout_width="301dp"
         android:layout_height="112dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="620dp"
         android:layout_marginBottom="292dp"
         android:orientation="horizontal"
@@ -171,9 +172,13 @@
         android:paddingEnd="10dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177">
 
         <!--android:button="@android:color/transparent" -->
+
+
+        <!-- android:buttonTint="@color/purple_700" -->
 
 
         <RadioButton
@@ -182,10 +187,7 @@
             android:layout_height="65dp"
             android:background="#5920E4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-            <!-- android:buttonTint="@color/purple_700" -->
-
-
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
             android:layout_width="30dp"
@@ -199,9 +201,8 @@
             android:contentDescription="@string/greyed_our_arrow"
             android:rotation="-90"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
         <!-- android:buttonTint="@color/purple_700" -->
-
 
 
         <View
@@ -216,13 +217,10 @@
             android:backgroundTint="#C40818"
             android:contentDescription="@string/x"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
         <!-- android:buttonTint="@color/purple_700" -->
 
     </RadioGroup>
-
-
 
     <TextView
         android:id="@+id/textView4"
@@ -322,7 +320,7 @@
         android:background="@drawable/gray_field"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/row1"
@@ -380,63 +378,63 @@
             android:layout_height="100dp" />
     </RadioGroup>
 
-        <!-- Middle Row -->
-        <RadioGroup
-            android:id="@+id/row2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginBottom="475dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+    <!-- Middle Row -->
+    <RadioGroup
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="475dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-            <RadioButton
-                android:id="@+id/grid_10"
-                android:layout_width="87dp"
-                android:layout_height="101dp" />
+        <RadioButton
+            android:id="@+id/grid_10"
+            android:layout_width="87dp"
+            android:layout_height="101dp" />
 
-            <RadioButton
-                android:id="@+id/grid_11"
-                android:layout_width="58dp"
-                android:layout_height="105dp" />
+        <RadioButton
+            android:id="@+id/grid_11"
+            android:layout_width="58dp"
+            android:layout_height="105dp" />
 
-            <RadioButton
-                android:id="@+id/grid_12"
-                android:layout_width="65dp"
-                android:layout_height="107dp" />
+        <RadioButton
+            android:id="@+id/grid_12"
+            android:layout_width="65dp"
+            android:layout_height="107dp" />
 
-            <RadioButton
-                android:id="@+id/grid_13"
-                android:layout_width="58dp"
-                android:layout_height="106dp" />
+        <RadioButton
+            android:id="@+id/grid_13"
+            android:layout_width="58dp"
+            android:layout_height="106dp" />
 
-            <RadioButton
-                android:id="@+id/grid_14"
-                android:layout_width="60dp"
-                android:layout_height="100dp" />
+        <RadioButton
+            android:id="@+id/grid_14"
+            android:layout_width="60dp"
+            android:layout_height="100dp" />
 
-            <RadioButton
-                android:id="@+id/grid_15"
-                android:layout_width="64dp"
-                android:layout_height="102dp" />
+        <RadioButton
+            android:id="@+id/grid_15"
+            android:layout_width="64dp"
+            android:layout_height="102dp" />
 
-            <RadioButton
-                android:id="@+id/grid_16"
-                android:layout_width="62dp"
-                android:layout_height="102dp" />
+        <RadioButton
+            android:id="@+id/grid_16"
+            android:layout_width="62dp"
+            android:layout_height="102dp" />
 
-            <RadioButton
-                android:id="@+id/grid_17"
-                android:layout_width="wrap_content"
-                android:layout_height="96dp" />
+        <RadioButton
+            android:id="@+id/grid_17"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp" />
 
-            <RadioButton
-                android:id="@+id/grid_18"
-                android:layout_width="96dp"
-                android:layout_height="100dp" />
-        </RadioGroup>
-        <!-- Middle Row -->
+        <RadioButton
+            android:id="@+id/grid_18"
+            android:layout_width="96dp"
+            android:layout_height="100dp" />
+    </RadioGroup>
+    <!-- Middle Row -->
     <RadioGroup
         android:id="@+id/row3"
         android:layout_width="598dp"
@@ -491,6 +489,18 @@
             android:layout_width="96dp"
             android:layout_height="80dp" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="115dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="557dp"
+        android:layout_marginEnd="485dp"
+        android:backgroundTint="#FF0000"
+        android:text="Reset Field"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- grid -->
 
