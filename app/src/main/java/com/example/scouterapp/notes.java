@@ -182,9 +182,12 @@ public class notes extends AppCompatActivity {
         backward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signup = new Intent(notes.this, teleop.class);
-                startActivity(signup);
+                onBackPressed();
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

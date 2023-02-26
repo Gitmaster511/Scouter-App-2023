@@ -246,13 +246,16 @@ public class endgame extends AppCompatActivity {
         backward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signup = new Intent(endgame.this, auto.class);
-                startActivity(signup);
+                onBackPressed();
             }
         });
 
 
 
 
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

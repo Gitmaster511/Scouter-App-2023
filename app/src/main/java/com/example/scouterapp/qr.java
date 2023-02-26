@@ -107,8 +107,7 @@ public class qr extends AppCompatActivity {
         backward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signup = new Intent(qr.this, notes.class);
-                startActivity(signup);
+                onBackPressed();
             }
         });
 
@@ -135,4 +134,9 @@ public class qr extends AppCompatActivity {
                 e.printStackTrace();
             }
         });
-    }}
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+}
