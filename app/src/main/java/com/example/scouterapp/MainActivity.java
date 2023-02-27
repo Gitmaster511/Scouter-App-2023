@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         if(savedInstanceState != null) {
             String matchNumber_string_lol;
             matchNumber_string_lol = (String) savedInstanceState.getString("matchNumber_string_2");
-            Toast.makeText(this, matchNumber_string_lol, Toast.LENGTH_SHORT).show();
 
         }
 

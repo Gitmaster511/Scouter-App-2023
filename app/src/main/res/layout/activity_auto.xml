@@ -186,39 +186,33 @@
 
     <RadioGroup
         android:id="@+id/shape2"
-        android:layout_width="221dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="676dp"
         android:orientation="horizontal"
-        android:paddingStart="20dip"
-        android:paddingEnd="10dip"
+        android:paddingEnd="0dip"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/Cube_select2"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#5920E4"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/xcube"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
+        <!-- android:buttonTint="@color/purple_700" -->
 
         <RadioButton
             android:id="@+id/Cone_select2"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="@drawable/triangle_blue"
-
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:background="@drawable/xtraingle"
             android:contentDescription="@string/greyed_our_arrow"
-            android:rotation="-90"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <!-- android:buttonTint="@color/purple_700" -->
 
         <View
             android:layout_width="30dp"
@@ -445,7 +439,7 @@
 
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/RESET"
         android:layout_width="115dp"
         android:layout_height="40dp"
         android:layout_marginTop="556dp"

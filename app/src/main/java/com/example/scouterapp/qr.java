@@ -3,6 +3,8 @@ package com.example.scouterapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
@@ -100,6 +103,37 @@ public class qr extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_qr);
 
+        AlertDialog.Builder check = new AlertDialog.Builder(qr.this);
+        check.setIcon(android.R.drawable.ic_dialog_alert);
+
+        check.setMessage("Is this correct?:" + "\n" +
+                "Match_Number: " + Match_Number + "\n" +
+                "Team_Number: " + Team_Number +"\n" +
+                "Alliance: " + Alliance +"\n" +
+                "Driver_Station: " + Driver_Station +"\n"
+);
+        check.setCancelable(true);
+
+        check.setPositiveButton(
+                "Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        check.setNegativeButton(
+                "\uD83D\uDE28 No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+
+
+
+
 
         Button backward = (Button) findViewById(R.id.Backward_page_5);
 
@@ -114,7 +148,8 @@ public class qr extends AppCompatActivity {
 
         Button bt_generate = findViewById(R.id.button);
         bt_generate.setOnClickListener(v->{
-
+            AlertDialog alert11 = check.create();
+            alert11.show();
 
 
             MultiFormatWriter writer = new MultiFormatWriter();
