@@ -439,24 +439,18 @@
 
         <RadioButton
             android:id="@+id/Cube_select2"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#5920E4"
+            android:layout_width="95dp"
+            android:layout_height="85dp"
+            android:background="@drawable/xcube"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
-
         <RadioButton
             android:id="@+id/Cone_select2"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="@drawable/triangle_blue"
-
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/xtraingle"
             android:contentDescription="@string/greyed_our_arrow"
-            android:rotation="-90"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <!-- android:buttonTint="@color/purple_700" -->
