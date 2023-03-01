@@ -40,11 +40,10 @@ public class notes extends AppCompatActivity {
 
         //Auto
         String climb_time = intent.getStringExtra("climb_time");
-        String First_array = intent.getStringExtra("First_array");
+        String auto_grid = intent.getStringExtra("auto_grid");
         String Second_array = intent.getStringExtra("Second_array");
         String left_community_checked = intent.getStringExtra("left_community_checked");
         String Docked_Engaged_checked = intent.getStringExtra("Docked_Engaged_checked");
-        String assisted_checked = intent.getStringExtra("assisted_checked");
         String docked_checked = intent.getStringExtra("docked_checked");
         String engaged_checked = intent.getStringExtra("engaged_checked");
 
@@ -55,8 +54,7 @@ public class notes extends AppCompatActivity {
         String station_cube_checked = intent.getStringExtra("station_cube_checked");
         String ground_cone_checked = intent.getStringExtra("ground_cone_checked");
         String ground_cube_checked = intent.getStringExtra("ground_cube_checked");
-        String final3 = intent.getStringExtra("final3");
-        String final4 = intent.getStringExtra("final4");
+        String teleop_grid = intent.getStringExtra("teleop_grid");
         String climb_time2 = intent.getStringExtra("climb_time2");
 
         //Endgame
@@ -140,11 +138,10 @@ public class notes extends AppCompatActivity {
 
                 //Second page
                 i.putExtra("climb_time", climb_time);
-                i.putExtra("First_array",First_array);
+                i.putExtra("auto_grid",auto_grid);
                 i.putExtra("Second_array",Second_array);
                 i.putExtra("left_community_checked",left_community_checked);
                 i.putExtra("Docked_Engaged_checked",Docked_Engaged_checked);
-                i.putExtra("assisted_checked",assisted_checked);
                 i.putExtra("docked_checked",docked_checked);
                 i.putExtra("engaged_checked",engaged_checked);
 
@@ -156,8 +153,7 @@ public class notes extends AppCompatActivity {
                 i.putExtra("station_cube_checked",station_cube_checked);
                 i.putExtra("ground_cone_checked",ground_cone_checked);
                 i.putExtra("ground_cube_checked",ground_cube_checked);
-                i.putExtra("final3",final3);
-                i.putExtra("final4",final4);
+                i.putExtra("teleop_grid",teleop_grid);
                 i.putExtra("climb_time2",climb_time2);
 
                 //Fourth Page

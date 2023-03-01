@@ -51,13 +51,10 @@ public class qr extends AppCompatActivity {
 
         String left_community_checked = intent.getStringExtra("left_community_checked");
         String Docked_Engaged_checked = intent.getStringExtra("Docked_Engaged_checked");
-        String assisted_checked = intent.getStringExtra("assisted_checked");
         String docked_checked = intent.getStringExtra("docked_checked");
         String engaged_checked = intent.getStringExtra("engaged_checked");
-        String First_array = intent.getStringExtra("First_array");
-        String Second_array = intent.getStringExtra("Second_array");
-        First_array = (String) First_array.replace(",",".");
-        Second_array = (String) Second_array.replace(",",".");
+        String auto_grid = intent.getStringExtra("auto_grid");
+        auto_grid = (String) auto_grid.replace(",",".");
 
 
 
@@ -69,8 +66,7 @@ public class qr extends AppCompatActivity {
         String station_cube_checked = intent.getStringExtra("station_cube_checked");
         String ground_cone_checked = intent.getStringExtra("ground_cone_checked");
         String ground_cube_checked = intent.getStringExtra("ground_cube_checked");
-        String final3 = intent.getStringExtra("final3");
-        String final4 = intent.getStringExtra("final4");
+        String teleop_grid = intent.getStringExtra("teleop_grid");
         String climb_time2 = intent.getStringExtra("climb_time2");
         climb_time2 = climb_time2.replace(":", "");
 
@@ -93,7 +89,7 @@ public class qr extends AppCompatActivity {
         String win = intent.getStringExtra("win");
 
         //Final string output
-        String finalresult = Match_Number + ";" + Team_Number + ";" + Alliance + ";" + Driver_Station + ";" + climb_time + ";" + First_array + ";" + Second_array + ";" + left_community_checked + ";" + Docked_Engaged_checked + ";" + assisted_checked + ";" + docked_checked + ";" + engaged_checked + ";" + cone_pickup_checked + ";" + cube_pickup_checked + ";" + station_cone_checked + ";" + station_cube_checked + ";" + ground_cone_checked + ";" + ground_cube_checked + ";" + final3 + ";" + final4 + ";" + climb_time2 + ";" + attempted_checked + ";" + docked2_checked + ";" + engaged2_checked + ";" + soloclimb_checked + ";" + gave_assistance_checked + ";" + recieved_assistance_checked + ";" + parked_checked + ";" + climb_time3 + ";" + aggression + ";" + additional + ";" + win + "?";
+        String finalresult = Match_Number + ";" + Team_Number + ";" + Alliance + ";" + Driver_Station + ";" + climb_time + ";" + auto_grid + ";" + left_community_checked + ";" + Docked_Engaged_checked + ";" + docked_checked + ";" + engaged_checked + ";" + cone_pickup_checked + ";" + cube_pickup_checked + ";" + station_cone_checked + ";" + station_cube_checked + ";" + ground_cone_checked + ";" + ground_cube_checked + ";" + teleop_grid + ";" + climb_time2 + ";" + attempted_checked + ";" + docked2_checked + ";" + engaged2_checked + ";" + soloclimb_checked + ";" + gave_assistance_checked + ";" + recieved_assistance_checked + ";" + parked_checked + ";" + climb_time3 + ";" + aggression + ";" + additional + ";" + win + "?";
 
 
 
@@ -107,10 +103,10 @@ public class qr extends AppCompatActivity {
         check.setIcon(android.R.drawable.ic_dialog_alert);
 
         check.setMessage("Is this correct?:" + "\n" +
-                "Match_Number: " + Match_Number + "\n" +
-                "Team_Number: " + Team_Number +"\n" +
+                "Match Number: " + Match_Number + "\n" +
+                "Team Number: " + Team_Number +"\n" +
                 "Alliance: " + Alliance +"\n" +
-                "Driver_Station: " + Driver_Station +"\n"
+                "Driver Station: " + Driver_Station +"\n"
 );
         check.setCancelable(true);
 

@@ -144,7 +144,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-
     <RadioGroup
         android:id="@+id/shape"
         android:layout_width="221dp"
@@ -225,14 +224,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
+        android:layout_marginTop="753dp"
+        android:layout_marginEnd="274dp"
         android:layout_marginBottom="172dp"
         android:fontFamily="@font/avenir"
-        android:text="D/E Time"
+        android:text="@string/d_e_time"
         android:textColor="#000000"
         android:textSize="30sp"
         app:fontFamily="@font/avenir"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Backward_page_2"
@@ -469,33 +472,45 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="147dp"
         android:text="@string/_0"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="796dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="795dp"
         android:text="@string/_5"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="796dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="376dp"
+        android:layout_marginBottom="147dp"
         android:text="@string/_10"
-        tools:layout_editor_absoluteX="377dp"
-        tools:layout_editor_absoluteY="796dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="548dp"
+        android:layout_marginTop="794dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="147dp"
         android:text="@string/_15"
-        tools:layout_editor_absoluteX="549dp"
-        tools:layout_editor_absoluteY="796dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- grid -->
 

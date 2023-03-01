@@ -142,13 +142,15 @@ public class MainActivity extends AppCompatActivity {
         }
         );
     }
+      /*
     @Override
+
     public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putString("matchNumber_string_2", "5");
-        Toast.makeText(this, "asd", Toast.LENGTH_SHORT).show();
 
     }
+    */
 
 
     }
