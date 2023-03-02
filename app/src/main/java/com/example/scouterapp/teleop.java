@@ -1,7 +1,6 @@
 package com.example.scouterapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -325,10 +324,31 @@ public class teleop extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                shape.clearCheck();
-                row1.clearCheck();
-                row2.clearCheck();
-                row3.clearCheck();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(teleop.this);
+
+                    builder.setMessage("THIS IS FINAL!");
+                    builder.setTitle(" Are you sure you want to reset all data?");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
+                        // When the user click yes button then app will close
+                        shape.clearCheck();
+                        row1.clearCheck();
+                        row2.clearCheck();
+                        row3.clearCheck();
+                        finalgrid2 =(String) "";
+                    });
+
+                    // Set the Negative button with No name Lambda OnClickListener method is use of DialogInterface interface.
+                    builder.setNegativeButton("No", (DialogInterface.OnClickListener) (dialog, which) -> {
+                        // If user click no then dialog box is canceled.
+                        dialog.cancel();
+                    });
+
+                    // Create the Alert dialog
+                    AlertDialog alertDialog = builder.create();
+                    // Show the Alert Dialog box
+                    alertDialog.show();
             }
         });
 
@@ -790,7 +810,6 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid13 Cube Selected", Toast.LENGTH_SHORT).show();
                     AlertDialog alert11 = cube_message.create();
                     alert11.show();
-                    //finalgrid2 = (String) finalgrid2 + "4,2,cube,1?";
 
                 }
                 else if (grid13.isChecked() && cone.isChecked()) {

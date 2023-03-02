@@ -490,7 +490,7 @@
         android:layout_marginTop="676dp"
         android:layout_marginEnd="249dp"
         android:backgroundTint="#FF0000"
-        android:text="Reset Field"
+        android:text="Reset Data"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -516,41 +516,52 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="795dp"
         android:text="0"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="796dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="795dp"
         android:text="10"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="796dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="795dp"
+        android:layout_marginEnd="208dp"
         android:text="20"
-        tools:layout_editor_absoluteX="377dp"
-        tools:layout_editor_absoluteY="796dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="795dp"
+        android:layout_marginEnd="36dp"
         android:text="30"
-        tools:layout_editor_absoluteX="549dp"
-        tools:layout_editor_absoluteY="796dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Cycle_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="753dp"
         android:text="Cycle Time"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="769dp" />
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
