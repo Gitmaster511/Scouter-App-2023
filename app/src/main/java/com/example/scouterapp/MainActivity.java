@@ -1,4 +1,5 @@
 package com.example.scouterapp;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -30,10 +31,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     @SuppressLint("AppCompatMethod")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(savedInstanceState != null) {
+            String matchNumber_string_lol;
+            matchNumber_string_lol = (String) savedInstanceState.getString("matchNumber_string_2");
+
+        }
 
         // Remove topbar and bottombar
 
@@ -44,14 +53,18 @@ public class MainActivity extends AppCompatActivity {
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
-        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_main);
 
 
         //Match Number
         EditText matchNumber = (EditText) findViewById(R.id.match_number_input);
         matchNumber.setTextColor(Color.WHITE);//set the red text color
+        String matchNumber_string = "";
+        //matchNumber.setText(0);
+
         //String matchNumberOutput = matchNumber.getText().toString();
+        matchNumber_string = (String) matchNumber.getText().toString();
+
 
 
         //Team Number
@@ -125,8 +138,19 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // on below line we are getting radio button from our group.
                 RadioButton radioButton = findViewById(checkedId);
-                }
+            }
         }
         );
     }
-}
+      /*
+    @Override
+
+    public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("matchNumber_string_2", "5");
+
+    }
+    */
+
+
+    }

@@ -63,7 +63,7 @@
     </CheckBox>
 
     <CheckBox
-        android:id="@+id/Docked_Engaged"
+        android:id="@+id/Attempted"
         android:layout_width="258dp"
         android:layout_height="99dp"
         android:layout_marginTop="148dp"
@@ -71,7 +71,7 @@
         android:background="@drawable/corner_rectangle_maroon"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
-        android:text="@string/docked_engaged"
+        android:text="Attempted D + E"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:fontFamily="@font/avenir"
@@ -81,27 +81,11 @@
     </CheckBox>
 
     <CheckBox
-        android:id="@+id/Assisted"
-        android:layout_width="276dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="324dp"
-        android:background="@drawable/smaller_rect_field"
-        android:buttonTint="#ffffff"
-        android:fontFamily="@font/avenir"
-        android:text="@string/assisted"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        app:fontFamily="@font/avenir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <CheckBox
         android:id="@+id/Docked"
         android:layout_width="276dp"
         android:layout_height="70dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="308dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
@@ -112,12 +96,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
     <CheckBox
         android:id="@+id/Engaged"
         android:layout_width="276dp"
         android:layout_height="70dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="224dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
@@ -127,7 +112,6 @@
         app:fontFamily="@font/avenir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
     <View
         android:id="@+id/view3"
@@ -162,24 +146,15 @@
 
     <RadioGroup
         android:id="@+id/shape"
-        android:layout_width="301dp"
-        android:layout_height="112dp"
+        android:layout_width="221dp"
+        android:layout_height="80dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="620dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginTop="596dp"
         android:orientation="horizontal"
         android:paddingStart="20dip"
         android:paddingEnd="10dip"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177">
-
-        <!--android:button="@android:color/transparent" -->
-
-
-        <!-- android:buttonTint="@color/purple_700" -->
-
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/Cube_select"
@@ -203,22 +178,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <!-- android:buttonTint="@color/purple_700" -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </RadioGroup>
 
+    <RadioGroup
+        android:id="@+id/shape2"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="676dp"
+        android:orientation="horizontal"
+        android:paddingEnd="0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/Cube_select2"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/xcube"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- android:buttonTint="@color/purple_700" -->
+
+        <RadioButton
+            android:id="@+id/Cone_select2"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:background="@drawable/xtraingle"
+            android:contentDescription="@string/greyed_our_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
             android:layout_width="30dp"
             android:layout_height="30dp" />
-
-        <RadioButton
-            android:id="@+id/X_select"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="@drawable/pngaaa_com_5257854"
-            android:backgroundTint="#C40818"
-            android:contentDescription="@string/x"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <!-- android:buttonTint="@color/purple_700" -->
 
     </RadioGroup>
 
@@ -226,62 +223,15 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="224dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="753dp"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="172dp"
         android:fontFamily="@font/avenir"
-        android:text="@string/climbing_time"
+        android:text="@string/d_e_time"
         android:textColor="#000000"
         android:textSize="30sp"
         app:fontFamily="@font/avenir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Chronometer
-        android:id="@+id/textViewStopWatch"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="168dp"
-        android:fontFamily="@font/avenirbold"
-        android:gravity="center"
-        android:text="@string/_00_00"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/avenirbold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <Button
-        android:id="@+id/start_button"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="803dp"
-        android:layout_marginEnd="485dp"
-        android:layout_marginBottom="108dp"
-        android:backgroundTint="#00FF38"
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="@string/start"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/reset_button"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="802dp"
-        android:layout_marginEnd="355dp"
-        android:layout_marginBottom="110dp"
-        android:backgroundTint="#C40818"
-        android:text="@string/stop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -490,16 +440,76 @@
             android:layout_height="80dp" />
     </RadioGroup>
 
+
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/RESET"
         android:layout_width="115dp"
         android:layout_height="40dp"
-        android:layout_marginTop="557dp"
-        android:layout_marginEnd="485dp"
+        android:layout_marginTop="556dp"
+        android:layout_marginEnd="412dp"
         android:backgroundTint="#FF0000"
-        android:text="Reset Field"
-        android:textSize="12dp"
+        android:text="Reset"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="549dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="796dp"
+        android:layout_marginEnd="26dp"
+        android:max="15"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="147dp"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="795dp"
+        android:text="@string/_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="376dp"
+        android:layout_marginBottom="147dp"
+        android:text="@string/_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="548dp"
+        android:layout_marginTop="794dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="147dp"
+        android:text="@string/_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- grid -->

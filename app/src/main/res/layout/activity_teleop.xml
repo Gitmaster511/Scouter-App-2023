@@ -9,6 +9,25 @@
     <!-- Top Bar  -->
 
     <View
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="137dp"
+        android:background="@drawable/simple_rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="77dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="266dp"
+        android:background="@drawable/triangle_blue"
+        android:rotation="-90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="110dp"
@@ -17,8 +36,8 @@
         android:bottomRightRadius="40dp"
         android:topLeftRadius="40dp"
         android:topRightRadius="40dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-11dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -49,7 +68,7 @@
         android:id="@+id/Ground_cube"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="408dp"
+        android:layout_marginStart="444dp"
         android:layout_marginTop="256dp"
         android:background="@drawable/red"
         android:buttonTint="#ffffff"
@@ -65,14 +84,14 @@
 
     <CheckBox
         android:id="@+id/Conepickup"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_width="155dp"
+        android:layout_height="101dp"
         android:layout_marginTop="124dp"
-        android:layout_marginEnd="420dp"
+        android:layout_marginEnd="348dp"
         android:background="@drawable/red"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
-        android:text="Cone Pickup"
+        android:text="Pickup"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:fontFamily="@font/avenir"
@@ -84,7 +103,7 @@
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginTop="125dp"
-        android:layout_marginEnd="228dp"
+        android:layout_marginEnd="176dp"
         android:layout_marginBottom="736dp"
         android:background="@drawable/red"
         android:buttonTint="#ffffff"
@@ -95,13 +114,14 @@
         app:fontFamily="@font/avenir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/Ground_cone"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="408dp"
+        android:layout_marginStart="444dp"
         android:layout_marginTop="124dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
@@ -119,12 +139,12 @@
         android:id="@+id/Cubepickup"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="256dp"
         android:background="@drawable/red"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
-        android:text="Cube Pickup"
+        android:text="Pickup"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:fontFamily="@font/avenir"
@@ -136,7 +156,7 @@
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginTop="256dp"
-        android:layout_marginEnd="228dp"
+        android:layout_marginEnd="176dp"
         android:layout_marginBottom="606dp"
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
@@ -147,7 +167,8 @@
         app:fontFamily="@font/avenir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/view3"
@@ -364,19 +385,15 @@
 
     <RadioGroup
         android:id="@+id/shape"
-        android:layout_width="301dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="740dp"
-        android:layout_marginBottom="110dp"
+        android:layout_width="221dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="676dp"
         android:orientation="horizontal"
         android:paddingStart="20dip"
         android:paddingEnd="10dip"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <!--android:button="@android:color/transparent" -->
-
 
         <RadioButton
             android:id="@+id/Cube_select"
@@ -385,8 +402,6 @@
             android:background="#5920E4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <!-- android:buttonTint="@color/purple_700" -->
-
 
         <View
             android:layout_width="30dp"
@@ -397,88 +412,54 @@
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:background="@drawable/triangle_blue"
+
             android:contentDescription="@string/greyed_our_arrow"
             android:rotation="-90"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <!-- android:buttonTint="@color/purple_700" -->
 
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/shape2"
+        android:layout_width="221dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="676dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dip"
+        android:paddingEnd="10dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/Cube_select2"
+            android:layout_width="95dp"
+            android:layout_height="85dp"
+            android:background="@drawable/xcube"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/Cone_select2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/xtraingle"
+            android:contentDescription="@string/greyed_our_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- android:buttonTint="@color/purple_700" -->
 
         <View
             android:layout_width="30dp"
             android:layout_height="30dp" />
 
-        <RadioButton
-            android:id="@+id/X_select"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="@drawable/pngaaa_com_5257854"
-            android:backgroundTint="#C40818"
-            android:contentDescription="@string/x"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <!-- android:buttonTint="@color/purple_700" -->
-
     </RadioGroup>
-
-    <Chronometer
-        android:id="@+id/textViewStopWatch"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="388dp"
-        android:layout_marginBottom="188dp"
-        android:fontFamily="@font/avenirbold"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/avenirbold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/startOrStopTextView"
-        android:layout_width="88dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="372dp"
-        android:layout_marginBottom="116dp"
-        android:backgroundTint="#00FF38"
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="@string/start"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/resetButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="472dp"
-        android:layout_marginBottom="116dp"
-        android:backgroundTint="#FF0000"
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="@string/stop"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="392dp"
-        android:layout_marginBottom="252dp"
-        android:fontFamily="@font/avenir"
-        android:text="@string/cycle_timer"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        app:fontFamily="@font/avenir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Forward_page_3"
@@ -502,14 +483,74 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/Reset_Field"
         android:layout_width="115dp"
         android:layout_height="40dp"
+        android:layout_marginStart="237dp"
+        android:layout_marginTop="676dp"
+        android:layout_marginEnd="249dp"
         android:backgroundTint="#FF0000"
         android:text="Reset Field"
-        android:textSize="12dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="670dp" />/>
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="549dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="796dp"
+        android:layout_marginEnd="26dp"
+        android:max="30"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="796dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="796dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        tools:layout_editor_absoluteX="377dp"
+        tools:layout_editor_absoluteY="796dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        tools:layout_editor_absoluteX="549dp"
+        tools:layout_editor_absoluteY="796dp" />
+
+    <TextView
+        android:id="@+id/Cycle_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cycle Time"
+        tools:layout_editor_absoluteX="270dp"
+        tools:layout_editor_absoluteY="769dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

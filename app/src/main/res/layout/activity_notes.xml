@@ -191,31 +191,31 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/text_input"
-        android:layout_width="603dp"
-        android:layout_height="360dp"
-        android:layout_marginTop="373dp"
+        android:layout_width="match_parent"
+        android:layout_height="203dp"
+        android:layout_marginTop="13dp"
         android:layout_marginBottom="229dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="418dp"
         android:layout_height="68dp"
         android:layout_marginStart="91dp"
-        android:layout_marginTop="305dp"
         android:layout_marginEnd="92dp"
-        android:layout_marginBottom="589dp"
+        android:layout_marginBottom="444dp"
         android:gravity="center"
         android:text="@string/additional_notes"
         android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
@@ -268,6 +268,64 @@
             android:textColor="#FFFFFF"
             android:textSize="45sp" />
     </RadioGroup>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:gravity="center"
+        android:orientation='horizontal'
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="362dp">
+
+        <RadioButton
+            android:id="@+id/Full_cycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full cycler"
+            android:textSize="28sp"
+            tools:layout_editor_absoluteX="271dp"
+            tools:layout_editor_absoluteY="364dp" />
+
+        <RadioButton
+            android:id="@+id/Half_cycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Half cycler"
+            android:textSize="28sp"
+            tools:layout_editor_absoluteX="271dp"
+            tools:layout_editor_absoluteY="364dp" />
+
+        <RadioButton
+            android:id="@+id/Feeder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feeder"
+            android:textSize="28sp"
+            tools:layout_editor_absoluteX="271dp"
+            tools:layout_editor_absoluteY="364dp" />
+
+        <RadioButton
+            android:id="@+id/Defense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Defense"
+            android:textSize="28sp"
+            tools:layout_editor_absoluteX="271dp"
+            tools:layout_editor_absoluteY="364dp" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Robot Type"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="305dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
