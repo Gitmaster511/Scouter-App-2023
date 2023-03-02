@@ -1,10 +1,7 @@
 package com.example.scouterapp;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.view.View;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,9 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 import java.util.Objects;
-
 //Could be removed
 
 
