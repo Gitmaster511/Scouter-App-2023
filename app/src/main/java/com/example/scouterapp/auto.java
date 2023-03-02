@@ -29,7 +29,6 @@ import java.util.Objects;
 public class auto extends AppCompatActivity {
 
     String climb_time = "";
-
     String Docked_Engaged_checked = "0";
     String left_community_checked = "0";
     String docked_checked = "0";
@@ -279,14 +278,32 @@ public class auto extends AppCompatActivity {
 
 
         RESET.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                shape.clearCheck();
-                shape2.clearCheck();
-                row1.clearCheck();
-                row2.clearCheck();
-                row3.clearCheck();
 
+                AlertDialog.Builder builder = new AlertDialog.Builder(auto.this);
+
+                builder.setMessage("THIS IS FINAL!");
+                builder.setTitle(" Are you sure you want to reset all data?");
+                builder.setCancelable(false);
+
+                builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
+                    shape.clearCheck();
+                    row1.clearCheck();
+                    row2.clearCheck();
+                    row3.clearCheck();
+                    finalgrid =(String) "";
+                });
+
+                builder.setNegativeButton("No", (DialogInterface.OnClickListener) (dialog, which) -> {
+                    dialog.cancel();
+                });
+
+                // Create the Alert dialog
+                AlertDialog alertDialog = builder.create();
+                // Show the Alert Dialog box
+                alertDialog.show();
             }
         });
 
