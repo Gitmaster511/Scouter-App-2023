@@ -3,63 +3,35 @@ package com.example.scouterapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ClipData;
-import android.content.Context;
+
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Handler;
-import android.os.SystemClock;
-import android.provider.CalendarContract;
+
 import android.view.View;
 import android.os.Bundle;
 
-import java.util.Arrays;
-import java.util.Locale;
-
-import android.widget.Chronometer;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.os.Bundle;
+
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.CheckBox;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.View;
-import android.widget.TextView;
 
-import java.util.Locale;
-import android.os.CountDownTimer;
-import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
 import android.widget.Toast;
 
-
-import android.view.DragEvent;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
 
 
 import java.util.Objects;
 
 public class auto extends AppCompatActivity {
-    public int counter;
-    private boolean isRunning;
-    private boolean wasRunning;
+
     String climb_time = "";
 
     String Docked_Engaged_checked = "0";
     String left_community_checked = "0";
-
-    String attempted_checked = "0";
     String docked_checked = "0";
     String engaged_checked = "0";
     int grid1_first = 0;
@@ -168,7 +140,7 @@ public class auto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (Attempted.isChecked()) {
-                    attempted_checked = (String) "1";
+                    Docked_Engaged_checked = (String) "1";
                 }
             }
         });

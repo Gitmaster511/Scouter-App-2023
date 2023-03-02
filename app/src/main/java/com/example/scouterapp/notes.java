@@ -10,19 +10,18 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.material.slider.Slider;
-
 import java.util.Objects;
 
 public class notes extends AppCompatActivity {
     String win = "0";
     int aggression = 0;
+
+    String type = "";
+
+
     @SuppressLint("AppCompatMethod")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,13 +79,7 @@ public class notes extends AppCompatActivity {
         Button forward = (Button) findViewById(R.id.Forward_page_4);
         Button backward = (Button) findViewById(R.id.Backward_page_4);
         SeekBar slider = findViewById(R.id.seekBar);
-        int maxValue=slider.getMax(); // get maximum value of the Seek bar
-
-
-
         TextView additional = (EditText)findViewById(R.id.text_input);
-
-
         RadioButton yes = (RadioButton) findViewById(R.id.yes);
         RadioButton no = (RadioButton) findViewById(R.id.no);
 
@@ -110,6 +103,44 @@ public class notes extends AppCompatActivity {
                 }
             }
         });
+
+        RadioButton Full_cycler = (RadioButton) findViewById(R.id.Full_cycler);
+
+        Full_cycler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = (String) "Full_cycler";
+            }
+        });
+
+        RadioButton Half_cycler = (RadioButton) findViewById(R.id.Half_cycler);
+        Half_cycler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = (String) "Half_cycler";
+            }
+        });
+
+
+        RadioButton Feeder = (RadioButton) findViewById(R.id.Half_cycler);
+        Feeder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = (String) "Feeder";
+            }
+        });
+
+        RadioButton Defense = (RadioButton) findViewById(R.id.Defense);
+        Defense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = (String) "Defense";
+            }
+        });
+
+
+
+
 
 
 
@@ -168,8 +199,9 @@ public class notes extends AppCompatActivity {
 
                 //Fifth Page
                 i.putExtra("aggression", bar);
-                Toast.makeText(notes.this, bar, Toast.LENGTH_SHORT).show();
+                i.putExtra("aggression", bar);
                 i.putExtra ( "additional",finalstr);
+                i.putExtra("type", type);
                 i.putExtra("win", win);
                 startActivity(i);
             }
