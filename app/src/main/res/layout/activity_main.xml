@@ -181,18 +181,6 @@
 
     <!-- Driver Station -->
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="55dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginBottom="14dp"
-        android:contentDescription="@string/greyed_our_arrow"
-        android:rotation="180"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/triangleforward" />
-
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
