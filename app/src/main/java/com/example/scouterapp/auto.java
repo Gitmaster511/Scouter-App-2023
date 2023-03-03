@@ -7,10 +7,10 @@ import android.app.AlertDialog;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-
+import android.widget.Toast;
 import android.view.View;
 import android.os.Bundle;
-
+import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -20,6 +20,7 @@ import android.widget.CheckBox;
 
 import android.widget.Button;
 
+import android.widget.SeekBar;
 import android.widget.Toast;
 
 
@@ -28,9 +29,9 @@ import java.util.Objects;
 
 public class auto extends AppCompatActivity {
 
-    String climb_time = "";
     String Docked_Engaged_checked = "0";
     String left_community_checked = "0";
+
     String docked_checked = "0";
     String engaged_checked = "0";
     int grid1_first = 0;
@@ -93,6 +94,8 @@ public class auto extends AppCompatActivity {
     String finalgrid = "";
 
 
+
+
     String Team_Number;
     String Match_Number;
 
@@ -107,8 +110,6 @@ public class auto extends AppCompatActivity {
         String Team_Number = intent.getStringExtra("Team_Number");
         String Alliance = intent.getStringExtra("Alliance");
         String Driver_Station = intent.getStringExtra("Driver_Station");
-
-
 
 
 
@@ -155,6 +156,11 @@ public class auto extends AppCompatActivity {
             }
         });
 
+
+
+
+
+
         CheckBox engaged = (CheckBox) findViewById(R.id.Engaged);
         engaged.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -177,23 +183,12 @@ public class auto extends AppCompatActivity {
         forward.setOnClickListener(new View.OnClickListener() {
 
 
+
             @Override
             public void onClick(View v) {
-                /*
-                int [][] final1 = new int[3][9];
-                final1[0] = new int[]{grid1_first, grid2_first, grid3_first, grid4_first, grid5_first, grid6_first, grid7_first, grid8_first, grid9_first};
-                final1[1] = new int[]{grid10_first, grid11_first, grid12_first, grid13_first, grid14_first, grid15_first, grid16_first, grid17_first, grid18_first};
-                final1[2] = new int[]{grid19_first, grid20_first, grid21_first, grid22_first, grid23_first, grid24_first, grid25_first, grid26_first, grid27_first};
-
-                int [][] final2 = new int[3][9];
-                final2[0] = new int[]{grid1_second, grid2_second, grid3_second, grid4_second, grid5_second, grid6_second, grid7_second, grid8_second, grid9_second};
-                final2[1] = new int[]{grid10_second, grid11_second, grid12_second, grid13_second, grid14_second, grid15_second, grid16_second, grid17_second, grid18_second};
-                final2[2] = new int[]{grid19_second, grid20_second, grid21_second, grid22_second, grid23_second, grid24_second, grid25_second, grid26_second, grid27_second};
-                //String final11 = Arrays.toString(final1);
-                String final11 = Arrays.deepToString(final1);
-                String final22 = Arrays.deepToString(final2);
-
-                 */
+                SeekBar simpleSeekBar = (SeekBar) findViewById(R.id.seekBar); // initiate the Seek bar
+                int maxValue=simpleSeekBar.getProgress(); // get maximum value of the Seek bar
+                String lol = String.valueOf(maxValue);
 
 
 
@@ -209,10 +204,8 @@ public class auto extends AppCompatActivity {
                 i.putExtra("Driver_Station",Driver_Station);
 
 
-                i.putExtra("climb_time", climb_time);
+                i.putExtra("climb_time", lol);
                 i.putExtra("auto_grid",finalgrid);
-                //i.putExtra("Second_array",final22);
-
 
 
 

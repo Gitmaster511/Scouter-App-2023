@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.Toast;
 import java.util.Objects;
 
@@ -211,8 +212,15 @@ public class teleop extends AppCompatActivity {
 
 
         forward.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
+                SeekBar simpleSeekBar = (SeekBar) findViewById(R.id.seekBar); // initiate the Seek bar
+                int maxValue=simpleSeekBar.getProgress(); // get maximum value of the Seek bar
+                String lol = String.valueOf(maxValue);
+
+
 
 
                 Intent i = new Intent(teleop.this, endgame.class);
@@ -247,7 +255,7 @@ public class teleop extends AppCompatActivity {
                 i.putExtra("ground_cone_checked",ground_cone_checked);
                 i.putExtra("ground_cube_checked",ground_cube_checked);
                 i.putExtra("teleop_grid",finalgrid2);
-                i.putExtra("climb_time2",climb_time2);
+                i.putExtra("climb_time2",lol);
 
 
                 startActivity(i);
@@ -324,6 +332,8 @@ public class teleop extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(teleop.this);
 

@@ -223,9 +223,9 @@
         android:layout_height="65dp"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="12dp"
-        app:backgroundTint="@color/white"
-
         android:background="@drawable/triangleforward"
+
+        app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -254,76 +254,92 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView29"
         android:layout_width="62dp"
         android:layout_height="54dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="116dp"
         android:fontFamily="@font/avenir"
         android:text="60"
         android:textColor="#C40818"
         android:textSize="50sp"
         app:fontFamily="@font/avenir"
-        tools:layout_editor_absoluteX="530dp"
-        tools:layout_editor_absoluteY="793dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView28"
         android:layout_width="59dp"
         android:layout_height="58dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="112dp"
         android:fontFamily="@font/avenir"
         android:text="45"
         android:textColor="#C40818"
         android:textSize="50sp"
         app:fontFamily="@font/avenir"
-        tools:layout_editor_absoluteX="406dp"
-        tools:layout_editor_absoluteY="792dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
         android:id="@+id/textView27"
         android:layout_width="63dp"
         android:layout_height="67dp"
+        android:layout_marginStart="269dp"
+        android:layout_marginEnd="269dp"
+        android:layout_marginBottom="101dp"
         android:fontFamily="@font/avenir"
         android:text="30"
         android:textColor="#C40818"
         android:textSize="50sp"
         app:fontFamily="@font/avenir"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="794dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/textView26"
         android:layout_width="70dp"
         android:layout_height="61dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginBottom="107dp"
         android:fontFamily="@font/avenir"
         android:text="15"
         android:textColor="#C40818"
         android:textSize="50sp"
         app:fontFamily="@font/avenir"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="794dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/textView25"
         android:layout_width="74dp"
         android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="113dp"
         android:fontFamily="@font/avenir"
         android:text="0"
         android:textColor="#C40818"
         android:textSize="50sp"
         app:fontFamily="@font/avenir"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="794dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/textView20"
         android:layout_width="272dp"
         android:layout_height="48dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="218dp"
         android:fontFamily="@font/avenir"
         android:text="Climb Time"
         android:textColor="@color/black"
         android:textSize="50sp"
         app:fontFamily="@font/avenir"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="697dp" />
-
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,13 +13,15 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.Objects;
 
 public class notes extends AppCompatActivity {
     String win = "0";
     int aggression = 0;
 
-    String type = "";
+    String types = "";
 
 
     @SuppressLint("AppCompatMethod")
@@ -97,9 +99,9 @@ public class notes extends AppCompatActivity {
         no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (yes.isChecked())
+                if (no.isChecked())
                 {
-                    win = (String) "1";
+                    win = (String) "0";
                 }
             }
         });
@@ -109,7 +111,7 @@ public class notes extends AppCompatActivity {
         Full_cycler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                type = (String) "Full_cycler";
+                types = (String) "Full_cycler";
             }
         });
 
@@ -117,16 +119,16 @@ public class notes extends AppCompatActivity {
         Half_cycler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                type = (String) "Half_cycler";
+                types = (String) "Half_cycler";
             }
         });
 
 
-        RadioButton Feeder = (RadioButton) findViewById(R.id.Half_cycler);
+        RadioButton Feeder = (RadioButton) findViewById(R.id.Feeder);
         Feeder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                type = (String) "Feeder";
+                types = (String) "Feeder";
             }
         });
 
@@ -134,7 +136,7 @@ public class notes extends AppCompatActivity {
         Defense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                type = (String) "Defense";
+                types = (String) "Defense";
             }
         });
 
@@ -200,10 +202,11 @@ public class notes extends AppCompatActivity {
                 //Fifth Page
                 i.putExtra("aggression", bar);
                 i.putExtra("aggression", bar);
-                i.putExtra ( "additional",finalstr);
-                i.putExtra("type", type);
+                i.putExtra ("additional",finalstr);
+                i.putExtra("type", types);
                 i.putExtra("win", win);
                 startActivity(i);
+
             }
         });
 
