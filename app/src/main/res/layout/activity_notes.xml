@@ -17,8 +17,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/avenirbold"
         android:text="End Notes"
         android:textColor="#FFFFFF"
@@ -186,13 +186,17 @@
         android:id="@+id/text_input"
         android:layout_width="match_parent"
         android:layout_height="203dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="13dp"
-        android:layout_marginBottom="229dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/smaller_rect_field"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView16"
@@ -205,16 +209,19 @@
         android:text="@string/additional_notes"
         android:textColor="@color/black"
         android:textSize="40sp"
+        android:fontFamily="@font/avenirbold"
+        app:fontFamily="@font/avenirbold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="749dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="788dp"
         android:fontFamily="@font/avenir"
         android:text="Win?"
         android:textColor="#000000"
@@ -223,12 +230,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <RadioGroup
         android:layout_width="392dp"
         android:layout_height="119dp"
         android:layout_marginStart="209dp"
-        android:layout_marginTop="744dp"
+        android:layout_marginTop="815dp"
         android:layout_marginBottom="99dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -241,7 +247,9 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@drawable/smaller_rect_field"
-            android:text="Yes"
+            android:text="@string/yes"
+            android:fontFamily="@font/avenirbold"
+            app:fontFamily="@font/avenirbold"
             android:textColor="#FFFFFF"
             android:textSize="45sp" />
 
@@ -257,6 +265,8 @@
             android:layout_height="64dp"
             android:background="@drawable/smaller_rect_field"
             android:text="No"
+            android:fontFamily="@font/avenirbold"
+            app:fontFamily="@font/avenirbold"
             android:textColor="#FFFFFF"
             android:textSize="45sp" />
     </RadioGroup>
@@ -273,37 +283,41 @@
 
         <RadioButton
             android:id="@+id/Full_cycler"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Full cycler"
-            android:textSize="28sp"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:text="Full Cycler"
+            android:textSize="27sp"
+            android:background="@drawable/left_rect"
             tools:layout_editor_absoluteX="271dp"
             tools:layout_editor_absoluteY="364dp" />
 
         <RadioButton
             android:id="@+id/Half_cycler"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Half cycler"
-            android:textSize="28sp"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:text="Half Cycler"
+            android:background="@drawable/middle_rect"
+            android:textSize="27sp"
             tools:layout_editor_absoluteX="271dp"
             tools:layout_editor_absoluteY="364dp" />
 
         <RadioButton
             android:id="@+id/Feeder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
             android:text="Feeder"
-            android:textSize="28sp"
+            android:background="@drawable/middle_rect"
+            android:textSize="27sp"
             tools:layout_editor_absoluteX="271dp"
             tools:layout_editor_absoluteY="364dp" />
 
         <RadioButton
             android:id="@+id/Defense"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
             android:text="Defense"
-            android:textSize="28sp"
+            android:background="@drawable/right_rect"
+            android:textSize="27sp"
             tools:layout_editor_absoluteX="271dp"
             tools:layout_editor_absoluteY="364dp" />
 
@@ -315,7 +329,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
         android:layout_marginTop="304dp"
-        android:text="Robot Type"
+        android:text="@string/robot_type"
         android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"

@@ -25,7 +25,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="189dp"
         android:fontFamily="@font/avenirbold"
-        android:text="@string/autonomous"
+        android:text="@string/auto"
         android:textColor="@color/white"
         android:textSize="75sp"
         app:fontFamily="@font/avenirbold"
@@ -69,7 +69,7 @@
         android:background="@drawable/corner_rectangle_maroon"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
-        android:text="Attempted D + E"
+        android:text="@string/attempted_d_e"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:fontFamily="@font/avenir"
@@ -104,7 +104,7 @@
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
-        android:text="@string/engaged"
+        android:text="Engaged"
         android:textColor="@color/white"
         android:textSize="26sp"
         app:fontFamily="@font/avenir"
@@ -214,23 +214,6 @@
             android:layout_height="30dp" />
 
     </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="753dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginBottom="172dp"
-        android:fontFamily="@font/avenir"
-        android:text="@string/d_e_time"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        app:fontFamily="@font/avenir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Backward_page_2"
@@ -446,7 +429,7 @@
         android:layout_marginTop="556dp"
         android:layout_marginEnd="412dp"
         android:backgroundTint="#FF0000"
-        android:text="Reset Data"
+        android:text="@string/reset_data"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -472,6 +455,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginBottom="147dp"
         android:text="@string/_0"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -479,8 +463,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="212dp"
-        android:layout_marginTop="795dp"
+        android:layout_marginTop="792dp"
         android:text="@string/_5"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -490,6 +475,7 @@
         android:layout_marginStart="376dp"
         android:layout_marginBottom="147dp"
         android:text="@string/_10"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -501,10 +487,22 @@
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="147dp"
         android:text="@string/_15"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/avenir"
+        android:text="@string/d_e_time"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:fontFamily="@font/avenir"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="759dp" />
 
     <!-- grid -->
 

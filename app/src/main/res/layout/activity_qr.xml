@@ -98,13 +98,10 @@
         android:id="@+id/resethard"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:layout_marginStart="484dp"
+        android:layout_marginStart="379dp"
         android:layout_marginTop="868dp"
-        android:layout_marginEnd="27dp"
         android:background="@drawable/restart_icon_32263"
         app:backgroundTint="#EA1919"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

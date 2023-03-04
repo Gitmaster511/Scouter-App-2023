@@ -1,3 +1,41 @@
 <resources>
 
+    <string name="auto">Auto</string>
+    <string name="left_community">Left Community</string>
+    <string name="attempted_d_e">Attempted D + E</string>
+    <string name="reset_data">Reset Data</string>
+    <string name="docked">Docked</string>
+    <string name="page_2">Page 2</string>
+    <string name="d_e_time">D+E Time</string>
+    <string name="_0">0</string>
+    <string name="_5">5</string>
+    <string name="_10">10</string>
+    <string name="_15">15</string>
+    <string name="attempted">Attempted</string>
+    <string name="end_game">End Game</string>
+    <string name="engaged">Engaged</string>
+    <string name="solo_climb">Solo Climb</string>
+    <string name="gave_assistance">Gave Assistance</string>
+    <string name="received_assistance">Received Assistance</string>
+    <string name="parked">Parked</string>
+    <string name="climb_time">Climb Time</string>
+    <string name="_30">30</string>
+    <string name="_45">45</string>
+    <string name="_60">60</string>
+    <string name="scouter_app">Scouter App</string>
+    <string name="match_number">Match Number</string>
+    <string name="team_number">Team Number</string>
+    <string name="alliance">Alliance</string>
+    <string name="ex_1">Ex: 1</string>
+    <string name="ex_75">Ex: 75</string>
+    <string name="red">Red</string>
+    <string name="blue">Blue</string>
+    <string name="driver_station">Driver Station</string>
+    <string name="left">Left</string>
+    <string name="middle">Middle</string>
+    <string name="right">Right</string>
+    <string name="page_1">Page 1</string>
+    <string name="additional_notes">Additional Notes</string>
+    <string name="robot_type">Robot Type</string>
+    <string name="yes">Yes</string>
 </resources>
