@@ -13,8 +13,6 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.Objects;
 
 public class notes extends AppCompatActivity {
@@ -141,11 +139,13 @@ public class notes extends AppCompatActivity {
         });
 
 
-
-
-
-
-
+        Button clear = (Button) findViewById(R.id.goback);
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -188,7 +188,6 @@ public class notes extends AppCompatActivity {
                 i.putExtra("ground_cube_checked",ground_cube_checked);
                 i.putExtra("teleop_grid",teleop_grid);
                 i.putExtra("climb_time2",climb_time2);
-
                 //Fourth Page
                 i.putExtra("attempted_checked", attempted_checked);
                 i.putExtra("docked2_checked", docked2_checked);
