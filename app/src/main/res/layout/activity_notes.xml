@@ -106,6 +106,8 @@
         android:layout_marginEnd="26dp"
         android:max="4"
         android:progress="0"
+        android:thumb="@drawable/triangle_blue"
+        android:thumbTint="#C40818"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -182,40 +184,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/text_input"
         android:layout_width="match_parent"
         android:layout_height="203dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:background="@drawable/smaller_rect_field"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="561dp" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="418dp"
         android:layout_height="68dp"
-        android:layout_marginStart="91dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="432dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="425dp"
+        android:fontFamily="@font/avenirbold"
         android:gravity="center"
         android:text="@string/additional_notes"
         android:textColor="@color/black"
         android:textSize="40sp"
-        android:fontFamily="@font/avenirbold"
         app:fontFamily="@font/avenirbold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -247,11 +240,11 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@drawable/smaller_rect_field"
-            android:text="@string/yes"
             android:fontFamily="@font/avenirbold"
-            app:fontFamily="@font/avenirbold"
+            android:text="@string/yes"
             android:textColor="#FFFFFF"
-            android:textSize="45sp" />
+            android:textSize="45sp"
+            app:fontFamily="@font/avenirbold" />
 
         <View
             android:layout_width="50dp"
@@ -264,18 +257,18 @@
             android:layout_width="146dp"
             android:layout_height="64dp"
             android:background="@drawable/smaller_rect_field"
-            android:text="No"
             android:fontFamily="@font/avenirbold"
-            app:fontFamily="@font/avenirbold"
+            android:text="No"
             android:textColor="#FFFFFF"
-            android:textSize="45sp" />
+            android:textSize="45sp"
+            app:fontFamily="@font/avenirbold" />
     </RadioGroup>
 
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="81dp"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="368dp"
         android:gravity="center"
         android:orientation='horizontal'
         app:layout_constraintTop_toTopOf="parent"
@@ -285,9 +278,10 @@
             android:id="@+id/Full_cycler"
             android:layout_width="150dp"
             android:layout_height="75dp"
-            android:text="Full Cycler"
-            android:textSize="27sp"
             android:background="@drawable/left_rect"
+            android:text="Full Cycler"
+            android:textColor="@color/white"
+            android:textSize="27sp"
             tools:layout_editor_absoluteX="271dp"
             tools:layout_editor_absoluteY="364dp" />
 
@@ -295,8 +289,9 @@
             android:id="@+id/Half_cycler"
             android:layout_width="150dp"
             android:layout_height="75dp"
-            android:text="Half Cycler"
             android:background="@drawable/middle_rect"
+            android:text="Half Cycler"
+            android:textColor="@color/white"
             android:textSize="27sp"
             tools:layout_editor_absoluteX="271dp"
             tools:layout_editor_absoluteY="364dp" />
@@ -305,8 +300,9 @@
             android:id="@+id/Feeder"
             android:layout_width="150dp"
             android:layout_height="75dp"
-            android:text="Feeder"
             android:background="@drawable/middle_rect"
+            android:text="Feeder"
+            android:textColor="@color/white"
             android:textSize="27sp"
             tools:layout_editor_absoluteX="271dp"
             tools:layout_editor_absoluteY="364dp" />
@@ -315,8 +311,9 @@
             android:id="@+id/Defense"
             android:layout_width="150dp"
             android:layout_height="75dp"
-            android:text="Defense"
             android:background="@drawable/right_rect"
+            android:text="Defense"
+            android:textColor="@color/white"
             android:textSize="27sp"
             tools:layout_editor_absoluteX="271dp"
             tools:layout_editor_absoluteY="364dp" />
@@ -329,9 +326,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
         android:layout_marginTop="304dp"
+        android:fontFamily="@font/avenirbold"
         android:text="@string/robot_type"
         android:textColor="@color/black"
         android:textSize="40sp"
+        app:fontFamily="@font/avenirbold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -341,10 +340,12 @@
         android:layout_height="40dp"
         android:layout_marginStart="253dp"
         android:layout_marginEnd="253dp"
-        android:layout_marginBottom="378dp"
-        android:text="Go back"
+        android:layout_marginBottom="392dp"
+        android:backgroundTint="#000000"
+        android:text="Close Keyboard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
 

@@ -507,6 +507,8 @@
         android:layout_marginEnd="26dp"
         android:max="30"
         android:progress="0"
+        android:thumb="@drawable/triangle_blue"
+        android:thumbTint="#C40818"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
