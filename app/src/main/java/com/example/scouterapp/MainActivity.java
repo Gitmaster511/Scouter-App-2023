@@ -12,41 +12,20 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import java.util.Objects;
-//Could be removed
-
 
 public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroup;
-
-    String Alliance= "";
-    String driver_station;
-    String d = "sharedPrefs";
-
-
-
-
-
-
 
     @SuppressLint("AppCompatMethod")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(savedInstanceState != null) {
-            String matchNumber_string_lol;
-            matchNumber_string_lol = (String) savedInstanceState.getString("matchNumber_string_2");
-
-        }
-
-        // Remove topbar and bottombar
-
-
         //DON'T CHANGE THIS IT WORKS WITHOUT THE CHANGE
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_main);
 
@@ -54,22 +33,13 @@ public class MainActivity extends AppCompatActivity {
         //Match Number
         EditText matchNumber = (EditText) findViewById(R.id.match_number_input);
         matchNumber.setTextColor(Color.WHITE);//set the red text color
-        String matchNumber_string = "";
-        //matchNumber.setText(0);
-
-        //String matchNumberOutput = matchNumber.getText().toString();
-        matchNumber_string = (String) matchNumber.getText().toString();
-
 
 
         //Team Number
         EditText teamNumber = (EditText) findViewById(R.id.team_number_input);
         teamNumber.setTextColor(Color.WHITE);//set the red text color
-        //String teamNumberOutput = teamNumber.getText().toString();
         RadioButton Red = (RadioButton) findViewById(R.id.Red);
         RadioButton Blue = (RadioButton) findViewById(R.id.Blue);
-
-
 
 
         Button forward = (Button) findViewById(R.id.Forward_page_1);
@@ -81,41 +51,32 @@ public class MainActivity extends AppCompatActivity {
             RadioButton Right = (RadioButton) findViewById(R.id.Right);
 
 
-
             @Override
             public void onClick(View v) {
                 String Alliance = "";
                 String DriverStation = "";
-
-
-                if (Red.isChecked())
-                {
+                if (Red.isChecked()) {
                     Alliance = (String) "Red";
                 }
 
-                if (Blue.isChecked())
-                {
+                if (Blue.isChecked()) {
                     Alliance = (String) "Blue";
                 }
 
 
-                if(Left.isChecked())
-                {
+                if (Left.isChecked()) {
                     DriverStation = (String) "Left";
                 }
-                if(Mid.isChecked())
-                {
+                if (Mid.isChecked()) {
                     DriverStation = (String) "Middle";
                 }
-                if(Right.isChecked())
-                {
+                if (Right.isChecked()) {
                     DriverStation = (String) "Right";
                 }
-
                 Intent i = new Intent(MainActivity.this, auto.class);
-                i.putExtra ( "Match_Number", matchNumber.getText().toString());
-                i.putExtra ( "Team_Number", teamNumber.getText().toString());
-                i.putExtra ( "Alliance", Alliance.toString());
+                i.putExtra("Match_Number", matchNumber.getText().toString());
+                i.putExtra("Team_Number", teamNumber.getText().toString());
+                i.putExtra("Alliance", Alliance);
                 i.putExtra("Driver_Station", DriverStation);
 
                 startActivity(i);
@@ -123,29 +84,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
-        //Radio Group, displays what button is pressed with Toast
-        radioGroup = findViewById(R.id.driverStationButton);
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // on below line we are getting radio button from our group.
-                RadioButton radioButton = findViewById(checkedId);
-            }
-        }
-        );
     }
-      /*
-    @Override
-
-    public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putString("matchNumber_string_2", "5");
-
-    }
-    */
-
-
     }

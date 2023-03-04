@@ -8,7 +8,6 @@
     tools:layout_editor_absoluteY="1dp">
 
     <View
-        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="115dp"
         android:background="@drawable/top_rect"
@@ -16,7 +15,6 @@
         tools:layout_editor_absoluteY="-4dp" />
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
@@ -30,7 +28,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view4"
         android:layout_width="610dp"
         android:layout_height="94dp"
         android:layout_marginBottom="0dp"
@@ -40,7 +37,6 @@
 
 
     <TextView
-        android:id="@+id/textView3"
         android:layout_width="166dp"
         android:layout_height="69dp"
         android:layout_marginStart="222dp"
@@ -116,7 +112,6 @@
 
 
     <TextView
-        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
@@ -130,7 +125,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
@@ -142,7 +136,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
@@ -157,7 +150,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="196dp"
@@ -169,7 +161,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="288dp"
@@ -181,7 +172,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="197dp"
@@ -221,7 +211,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
@@ -322,7 +311,6 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"

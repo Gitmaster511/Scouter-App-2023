@@ -124,7 +124,6 @@ public class teleop extends AppCompatActivity {
             public void onClick(View v) {
                 ground_cube_checked = (String) "1";
 
-
             }
         });
 

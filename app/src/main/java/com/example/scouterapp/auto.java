@@ -35,14 +35,8 @@ public class auto extends AppCompatActivity {
     String docked_checked = "0";
     String engaged_checked = "0";
 
-
     String finalgrid = "";
 
-
-
-
-    String Team_Number;
-    String Match_Number;
 
     @SuppressLint("AppCompatMethod")
     @Override

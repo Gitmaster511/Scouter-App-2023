@@ -11,8 +11,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -173,7 +171,6 @@ public class qr extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(qr.this);
                 builder.setMessage("Did you get the QR code scanned?");
                 builder.setTitle("Are you sure you want to reset???");
-
                 builder.setMessage("This action is irreversible");
                 builder.setCancelable(false);
 
@@ -181,6 +178,7 @@ public class qr extends AppCompatActivity {
                 builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
                     // When the user click yes button then app will close
                     Intent i = new Intent(qr.this, MainActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(i);
                 });
 

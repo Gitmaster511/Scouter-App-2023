@@ -28,7 +28,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:background="@drawable/top_rect"
@@ -40,7 +39,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="277dp"
         android:layout_height="95dp"
         android:layout_marginStart="189dp"
@@ -171,7 +169,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <View
-        android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="94dp"
 
@@ -184,7 +181,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
         android:layout_width="173dp"
         android:layout_height="71dp"
         android:layout_marginStart="189dp"
@@ -517,7 +513,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
@@ -528,7 +523,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="212dp"
@@ -539,7 +533,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="795dp"
@@ -550,7 +543,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="795dp"
@@ -561,7 +553,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Cycle_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="228dp"
