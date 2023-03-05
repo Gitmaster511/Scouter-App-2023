@@ -425,7 +425,7 @@
         android:id="@+id/shape2"
         android:layout_width="221dp"
         android:layout_height="80dp"
-        android:layout_marginStart="352dp"
+        android:layout_marginStart="380dp"
         android:layout_marginTop="665dp"
         android:orientation="horizontal"
         android:paddingStart="20dip"
@@ -446,9 +446,9 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@drawable/xtraingle"
+            android:contentDescription="@string/greyed_our_arrow"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <!-- android:buttonTint="@color/purple_700" -->
 
         <View
             android:layout_width="30dp"
@@ -462,9 +462,9 @@
         android:layout_height="65dp"
         android:layout_marginEnd="156dp"
         android:layout_marginBottom="16dp"
-        app:backgroundTint="@color/white"
-
         android:background="@drawable/triangleforward"
+
+        app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
