@@ -3,11 +3,13 @@ package com.example.scouterapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -26,6 +28,8 @@ public class notes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         Intent intent = getIntent();
 
@@ -104,6 +108,8 @@ public class notes extends AppCompatActivity {
             }
         });
 
+
+
         RadioButton Full_cycler = (RadioButton) findViewById(R.id.Full_cycler);
 
         Full_cycler.setOnClickListener(new View.OnClickListener() {
@@ -143,7 +149,7 @@ public class notes extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                hideSoftKeyboard(v);
             }
         });
 
@@ -215,6 +221,10 @@ public class notes extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+    public void hideSoftKeyboard(View view){
+        InputMethodManager imm =(InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     @Override
     public void onBackPressed() {

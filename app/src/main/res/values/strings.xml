@@ -1,5 +1,5 @@
 <resources>
-
+    <string name="app_name">"Scouter App"</string>
     <string name="auto">Auto</string>
     <string name="left_community">Left Community</string>
     <string name="attempted_d_e">Attempted D + E</string>
@@ -64,4 +64,5 @@
     <string name="tele_op">Tele-Op</string>
     <string name="pickup">Pickup</string>
     <string name="greyed_our_arrow">Greyed Our Arrow</string>
+    <string name="edit_info">Edit Info</string>
 </resources>
