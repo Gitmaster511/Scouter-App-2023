@@ -18,6 +18,55 @@
 
     <!-- Match Number -->
 
+    <View
+        android:id="@+id/match_number_box"
+        android:layout_width="411dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="91dp"
+        android:background="@drawable/corner_rectangle_maroon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/match_number_input"
+        android:layout_width="333dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="137dp"
+        android:autofillHints="Ex: 1"
+        android:fontFamily="@font/avenirlight"
+        android:hint="@string/ex_1"
+        android:inputType="number"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:fontFamily="@font/avenirlight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/match_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="121dp"
+        android:fontFamily="@font/avenir"
+        android:text="@string/match_number"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:fontFamily="@font/avenir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -34,82 +83,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/match_number_box"
-        android:layout_width="420dp"
-        android:layout_height="175dp"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="152dp"
-        android:layout_marginEnd="91dp"
-        android:background="@drawable/corner_rectangle_maroon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/match_number_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="121dp"
-        android:fontFamily="@font/avenir"
-        android:text="@string/match_number"
-        android:textColor="#FFFFFF"
-        android:textSize="55sp"
-        app:fontFamily="@font/avenir"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Team Number -->
-
-    <EditText
-        android:id="@+id/match_number_input"
-        android:layout_width="333dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="137dp"
-        android:autofillHints="Ex: 1"
-        android:fontFamily="@font/avenirlight"
-        android:hint="@string/ex_1"
-        android:inputType="number"
-        android:textColorHint="@color/white"
-        android:textSize="20sp"
-        app:fontFamily="@font/avenirlight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/team_number_box"
-        android:layout_width="420dp"
-        android:layout_height="175dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="348dp"
-        android:layout_marginEnd="92dp"
-        android:background="@drawable/corner_rectangle_maroon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Driver Station -->
 
 
     <!-- Bottom -->
 
+    <View
+        android:id="@+id/match_number_box"
+        android:layout_width="411dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="91dp"
+        android:background="@drawable/corner_rectangle_maroon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/team_number_box"
+        android:layout_width="411dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="408dp"
+        android:layout_marginEnd="91dp"
+        android:background="@drawable/corner_rectangle_maroon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <TextView
         android:id="@+id/team_number_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="364dp"
+        android:layout_marginTop="408dp"
         android:layout_marginEnd="141dp"
         android:fontFamily="@font/avenir"
         android:text="@string/team_number"
@@ -126,7 +140,7 @@
         android:layout_width="330dp"
         android:layout_height="66dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="464dp"
         android:layout_marginEnd="137dp"
         android:autofillHints="Ex: 75"
         android:fontFamily="@font/avenirlight"
@@ -139,7 +153,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <View
         android:id="@+id/Page_1"

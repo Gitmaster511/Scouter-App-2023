@@ -504,7 +504,7 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="796dp"
         android:layout_marginEnd="26dp"
-        android:max="30"
+        android:max="60"
         android:progress="0"
         android:thumb="@drawable/triangle_blue"
         android:thumbTint="#C40818"
@@ -528,7 +528,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="212dp"
         android:layout_marginTop="795dp"
-        android:text="@string/_10"
+        android:text="20"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -538,7 +538,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="795dp"
         android:layout_marginEnd="208dp"
-        android:text="@string/_20"
+        android:text="40"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -548,7 +548,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="795dp"
         android:layout_marginEnd="36dp"
-        android:text="@string/_30"
+        android:text="60"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
