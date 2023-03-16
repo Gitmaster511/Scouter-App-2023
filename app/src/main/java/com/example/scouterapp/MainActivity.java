@@ -2,6 +2,7 @@ package com.example.scouterapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroup;
+    boolean disabled = false;
+
 
     @SuppressLint("AppCompatMethod")
     @Override
@@ -29,14 +32,19 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_main);
 
+        EditText name = (EditText) findViewById(R.id.name);
+        name.setTextColor(Color.WHITE);//set the red text color
+
 
         //Match Number
         EditText matchNumber = (EditText) findViewById(R.id.match_number_input);
         matchNumber.setTextColor(Color.WHITE);//set the red text color
 
 
+
         //Team Number
         EditText teamNumber = (EditText) findViewById(R.id.team_number_input);
+
         teamNumber.setTextColor(Color.WHITE);//set the red text color
         RadioButton Red = (RadioButton) findViewById(R.id.Red);
         RadioButton Blue = (RadioButton) findViewById(R.id.Blue);

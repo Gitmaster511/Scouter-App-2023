@@ -151,7 +151,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/Cube_select"
             android:layout_width="65dp"
             android:layout_height="65dp"
@@ -163,7 +163,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp" />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/Cone_select"
             android:layout_width="65dp"
             android:layout_height="65dp"
@@ -189,7 +189,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/Cube_select2"
             android:layout_width="100dp"
             android:layout_height="80dp"
@@ -199,7 +199,7 @@
 
         <!-- android:buttonTint="@color/purple_700" -->
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/Cone_select2"
             android:layout_width="130dp"
             android:layout_height="100dp"
@@ -299,7 +299,7 @@
 
         <RadioButton
             android:id="@+id/grid_8"
-            android:layout_width="wrap_content"
+            android:layout_width="52dp"
             android:layout_height="96dp" />
 
         <RadioButton
@@ -356,7 +356,7 @@
 
         <RadioButton
             android:id="@+id/grid_17"
-            android:layout_width="wrap_content"
+            android:layout_width="62dp"
             android:layout_height="96dp" />
 
         <RadioButton
@@ -411,7 +411,7 @@
 
         <RadioButton
             android:id="@+id/grid_26"
-            android:layout_width="wrap_content"
+            android:layout_width="52dp"
             android:layout_height="80dp" />
 
         <RadioButton
@@ -497,13 +497,25 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="234dp"
+        android:layout_marginBottom="167dp"
         android:fontFamily="@font/avenir"
         android:text="@string/d_e_time"
         android:textColor="#000000"
         android:textSize="30sp"
         app:fontFamily="@font/avenir"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="759dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="124dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="556dp"
+        android:layout_marginEnd="272dp"
+        android:text="@string/clear_grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- grid -->
 

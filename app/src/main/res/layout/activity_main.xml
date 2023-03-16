@@ -68,7 +68,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <View
         android:id="@+id/team_number_box"
         android:layout_width="411dp"
@@ -144,12 +143,14 @@
 
 
     <View
-        android:id="@+id/match_number_box"
+        android:id="@+id/name_box"
         android:layout_width="411dp"
         android:layout_height="124dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="149dp"
         android:background="@drawable/corner_rectangle_maroon"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="149dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/Page_1"
@@ -306,11 +307,15 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="203dp"
         android:text="@string/driver_station"
         android:textColor="#000000"
         android:textSize="45sp"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="698dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/student_id"
@@ -320,7 +325,7 @@
         android:layout_marginTop="148dp"
         android:layout_marginEnd="121dp"
         android:fontFamily="@font/avenir"
-        android:text="Student ID"
+        android:text="@string/name"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
         app:fontFamily="@font/avenir"
@@ -329,23 +334,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/studentid_number_input"
-        android:layout_width="333dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="212dp"
-        android:layout_marginEnd="137dp"
-        android:autofillHints="Ex: 1"
-        android:fontFamily="@font/avenirlight"
-        android:hint="Ex: 504532"
-        android:inputType="number"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/name"
+        android:layout_width="370dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/ex_ritvik"
         android:textColorHint="@color/white"
-        android:textSize="20sp"
-        app:fontFamily="@font/avenirlight"
+        android:textSize="22sp"
+        android:background="@drawable/smaller_rect_field"
+        android:imeOptions="actionDone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

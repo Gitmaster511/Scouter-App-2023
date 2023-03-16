@@ -66,4 +66,9 @@
     <string name="pickup">Pickup</string>
     <string name="greyed_our_arrow">Greyed Our Arrow</string>
     <string name="edit_info">Edit Info</string>
+    <string name="ex_504532">Ex: 504532</string>
+    <string name="student_id">Student ID</string>
+    <string name="ex_ritvik">Ex: Ritvik</string>
+    <string name="name">Name</string>
+    <string name="clear_grid">Clear Grid</string>
 </resources>
