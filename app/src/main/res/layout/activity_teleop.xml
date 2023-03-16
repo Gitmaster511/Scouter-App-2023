@@ -7,7 +7,12 @@
     android:background="@color/white">
 
     <!-- Top Bar  -->
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A0C7FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <View
         android:layout_width="77dp"
         android:layout_height="76dp"
@@ -264,6 +269,18 @@
             android:id="@+id/grid_9"
             android:layout_width="96dp"
             android:layout_height="100dp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
     </RadioGroup>
 
     <!-- Middle Row -->
@@ -485,11 +502,11 @@
         android:id="@+id/Reset_Field"
         android:layout_width="115dp"
         android:layout_height="40dp"
-        android:layout_marginStart="237dp"
-        android:layout_marginTop="676dp"
-        android:layout_marginEnd="249dp"
+        android:layout_marginStart="243dp"
+        android:layout_marginTop="704dp"
+        android:layout_marginEnd="243dp"
         android:backgroundTint="#FF0000"
-        android:text="@string/reset_data"
+        android:text="Reset Field"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -561,6 +578,21 @@
         android:text="@string/cycle_time"
         android:textColor="@color/black"
         android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Undo"
+        android:layout_width="115dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="243dp"
+        android:layout_marginTop="664dp"
+        android:layout_marginEnd="243dp"
+        android:backgroundTint="#FF0000"
+        android:text="Undo"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
