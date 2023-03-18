@@ -6,7 +6,12 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteX="134dp"
     tools:layout_editor_absoluteY="1dp">
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/db03c090f3453aa392e368f65667b6d9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="115dp"
@@ -61,10 +66,10 @@
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.914" />
+        app:layout_constraintVertical_bias="0.936" />
 
     <Button
         android:id="@+id/Backward_page_5"
@@ -86,7 +91,8 @@
         android:layout_height="98dp"
         android:layout_marginStart="178dp"
         android:layout_marginEnd="178dp"
-        android:layout_marginBottom="105dp"
+        android:layout_marginBottom="132dp"
+        android:backgroundTint="#C40818"
         android:text="@string/generate"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

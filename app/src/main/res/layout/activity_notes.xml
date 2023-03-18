@@ -6,7 +6,12 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteX="134dp"
     tools:layout_editor_absoluteY="1dp">
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/db03c090f3453aa392e368f65667b6d9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="115dp"

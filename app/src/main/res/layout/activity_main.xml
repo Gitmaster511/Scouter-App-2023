@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/db03c090f3453aa392e368f65667b6d9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <!-- Heading -->
     <View
         android:id="@+id/view"
@@ -341,7 +347,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="204dp"
         android:layout_marginEnd="15dp"
-        android:hint="@string/ex_ritvik"
+        android:hint="@string/ritvik_r"
         android:textColorHint="@color/white"
         android:textSize="22sp"
         android:background="@drawable/smaller_rect_field"

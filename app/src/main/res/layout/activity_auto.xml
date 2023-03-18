@@ -9,7 +9,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#A0C7FF"
+        android:background="@drawable/db03c090f3453aa392e368f65667b6d9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
     <View
@@ -462,7 +462,8 @@
         android:layout_marginStart="37dp"
         android:layout_marginBottom="147dp"
         android:text="@string/_0"
-        android:textColor="@color/black"
+        android:textColor="#C40818"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -472,7 +473,8 @@
         android:layout_marginStart="212dp"
         android:layout_marginTop="792dp"
         android:text="@string/_5"
-        android:textColor="@color/black"
+        android:textColor="#C40818"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -482,7 +484,8 @@
         android:layout_marginStart="376dp"
         android:layout_marginBottom="147dp"
         android:text="@string/_10"
-        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textColor="#C40818"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -494,7 +497,8 @@
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="147dp"
         android:text="@string/_15"
-        android:textColor="@color/black"
+        android:textColor="#C40818"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -505,11 +509,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="234dp"
         android:layout_marginBottom="167dp"
-        android:fontFamily="@font/avenir"
+        android:fontFamily="@font/avenirbold"
         android:text="@string/d_e_time"
-        android:textColor="#000000"
+        android:textColor="#C40818"
         android:textSize="30sp"
-        app:fontFamily="@font/avenir"
+        app:fontFamily="@font/avenirbold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
