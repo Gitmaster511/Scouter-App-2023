@@ -8,6 +8,12 @@
     <!-- Top Bar  -->
     <View
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A0C7FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:layout_width="match_parent"
         android:layout_height="115dp"
         android:background="@drawable/top_rect"
         android:bottomLeftRadius="40dp"
@@ -46,7 +52,7 @@
         android:layout_width="258dp"
         android:layout_height="99dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="132dp"
         android:background="@drawable/corner_rectangle_maroon"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
@@ -63,8 +69,8 @@
         android:id="@+id/Attempted"
         android:layout_width="258dp"
         android:layout_height="99dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="327dp"
+        android:layout_marginTop="131dp"
         android:background="@drawable/corner_rectangle_maroon"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
@@ -72,7 +78,7 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         app:fontFamily="@font/avenir"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </CheckBox>
@@ -143,8 +149,8 @@
         android:id="@+id/shape"
         android:layout_width="221dp"
         android:layout_height="80dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="596dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="580dp"
         android:orientation="horizontal"
         android:paddingStart="20dip"
         android:paddingEnd="10dip"
@@ -182,8 +188,8 @@
         android:id="@+id/shape2"
         android:layout_width="400dp"
         android:layout_height="100dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="676dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="660dp"
         android:orientation="horizontal"
         android:paddingEnd="0dip"
         app:layout_constraintStart_toStartOf="parent"
@@ -425,7 +431,7 @@
         android:id="@+id/RESET"
         android:layout_width="115dp"
         android:layout_height="40dp"
-        android:layout_marginTop="556dp"
+        android:layout_marginTop="250dp"
         android:layout_marginEnd="412dp"
         android:backgroundTint="#FF0000"
         android:text="@string/reset_data"
@@ -516,6 +522,16 @@
         android:text="@string/clear_grid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Undo"
+        android:layout_width="115dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#FF0000"
+        android:text="Undo"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="400dp"
+        tools:layout_editor_absoluteY="249dp" />
 
     <!-- grid -->
 
