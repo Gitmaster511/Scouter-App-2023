@@ -451,7 +451,7 @@
         android:id="@+id/RESET"
         android:layout_width="115dp"
         android:layout_height="40dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="248dp"
         android:layout_marginEnd="412dp"
         android:backgroundTint="#FF0000"
         android:text="@string/reset_data"
@@ -469,7 +469,7 @@
         android:layout_marginEnd="26dp"
         android:max="15"
         android:progress="0"
-        android:thumb="@drawable/triangle_blue"
+        android:thumb="@drawable/triangle_real"
         android:thumbTint="#C40818"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -542,25 +542,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/clear"
-        android:layout_width="124dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="556dp"
-        android:layout_marginEnd="272dp"
-        android:text="@string/clear_grid"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Undo"
         android:layout_width="115dp"
         android:layout_height="40dp"
+        android:layout_marginTop="249dp"
+        android:layout_marginEnd="86dp"
         android:backgroundTint="#FF0000"
-        android:text="Undo"
+        android:text="@string/undo"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="400dp"
-        tools:layout_editor_absoluteY="249dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- grid -->
 

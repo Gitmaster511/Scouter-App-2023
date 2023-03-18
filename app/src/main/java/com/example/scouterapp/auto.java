@@ -4,15 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.widget.Toast;
 import android.view.View;
 import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+//import java.util.*;
+import java.util.ArrayList;
+
 
 import android.view.Window;
 import android.view.WindowManager;
@@ -34,7 +38,13 @@ public class auto extends AppCompatActivity {
     String docked_checked = "0";
     String engaged_checked = "0";
 
-    String finalgrid = "";
+    //String finalgrid = "";
+
+    // push_back equivalent
+
+    ArrayList<String> finalgrid = new ArrayList<String>();
+
+
 
 
     @SuppressLint("AppCompatMethod")
@@ -71,7 +81,6 @@ public class auto extends AppCompatActivity {
                 }
             }
         });
-
 
         CheckBox Attempted = (CheckBox) findViewById(R.id.Attempted);
         Attempted.setOnClickListener(new View.OnClickListener() {
@@ -118,6 +127,8 @@ public class auto extends AppCompatActivity {
 
 
 
+
+
         forward.setOnClickListener(new View.OnClickListener() {
 
 
@@ -141,9 +152,9 @@ public class auto extends AppCompatActivity {
                 i.putExtra("Alliance", Alliance);
                 i.putExtra("Driver_Station",Driver_Station);
 
-
                 i.putExtra("climb_time", lol);
-                i.putExtra("auto_grid",finalgrid);
+                String listString = String.join(", ", finalgrid);
+                i.putExtra("auto_grid",listString);
 
 
 
@@ -187,6 +198,27 @@ public class auto extends AppCompatActivity {
         RadioButton grid25 = (RadioButton) findViewById(R.id.grid_25);
         RadioButton grid26 = (RadioButton) findViewById(R.id.grid_26);
         RadioButton grid27 = (RadioButton) findViewById(R.id.grid_27);
+
+        Button undo = (Button) findViewById(R.id.Undo);
+        undo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (finalgrid.size() >= 1) {
+                    int index = finalgrid.size() - 1;
+                    String str = finalgrid.get(index);
+                    String a = str.substring(0, 3);
+                    //Toast.makeText(auto.this, a, Toast.LENGTH_SHORT).show();
+                    Drawable transparentDrawable = new ColorDrawable(Color.TRANSPARENT);
+
+                    if (a.equals("1,1")) {
+                        grid1.setChecked(false);
+                        grid1.setBackground(transparentDrawable);
+                    }
+
+                    finalgrid.remove(index);
+                }
+            }
+        });
 
 
         CheckBox cube = (CheckBox) findViewById(R.id.Cube_select);
@@ -259,7 +291,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                     row2.clearCheck();
                     row3.clearCheck();
-                    finalgrid = (String) "";
+                    finalgrid.clear();
                     grid1.setBackgroundColor(Color.TRANSPARENT);
                     grid2.setBackgroundColor(Color.TRANSPARENT);
                     grid3.setBackgroundColor(Color.TRANSPARENT);
@@ -324,6 +356,7 @@ public class auto extends AppCompatActivity {
                 });
 
 
+        /*
         Button clear = (Button) findViewById(R.id.clear);
 
         clear.setOnClickListener(new View.OnClickListener() {
@@ -364,6 +397,7 @@ public class auto extends AppCompatActivity {
 
             }
         });
+         */
 
         row1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
@@ -377,29 +411,27 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cube_message.create();
                     alert11.show();
                     cube.setChecked(false);
-
-
                 }
                 else if (grid1.isChecked() && cone.isChecked()) {
                     row1.clearCheck();
                     cone.setChecked(false);
                     Toast.makeText(auto.this, "Grid1 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,1,cone,1?";
-                    grid1.setBackgroundResource(R.drawable.triangle_blue);
-
+                    finalgrid.add("1,1,cone,1?");
+                    grid1.setBackgroundResource(R.drawable.triangle_real);
                 }
                 else if (grid1.isChecked() && cube2.isChecked()) {
                     row1.clearCheck();
                     cube2.setChecked(false);
                     Toast.makeText(auto.this, "Grid1 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,1,cube,-1?";
+                    finalgrid.add("1,1,cube,-1?");
                     grid1.setBackgroundResource(R.drawable.xcube);
 
                 }
                 else if (grid1.isChecked() && cone2.isChecked()) {
                     row1.clearCheck();
                     Toast.makeText(auto.this, "Grid1 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,1,cone,-1?";
+                    finalgrid.add("1,1,cone,-1?");
+
                     grid1.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -407,12 +439,9 @@ public class auto extends AppCompatActivity {
                 if (grid2.isChecked() && cube.isChecked()) {
                     row1.clearCheck();
                     Toast.makeText(auto.this, "Grid2 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,1,cube,1?";
+                    finalgrid.add("2,1,cube,-1?");
                     grid2.setBackgroundResource(R.drawable.cube);
                     cube.setChecked(false);
-
-
-
                 }
                 else if (grid2.isChecked() && cone.isChecked()) {
                     row1.clearCheck();
@@ -428,7 +457,8 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid2 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,1,cube,-1?";
+                    finalgrid.add("2,1,cube,-1?");
+
                     grid2.setBackgroundResource(R.drawable.xcube);
 
                 }
@@ -436,7 +466,8 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid2 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,1,cone,-1?";
+                    finalgrid.add("2,1,cone,-1?");
+
                     grid2.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -454,8 +485,9 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid3 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,1,cone,1?";
-                    grid3.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("3,1,cone,-1?");
+
+                    grid3.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -463,7 +495,8 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid3 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,1,cube,-1?";
+                    finalgrid.add("3,1,cube,-1?");
+
                     grid3.setBackgroundResource(R.drawable.xcube);
 
 
@@ -472,7 +505,8 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid3 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,1,cube,-1?";
+                    finalgrid.add("3,1,cube,-1?");
+
                     grid3.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -491,8 +525,8 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                     
                     Toast.makeText(auto.this, "Grid4 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,1,cone,1?";
-                    grid4.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("4,1,cone,1?");
+                    grid4.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -500,7 +534,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid4 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,1,cube,-1?";
+                    finalgrid.add("4,1,cube,-1?");
                     grid4.setBackgroundResource(R.drawable.xcube);
 
 
@@ -509,7 +543,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid4 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,1,cone,-1?";
+                    finalgrid.add("4,1,cone,-1?");
                     grid4.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -518,7 +552,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid5 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,1,cube,1?";
+                    finalgrid.add("5,1,cube,1?");
                     grid5.setBackgroundResource(R.drawable.cube);
                     cube.setChecked(false);
 
@@ -537,7 +571,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid5 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,1,cube,-1?";
+                    finalgrid.add("5,1,cube,-1?");
                     grid5.setBackgroundResource(R.drawable.xcube);
 
 
@@ -546,7 +580,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid5 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,1,cone,-1?";
+                    finalgrid.add("5,1,cone,-1?");
                     grid5.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -559,15 +593,15 @@ public class auto extends AppCompatActivity {
                     alert11.show();
                     cube.setChecked(false);
 
-                    //finalgrid = (String) finalgrid + "6,1,cube,1?";
+                    //finalgrid.add("6,1,cube,1?";
 
                 }
                 else if (grid6.isChecked() && cone.isChecked()) {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid6 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,1,cone,1?";
-                    grid6.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("6,1,cone,1?");
+                    grid6.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -575,7 +609,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid6 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,1,cube,-1?";
+                    finalgrid.add("6,1,cube,-1?");
                     grid6.setBackgroundResource(R.drawable.xcube);
 
 
@@ -584,7 +618,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid6 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,1,cone,-1?";
+                    finalgrid.add("6,1,cone,-1?");
                     grid6.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -602,8 +636,8 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid7 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,1,cone,1?";
-                    grid7.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("7,1,cone,1?");
+                    grid7.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -611,7 +645,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid7 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,1,cube,-1?";
+                    finalgrid.add("7,1,cube,-1?");
                     grid7.setBackgroundResource(R.drawable.xcube);
 
 
@@ -620,7 +654,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid7 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,1,cone,-1?";
+                    finalgrid.add("7,1,cone,-1?");
                     grid7.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -630,7 +664,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid8 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,1,cube,1?";
+                    finalgrid.add("8,1,cube,1?");
                     grid8.setBackgroundResource(R.drawable.cube);
 
 
@@ -642,14 +676,14 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "8,1,cone,1?";
+                    //finalgrid.add("8,1,cone,1?";
 
                 }
                 else if (grid8.isChecked() && cube2.isChecked()) {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid8 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,1,cube,-1?";
+                    finalgrid.add("8,1,cube,-1?");
                     grid8.setBackgroundResource(R.drawable.xcube);
 
 
@@ -658,7 +692,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid8 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,1,cone,-1?";
+                    finalgrid.add("8,1,cone,-1?");
                     grid8.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -671,15 +705,15 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cube_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "9,1,cube,1?";
+                    //finalgrid.add("9,1,cube,1?";
 
                 }
                 else if (grid9.isChecked() && cone.isChecked()) {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid9 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,1,cone,1?";
-                    grid9.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("9,1,cone,1?");
+                    grid9.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -687,7 +721,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid9 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,1,cube,-1?";
+                    finalgrid.add("9,1,cube,-1?");
                     grid9.setBackgroundResource(R.drawable.xcube);
 
 
@@ -696,7 +730,7 @@ public class auto extends AppCompatActivity {
                     row1.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid9 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,1,cone,-1?";
+                    finalgrid.add("9,1,cone,-1?");
                     grid9.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -727,8 +761,8 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid10 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,2,cone,1?";
-                    grid10.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("1,2,cone,1?");
+                    grid10.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -736,7 +770,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid10 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,2,cube,-1?";
+                    finalgrid.add("1,2,cube,-1?");
                     grid10.setBackgroundResource(R.drawable.xcube);
 
 
@@ -745,7 +779,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid10 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,2,cone,-1?";
+                    finalgrid.add("1,2,cone,-1?");
                     grid10.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -756,7 +790,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid11 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,2,cube,1?";
+                    finalgrid.add("2,2,cube,1?");
                     grid11.setBackgroundResource(R.drawable.cube);
 
 
@@ -768,14 +802,14 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "2,2,cone,1?";
+                    //finalgrid.add("2,2,cone,1?";
 
                 }
                 else if (grid11.isChecked() && cube2.isChecked()) {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid11 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,2,cube,-1?";
+                    finalgrid.add("2,2,cube,-1?");
                     grid11.setBackgroundResource(R.drawable.xcube);
 
 
@@ -784,7 +818,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid11 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,2,cone,-1?";
+                    finalgrid.add("2,2,cone,-1?");
                     grid11.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -797,15 +831,15 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cube_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "3,2,cube,1?";
+                    //finalgrid.add("3,2,cube,1?";
 
                 }
                 else if (grid12.isChecked() && cone.isChecked()) {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid12 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,2,cone,1?";
-                    grid12.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("3,2,cone,1?");
+                    grid12.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -813,7 +847,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid12 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,2,cube,-1?";
+                    finalgrid.add("3,2,cube,-1?");
                     grid12.setBackgroundResource(R.drawable.xcube);
 
 
@@ -823,7 +857,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid12 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,2,cone,-1?";
+                    finalgrid.add("3,2,cone,-1?");
                     grid12.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -836,15 +870,15 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cube_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "4,2,cube,1?";
+                    //finalgrid.add("4,2,cube,1?";
 
                 }
                 else if (grid13.isChecked() && cone.isChecked()) {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid13 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,2,cone,1?";
-                    grid13.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("4,2,cone,1?");
+                    grid13.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -852,7 +886,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid13 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,2,cube,-1?";
+                    finalgrid.add("4,2,cube,-1?");
                     grid13.setBackgroundResource(R.drawable.xcube);
 
 
@@ -861,7 +895,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid13 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,2,cone,-1?";
+                    finalgrid.add("4,2,cone,-1?");
                     grid13.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -871,7 +905,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid14 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,2,cube,1?";
+                    finalgrid.add("5,2,cube,1?");
                     grid14.setBackgroundResource(R.drawable.cube);
 
 
@@ -883,14 +917,14 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "5,2,cone,1?";
+                    //finalgrid.add("5,2,cone,1?";
 
                 }
                 else if (grid14.isChecked() && cube2.isChecked()) {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid14 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,2,cube,-1?";
+                    finalgrid.add("5,2,cube,-1?");
                     grid14.setBackgroundResource(R.drawable.xcube);
 
 
@@ -899,7 +933,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid14 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,2,cone,-1?";
+                    finalgrid.add("5,2,cone,-1?");
                     grid14.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -912,15 +946,15 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cube_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "6,2,cube,1?";
+                    //finalgrid.add("6,2,cube,1?";
 
                 }
                 else if (grid15.isChecked() && cone.isChecked()) {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid15 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,2,cone,1?";
-                    grid15.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("6,2,cone,1?");
+                    grid15.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -928,7 +962,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid15 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,2,cube,-1?";
+                    finalgrid.add("6,2,cube,-1?");
                     grid15.setBackgroundResource(R.drawable.xcube);
 
 
@@ -937,7 +971,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid15 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,2,cone,-1?";
+                    finalgrid.add("6,2,cone,-1?");
                     grid15.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -951,15 +985,15 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cube_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "7,2,cube,1?";
+                    //finalgrid.add("7,2,cube,1?";
 
                 }
                 else if (grid16.isChecked() && cone.isChecked()) {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid16 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,2,cone,1?";
-                    grid16.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("7,2,cone,1?");
+                    grid16.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -967,7 +1001,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid16 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,2,cube,-1?";
+                    finalgrid.add("7,2,cube,-1?");
                     grid16.setBackgroundResource(R.drawable.xcube);
 
 
@@ -976,7 +1010,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid16 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,2,cone,-1?";
+                    finalgrid.add("7,2,cone,-1?");
                     grid16.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -986,7 +1020,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid17 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,2,cube,1?";
+                    finalgrid.add("8,2,cube,1?");
                     grid17.setBackgroundResource(R.drawable.cube);
 
 
@@ -998,14 +1032,14 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "8,2,cone,1?";
+                    //finalgrid.add("8,2,cone,1?";
 
                 }
                 else if (grid17.isChecked() && cube2.isChecked()) {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid17 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,2,cube,-1?";
+                    finalgrid.add("8,2,cube,-1?");
                     grid17.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1014,7 +1048,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid17 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,2,cone,-1?";
+                    finalgrid.add("8,2,cone,-1?");
                     grid17.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1027,15 +1061,15 @@ public class auto extends AppCompatActivity {
                     AlertDialog alert11 = cube_message.create();
                     alert11.show();
 
-                    //finalgrid = (String) finalgrid + "9,2,cube,1?";
+                    //finalgrid.add("9,2,cube,1?";
 
                 }
                 else if (grid18.isChecked() && cone.isChecked()) {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid18 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,2,cone,1?";
-                    grid18.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("9,2,cone,1?");
+                    grid18.setBackgroundResource(R.drawable.triangle_real);
 
 
                 }
@@ -1043,7 +1077,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid18 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,2,cube,-1?";
+                    finalgrid.add("9,2,cube,-1?");
                     grid18.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1052,7 +1086,7 @@ public class auto extends AppCompatActivity {
                     row2.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid18 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,2,cone,-1?";
+                    finalgrid.add("9,2,cone,-1?");
                     grid18.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1073,7 +1107,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid19 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,3,cube,1?";
+                    finalgrid.add("1,3,cube,1?");
                     grid19.setBackgroundResource(R.drawable.cube);
 
 
@@ -1081,15 +1115,15 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid19 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,3,cone,1?";
-                    grid19.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("1,3,cone,1?");
+                    grid19.setBackgroundResource(R.drawable.triangle_real);
 
 
                 } else if (grid19.isChecked() && cube2.isChecked()) {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid19 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,3,cube,-1?";
+                    finalgrid.add("1,3,cube,-1?");
                     grid19.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1098,7 +1132,7 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid19 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "1,3,cone,-1?";
+                    finalgrid.add("1,3,cone,-1?");
                     grid19.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1108,7 +1142,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid20 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,3,cube,1?";
+                    finalgrid.add("2,3,cube,1?");
                     grid20.setBackgroundResource(R.drawable.cube);
 
 
@@ -1116,15 +1150,15 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid20 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,3,cone,1?";
-                    grid20.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("2,3,cone,1?");
+                    grid20.setBackgroundResource(R.drawable.triangle_real);
 
 
                 } else if (grid20.isChecked() && cube2.isChecked()) {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid20 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,3,cube,-1?";
+                    finalgrid.add("2,3,cube,-1?");
                     grid20.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1133,7 +1167,7 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid20 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "2,3,cone,-1?";
+                    finalgrid.add("2,3,cone,-1?");
                     grid20.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1143,7 +1177,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid21 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,3,cube,1?";
+                    finalgrid.add("3,3,cube,1?");
                     grid21.setBackgroundResource(R.drawable.cube);
 
 
@@ -1151,15 +1185,15 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid21 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,3,cone,1?";
-                    grid21.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("3,3,cone,1?");
+                    grid21.setBackgroundResource(R.drawable.triangle_real);
 
 
                 } else if (grid21.isChecked() && cube2.isChecked()) {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid21 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,3,cube,-1?";
+                    finalgrid.add("3,3,cube,-1?");
                     grid21.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1168,7 +1202,7 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid21 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "3,3,cone,-1?";
+                    finalgrid.add("3,3,cone,-1?");
                     grid21.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1178,7 +1212,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid22 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,3,cube,1?";
+                    finalgrid.add("4,3,cube,1?");
                     grid22.setBackgroundResource(R.drawable.cube);
 
 
@@ -1186,15 +1220,15 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid22 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,3,cone,1?";
-                    grid22.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("4,3,cone,1?");
+                    grid22.setBackgroundResource(R.drawable.triangle_real);
 
 
                 } else if (grid22.isChecked() && cube2.isChecked()) {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid22 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,3,cube,-1?";
+                    finalgrid.add("4,3,cube,-1?");
                     grid22.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1203,7 +1237,7 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid22 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "4,3,cone,-1?";
+                    finalgrid.add("4,3,cone,-1?");
                     grid22.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1213,7 +1247,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid23 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,3,cube,1?";
+                    finalgrid.add("5,3,cube,1?");
                     grid23.setBackgroundResource(R.drawable.cube);
 
 
@@ -1221,15 +1255,15 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid23 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,3,cone,1?";
-                    grid23.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("5,3,cone,1?");
+                    grid23.setBackgroundResource(R.drawable.triangle_real);
 
 
                 } else if (grid23.isChecked() && cube2.isChecked()) {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid23 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,3,cube,-1?";
+                    finalgrid.add("5,3,cube,-1?");
                     grid23.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1238,7 +1272,7 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid23 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "5,3,cone,-1?";
+                    finalgrid.add("5,3,cone,-1?");
                     grid23.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1248,7 +1282,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid24 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,3,cube,1?";
+                    finalgrid.add("6,3,cube,1?");
                     grid24.setBackgroundResource(R.drawable.cube);
 
 
@@ -1256,15 +1290,15 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid24 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,3,cone,1?";
-                    grid24.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("6,3,cone,1?");
+                    grid24.setBackgroundResource(R.drawable.triangle_real);
 
 
                 } else if (grid24.isChecked() && cube2.isChecked()) {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid24 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,3,cube,-1?";
+                    finalgrid.add("6,3,cube,-1?");
                     grid24.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1273,7 +1307,7 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid24 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "6,3,cone,-1?";
+                    finalgrid.add("6,3,cone,-1?");
                     grid24.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1283,7 +1317,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid25 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,3,cube,1?";
+                    finalgrid.add("7,3,cube,1?");
                     grid25.setBackgroundResource(R.drawable.cube);
 
 
@@ -1291,15 +1325,15 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid25 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,3,cone,1?";
-                    grid25.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("7,3,cone,1?");
+                    grid25.setBackgroundResource(R.drawable.triangle_real);
 
 
                 } else if (grid25.isChecked() && cube2.isChecked()) {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid25 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,3,cube,-1?";
+                    finalgrid.add("7,3,cube,-1?");
                     grid25.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1308,7 +1342,7 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid25 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "7,3,cone,-1?";
+                    finalgrid.add("7,3,cone,-1?");
                     grid25.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1318,7 +1352,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid26 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,3,cube,1?";
+                    finalgrid.add("8,3,cube,1?");
                     grid26.setBackgroundResource(R.drawable.cube);
 
 
@@ -1326,8 +1360,8 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid26 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,3,cone,1?";
-                    grid26.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("8,3,cone,1?");
+                    grid26.setBackgroundResource(R.drawable.triangle_real);
 
 
 
@@ -1335,7 +1369,7 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid26 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,3,cube,-1?";
+                    finalgrid.add("8,3,cube,-1?");
                     grid26.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1344,7 +1378,7 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid26 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "8,3,cone,-1?";
+                    finalgrid.add("8,3,cone,-1?");
                     grid26.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1355,7 +1389,7 @@ public class auto extends AppCompatActivity {
                     cube.setChecked(false);
 
                     Toast.makeText(auto.this, "Grid27 Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,3,cube,1?";
+                    finalgrid.add("9,3,cube,1?");
                     grid27.setBackgroundResource(R.drawable.cube);
 
 
@@ -1363,15 +1397,15 @@ public class auto extends AppCompatActivity {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid27 Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,3,cone,1?";
-                    grid27.setBackgroundResource(R.drawable.triangle_blue);
+                    finalgrid.add("9,3,cone,1?");
+                    grid27.setBackgroundResource(R.drawable.triangle_real);
 
 
                 } else if (grid27.isChecked() && cube2.isChecked()) {
                     row3.clearCheck();
                    
                     Toast.makeText(auto.this, "Grid27 X Cube Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,3,cube,-1?";
+                    finalgrid.add("9,3,cube,-1?");
                     grid27.setBackgroundResource(R.drawable.xcube);
 
 
@@ -1379,7 +1413,7 @@ public class auto extends AppCompatActivity {
                 else if (grid27.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
                     Toast.makeText(auto.this, "Grid27 X Cone Selected", Toast.LENGTH_SHORT).show();
-                    finalgrid = (String) finalgrid + "9,3,cone,-1?";
+                    finalgrid.add("9,3,cone,-1?");
                     grid27.setBackgroundResource(R.drawable.xtraingle);
 
 
@@ -1387,6 +1421,8 @@ public class auto extends AppCompatActivity {
             }
 
         });}
+
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
