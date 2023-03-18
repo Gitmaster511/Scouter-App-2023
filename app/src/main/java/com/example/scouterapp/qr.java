@@ -111,7 +111,7 @@ public class qr extends AppCompatActivity {
                 });
 
         check.setNegativeButton(
-                "\uD83D\uDE28 No",
+                "No",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // If user click no then dialog box is canceled.
