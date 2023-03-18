@@ -456,6 +456,11 @@
         android:backgroundTint="#FF0000"
         android:text="@string/reset_data"
         android:textSize="12sp"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -549,6 +554,11 @@
         android:layout_marginTop="556dp"
         android:layout_marginEnd="272dp"
         android:text="@string/clear_grid"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -558,6 +568,11 @@
         android:layout_height="40dp"
         android:backgroundTint="#FF0000"
         android:text="Undo"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:textAllCaps="true"
         android:textSize="12sp"
         tools:layout_editor_absoluteX="400dp"
         tools:layout_editor_absoluteY="249dp" />
