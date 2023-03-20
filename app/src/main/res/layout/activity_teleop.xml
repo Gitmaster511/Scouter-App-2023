@@ -503,7 +503,7 @@
         android:layout_marginTop="704dp"
         android:layout_marginEnd="243dp"
         android:backgroundTint="#FF0000"
-        android:text="Reset Field"
+        android:text="@string/reset_data"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

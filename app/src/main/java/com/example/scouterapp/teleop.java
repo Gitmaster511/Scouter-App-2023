@@ -520,6 +520,7 @@ public class teleop extends AppCompatActivity {
                 });
 
 
+
         row1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
             @Override
@@ -539,6 +540,8 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid1 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("1,1,cone,1?");
                     grid1.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
+
                 }
                 else if (grid1.isChecked() && cube2.isChecked()) {
                     row1.clearCheck();
@@ -546,12 +549,15 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid1 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("1,1,cube,-1?");
                     grid1.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
+
 
                 }
                 else if (grid1.isChecked() && cone2.isChecked()) {
                     row1.clearCheck();
                     Toast.makeText(teleop.this, "Grid1 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("1,1,cone,-1?");
+                    cone2.setChecked(false);
 
                     grid1.setBackgroundResource(R.drawable.xtraingle);
 
@@ -570,6 +576,8 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid2 Cone Selected", Toast.LENGTH_SHORT).show();
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
+                    cone.setChecked(false);
+
 
 
 
@@ -579,8 +587,8 @@ public class teleop extends AppCompatActivity {
 
                     Toast.makeText(teleop.this, "Grid2 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("2,1,cube,-1?");
-
                     grid2.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
                 }
                 else if (grid2.isChecked() && cone2.isChecked()) {
@@ -588,6 +596,7 @@ public class teleop extends AppCompatActivity {
 
                     Toast.makeText(teleop.this, "Grid2 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("2,1,cone,-1?");
+                    cone2.setChecked(false);
 
                     grid2.setBackgroundResource(R.drawable.xtraingle);
 
@@ -600,15 +609,14 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid3 Cube Selected", Toast.LENGTH_SHORT).show();
                     cube.setChecked(false);
 
-
                 }
                 else if (grid3.isChecked() && cone.isChecked()) {
                     row1.clearCheck();
 
                     Toast.makeText(teleop.this, "Grid3 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("3,1,cone,-1?");
-
                     grid3.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -617,7 +625,7 @@ public class teleop extends AppCompatActivity {
 
                     Toast.makeText(teleop.this, "Grid3 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("3,1,cube,-1?");
-
+                    cube2.setChecked(false);
                     grid3.setBackgroundResource(R.drawable.xcube);
 
 
@@ -627,6 +635,7 @@ public class teleop extends AppCompatActivity {
 
                     Toast.makeText(teleop.this, "Grid3 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("3,1,cube,-1?");
+                    cone2.setChecked(false);
 
                     grid3.setBackgroundResource(R.drawable.xtraingle);
 
@@ -648,6 +657,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid4 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("4,1,cone,1?");
                     grid4.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -657,6 +667,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid4 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("4,1,cube,-1?");
                     grid4.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
@@ -666,6 +677,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid4 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("4,1,cone,-1?");
                     grid4.setBackgroundResource(R.drawable.xtraingle);
+                    cone2.setChecked(false);
 
 
                 }
@@ -685,6 +697,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid5 Cone Selected", Toast.LENGTH_SHORT).show();
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
+                    cone.setChecked(false);
 
 
                 }
@@ -694,11 +707,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid5 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("5,1,cube,-1?");
                     grid5.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid5.isChecked() && cone2.isChecked()) {
                     row1.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid5 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("5,1,cone,-1?");
@@ -723,6 +738,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid6 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("6,1,cone,1?");
                     grid6.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -732,11 +748,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid6 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("6,1,cube,-1?");
                     grid6.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid6.isChecked() && cone2.isChecked()) {
                     row1.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid6 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("6,1,cone,-1?");
@@ -759,6 +777,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid7 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("7,1,cone,1?");
                     grid7.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -768,11 +787,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid7 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("7,1,cube,-1?");
                     grid7.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid7.isChecked() && cone2.isChecked()) {
                     row1.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid7 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("7,1,cone,-1?");
@@ -796,6 +817,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid8 Cone Selected", Toast.LENGTH_SHORT).show();
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
+                    cone.setChecked(false);
 
                     //finalgrid.add("8,1,cone,1?";
 
@@ -806,11 +828,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid8 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("8,1,cube,-1?");
                     grid8.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid8.isChecked() && cone2.isChecked()) {
                     row1.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid8 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("8,1,cone,-1?");
@@ -835,6 +859,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid9 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("9,1,cone,1?");
                     grid9.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -844,11 +869,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid9 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("9,1,cube,-1?");
                     grid9.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid9.isChecked() && cone2.isChecked()) {
                     row1.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid9 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("9,1,cone,-1?");
@@ -884,6 +911,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid10 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("1,2,cone,1?");
                     grid10.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -893,11 +921,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid10 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("1,2,cube,-1?");
                     grid10.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid10.isChecked() && cone2.isChecked()) {
                     row2.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid10 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("1,2,cone,-1?");
@@ -922,6 +952,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid11 Cone Selected", Toast.LENGTH_SHORT).show();
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
+                    cone.setChecked(false);
 
                     //finalgrid.add("2,2,cone,1?";
 
@@ -932,11 +963,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid11 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("2,2,cube,-1?");
                     grid11.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid11.isChecked() && cone2.isChecked()) {
                     row2.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid11 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("2,2,cone,-1?");
@@ -961,6 +994,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid12 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("3,2,cone,1?");
                     grid12.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -970,12 +1004,14 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid12 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("3,2,cube,-1?");
                     grid12.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
 
                 }
                 else if (grid12.isChecked() && cone2.isChecked()) {
                     row2.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid12 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("3,2,cone,-1?");
@@ -1000,6 +1036,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid13 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("4,2,cone,1?");
                     grid13.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -1009,11 +1046,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid13 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("4,2,cube,-1?");
                     grid13.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid13.isChecked() && cone2.isChecked()) {
                     row2.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid13 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("4,2,cone,-1?");
@@ -1037,6 +1076,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid14 Cone Selected", Toast.LENGTH_SHORT).show();
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
+                    cone.setChecked(false);
 
                     //finalgrid.add("5,2,cone,1?";
 
@@ -1047,11 +1087,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid14 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("5,2,cube,-1?");
                     grid14.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid14.isChecked() && cone2.isChecked()) {
                     row2.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid14 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("5,2,cone,-1?");
@@ -1076,6 +1118,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid15 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("6,2,cone,1?");
                     grid15.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -1085,11 +1128,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid15 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("6,2,cube,-1?");
                     grid15.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid15.isChecked() && cone2.isChecked()) {
                     row2.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid15 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("6,2,cone,-1?");
@@ -1115,6 +1160,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid16 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("7,2,cone,1?");
                     grid16.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -1124,11 +1170,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid16 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("7,2,cube,-1?");
                     grid16.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid16.isChecked() && cone2.isChecked()) {
                     row2.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid16 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("7,2,cone,-1?");
@@ -1152,6 +1200,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid17 Cone Selected", Toast.LENGTH_SHORT).show();
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
+                    cone.setChecked(false);
 
                     //finalgrid.add("8,2,cone,1?";
 
@@ -1162,11 +1211,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid17 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("8,2,cube,-1?");
                     grid17.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid17.isChecked() && cone2.isChecked()) {
                     row2.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid17 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("8,2,cone,-1?");
@@ -1191,6 +1242,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid18 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("9,2,cone,1?");
                     grid18.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 }
@@ -1200,11 +1252,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid18 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("9,2,cube,-1?");
                     grid18.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid18.isChecked() && cone2.isChecked()) {
                     row2.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid18 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("9,2,cone,-1?");
@@ -1238,6 +1292,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid19 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("1,3,cone,1?");
                     grid19.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 } else if (grid19.isChecked() && cube2.isChecked()) {
@@ -1246,11 +1301,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid19 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("1,3,cube,-1?");
                     grid19.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid19.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid19 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("1,3,cone,-1?");
@@ -1273,6 +1330,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid20 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("2,3,cone,1?");
                     grid20.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 } else if (grid20.isChecked() && cube2.isChecked()) {
@@ -1281,11 +1339,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid20 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("2,3,cube,-1?");
                     grid20.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid20.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid20 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("2,3,cone,-1?");
@@ -1308,6 +1368,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid21 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("3,3,cone,1?");
                     grid21.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 } else if (grid21.isChecked() && cube2.isChecked()) {
@@ -1316,11 +1377,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid21 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("3,3,cube,-1?");
                     grid21.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid21.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid21 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("3,3,cone,-1?");
@@ -1343,6 +1406,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid22 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("4,3,cone,1?");
                     grid22.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 } else if (grid22.isChecked() && cube2.isChecked()) {
@@ -1351,11 +1415,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid22 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("4,3,cube,-1?");
                     grid22.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid22.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid22 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("4,3,cone,-1?");
@@ -1378,6 +1444,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid23 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("5,3,cone,1?");
                     grid23.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 } else if (grid23.isChecked() && cube2.isChecked()) {
@@ -1386,11 +1453,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid23 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("5,3,cube,-1?");
                     grid23.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid23.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid23 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("5,3,cone,-1?");
@@ -1413,6 +1482,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid24 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("6,3,cone,1?");
                     grid24.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 } else if (grid24.isChecked() && cube2.isChecked()) {
@@ -1421,11 +1491,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid24 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("6,3,cube,-1?");
                     grid24.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid24.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid24 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("6,3,cone,-1?");
@@ -1448,6 +1520,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid25 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("7,3,cone,1?");
                     grid25.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 } else if (grid25.isChecked() && cube2.isChecked()) {
@@ -1456,11 +1529,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid25 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("7,3,cube,-1?");
                     grid25.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid25.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid25 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("7,3,cone,-1?");
@@ -1483,6 +1558,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid26 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("8,3,cone,1?");
                     grid26.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
 
@@ -1492,11 +1568,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid26 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("8,3,cube,-1?");
                     grid26.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
 
 
                 }
                 else if (grid26.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
+                    cone2.setChecked(false);
 
                     Toast.makeText(teleop.this, "Grid26 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("8,3,cone,-1?");
@@ -1520,6 +1598,7 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid27 Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("9,3,cone,1?");
                     grid27.setBackgroundResource(R.drawable.triangle_real);
+                    cone.setChecked(false);
 
 
                 } else if (grid27.isChecked() && cube2.isChecked()) {
@@ -1528,9 +1607,13 @@ public class teleop extends AppCompatActivity {
                     Toast.makeText(teleop.this, "Grid27 X Cube Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("9,3,cube,-1?");
                     grid27.setBackgroundResource(R.drawable.xcube);
+                    cube2.setChecked(false);
+
+
                 }
                 else if (grid27.isChecked() && cone2.isChecked()) {
                     row3.clearCheck();
+                    cone2.setChecked(false);
                     Toast.makeText(teleop.this, "Grid27 X Cone Selected", Toast.LENGTH_SHORT).show();
                     finalgrid.add("9,3,cone,-1?");
                     grid27.setBackgroundResource(R.drawable.xtraingle);

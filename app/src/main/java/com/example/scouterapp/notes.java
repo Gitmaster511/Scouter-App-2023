@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -84,6 +85,8 @@ public class notes extends AppCompatActivity {
         Button backward = (Button) findViewById(R.id.Backward_page_4);
         SeekBar slider = findViewById(R.id.seekBar);
         TextView additional = (EditText)findViewById(R.id.text_input);
+        additional.setTextColor(Color.WHITE);
+
         RadioButton yes = (RadioButton) findViewById(R.id.yes);
         RadioButton no = (RadioButton) findViewById(R.id.no);
 

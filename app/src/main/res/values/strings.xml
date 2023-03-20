@@ -73,4 +73,5 @@
     <string name="clear_grid">Clear Grid</string>
     <string name="ritvik_r">Ritvik R</string>
     <string name="ex_mongoose_anteater">Ex: Mongoose Anteater</string>
+    <string name="robot_got_flipped_over">Robot got flipped over</string>
 </resources>

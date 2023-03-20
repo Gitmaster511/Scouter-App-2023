@@ -167,9 +167,9 @@
 
     <RadioGroup
         android:id="@+id/shape"
-        android:layout_width="221dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="25dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="580dp"
         android:orientation="horizontal"
         android:paddingStart="20dip"
@@ -206,12 +206,11 @@
 
     <RadioGroup
         android:id="@+id/shape2"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="660dp"
         android:orientation="horizontal"
-        android:paddingEnd="0dip"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -291,45 +290,54 @@
         <RadioButton
             android:id="@+id/grid_1"
             android:layout_width="87dp"
+            android:button="@null"
             android:layout_height="101dp" />
 
         <RadioButton
             android:id="@+id/grid_2"
+            android:button="@null"
             android:layout_width="58dp"
             android:layout_height="105dp" />
 
         <RadioButton
             android:id="@+id/grid_3"
+            android:button="@null"
             android:layout_width="65dp"
             android:layout_height="107dp" />
 
         <RadioButton
             android:id="@+id/grid_4"
+            android:button="@null"
             android:layout_width="58dp"
             android:layout_height="106dp" />
 
         <RadioButton
             android:id="@+id/grid_5"
+            android:button="@null"
             android:layout_width="60dp"
             android:layout_height="100dp" />
 
         <RadioButton
             android:id="@+id/grid_6"
+            android:button="@null"
             android:layout_width="64dp"
             android:layout_height="102dp" />
 
         <RadioButton
             android:id="@+id/grid_7"
+            android:button="@null"
             android:layout_width="62dp"
             android:layout_height="102dp" />
 
         <RadioButton
             android:id="@+id/grid_8"
+            android:button="@null"
             android:layout_width="52dp"
             android:layout_height="96dp" />
 
         <RadioButton
             android:id="@+id/grid_9"
+            android:button="@null"
             android:layout_width="96dp"
             android:layout_height="100dp" />
     </RadioGroup>
@@ -347,46 +355,55 @@
 
         <RadioButton
             android:id="@+id/grid_10"
+            android:button="@null"
             android:layout_width="87dp"
             android:layout_height="101dp" />
 
         <RadioButton
             android:id="@+id/grid_11"
+            android:button="@null"
             android:layout_width="58dp"
             android:layout_height="105dp" />
 
         <RadioButton
             android:id="@+id/grid_12"
+            android:button="@null"
             android:layout_width="65dp"
             android:layout_height="107dp" />
 
         <RadioButton
             android:id="@+id/grid_13"
+            android:button="@null"
             android:layout_width="58dp"
             android:layout_height="106dp" />
 
         <RadioButton
             android:id="@+id/grid_14"
+            android:button="@null"
             android:layout_width="60dp"
             android:layout_height="100dp" />
 
         <RadioButton
             android:id="@+id/grid_15"
+            android:button="@null"
             android:layout_width="64dp"
             android:layout_height="102dp" />
 
         <RadioButton
             android:id="@+id/grid_16"
+            android:button="@null"
             android:layout_width="62dp"
             android:layout_height="102dp" />
 
         <RadioButton
             android:id="@+id/grid_17"
+            android:button="@null"
             android:layout_width="62dp"
             android:layout_height="96dp" />
 
         <RadioButton
             android:id="@+id/grid_18"
+            android:button="@null"
             android:layout_width="96dp"
             android:layout_height="100dp" />
     </RadioGroup>
@@ -402,46 +419,55 @@
 
         <RadioButton
             android:id="@+id/grid_19"
+            android:button="@null"
             android:layout_width="92dp"
             android:layout_height="77dp" />
 
         <RadioButton
             android:id="@+id/grid_20"
+            android:button="@null"
             android:layout_width="58dp"
             android:layout_height="80dp" />
 
         <RadioButton
             android:id="@+id/grid_21"
+            android:button="@null"
             android:layout_width="65dp"
             android:layout_height="80dp" />
 
         <RadioButton
             android:id="@+id/grid_22"
+            android:button="@null"
             android:layout_width="58dp"
             android:layout_height="80dp" />
 
         <RadioButton
             android:id="@+id/grid_23"
+            android:button="@null"
             android:layout_width="60dp"
             android:layout_height="80dp" />
 
         <RadioButton
             android:id="@+id/grid_24"
+            android:button="@null"
             android:layout_width="64dp"
             android:layout_height="80dp" />
 
         <RadioButton
             android:id="@+id/grid_25"
+            android:button="@null"
             android:layout_width="62dp"
             android:layout_height="80dp" />
 
         <RadioButton
             android:id="@+id/grid_26"
+            android:button="@null"
             android:layout_width="52dp"
             android:layout_height="80dp" />
 
         <RadioButton
             android:id="@+id/grid_27"
+            android:button="@null"
             android:layout_width="96dp"
             android:layout_height="80dp" />
     </RadioGroup>
