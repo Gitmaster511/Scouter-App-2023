@@ -27,8 +27,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="7dp"
         android:layout_marginTop="266dp"
-        android:background="@drawable/triangle_blue"
-        android:rotation="-90"
+        android:background="@drawable/triangle_real"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -408,7 +407,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/Cube_select"
             android:layout_width="65dp"
             android:layout_height="65dp"
@@ -420,14 +419,12 @@
             android:layout_width="30dp"
             android:layout_height="30dp" />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/Cone_select"
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:background="@drawable/triangle_blue"
-
+            android:background="@drawable/triangle_real"
             android:contentDescription="@string/greyed_our_arrow"
-            android:rotation="-90"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <!-- android:buttonTint="@color/purple_700" -->
@@ -450,7 +447,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/Cube_select2"
             android:layout_width="95dp"
             android:layout_height="85dp"
@@ -458,7 +455,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/Cone_select2"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -523,7 +520,7 @@
         android:layout_marginEnd="26dp"
         android:max="60"
         android:progress="0"
-        android:thumb="@drawable/triangle_blue"
+        android:thumb="@drawable/triangle_real"
         android:thumbTint="#C40818"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -536,17 +533,38 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="795dp"
         android:text="@string/_0"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="795dp"
+        android:text="10"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="212dp"
+        android:layout_marginStart="205dp"
         android:layout_marginTop="795dp"
         android:text="20"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="795dp"
+        android:text="30"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -556,7 +574,7 @@
         android:layout_marginTop="795dp"
         android:layout_marginEnd="208dp"
         android:text="40"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -564,9 +582,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="795dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="110dp"
+        android:text="50"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="795dp"
+        android:layout_marginEnd="30dp"
         android:text="60"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -576,13 +604,13 @@
         android:layout_marginStart="228dp"
         android:layout_marginTop="753dp"
         android:text="@string/cycle_time"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Undo"
+        android:id="@+id/undo"
         android:layout_width="115dp"
         android:layout_height="40dp"
         android:layout_marginStart="243dp"
