@@ -24,10 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="251dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/avenirbold"
+
         android:text="@string/qr"
         android:textColor="#FFFFFF"
         android:textSize="75sp"
+        android:fontFamily="@font/avenirbold"
         app:fontFamily="@font/avenirbold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -100,6 +101,8 @@
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
         android:textAllCaps="true"
+        android:fontFamily="@font/avenirbold"
+        app:fontFamily="@font/avenirbold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
