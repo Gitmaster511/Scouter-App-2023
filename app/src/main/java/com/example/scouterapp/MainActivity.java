@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         EditText name = (EditText) findViewById(R.id.name);
         name.setTextColor(Color.WHITE);//set the red text color
 
-
         //Match Number
         EditText matchNumber = (EditText) findViewById(R.id.match_number_input);
         matchNumber.setTextColor(Color.WHITE);//set the red text color
@@ -44,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Team Number
         EditText teamNumber = (EditText) findViewById(R.id.team_number_input);
-
         teamNumber.setTextColor(Color.WHITE);//set the red text color
         RadioButton Red = (RadioButton) findViewById(R.id.Red);
         RadioButton Blue = (RadioButton) findViewById(R.id.Blue);
