@@ -1,6 +1,8 @@
 package com.example.scouterapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -80,12 +82,60 @@ public class MainActivity extends AppCompatActivity {
                     DriverStation = (String) "Right";
                 }
                 Intent i = new Intent(MainActivity.this, auto.class);
-                i.putExtra("Match_Number", matchNumber.getText().toString());
-                i.putExtra("Team_Number", teamNumber.getText().toString());
-                i.putExtra("Alliance", Alliance);
-                i.putExtra("Driver_Station", DriverStation);
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+                builder1.setMessage("Invalid Match Number");
+                builder1.setPositiveButton(
+                        "Ok",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                                Intent k = new Intent(MainActivity.this, MainActivity.class);
 
-                startActivity(i);
+                                startActivity(k);
+                            }
+                        });
+
+
+                AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
+                builder2.setMessage("Invalid Team Number");
+                builder2.setPositiveButton(
+                        "Ok",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                                Intent k = new Intent(MainActivity.this, MainActivity.class);
+
+                                startActivity(k);
+                            }
+                        });
+
+
+
+
+                if (Integer.valueOf(Integer.valueOf(String.valueOf(matchNumber.getText()))) > 100) {
+                    AlertDialog alert11 = builder1.create();
+                    alert11.show();
+                    matchNumber.getText().clear();
+
+
+                }
+                else if (Integer.valueOf(String.valueOf(teamNumber.getText())) > 9999) {
+                    AlertDialog alert12 = builder2.create();
+                    alert12.show();
+                    teamNumber.getText().clear();
+
+
+
+                }
+                else {
+                    i.putExtra("Match_Number", matchNumber.getText().toString());
+                    i.putExtra("Team_Number", teamNumber.getText().toString());
+                    i.putExtra("Alliance", Alliance);
+                    i.putExtra("Driver_Station", DriverStation);
+                    startActivity(i);
+
+                }
+
             }
         });
 

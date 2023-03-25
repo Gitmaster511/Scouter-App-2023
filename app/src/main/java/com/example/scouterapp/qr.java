@@ -1,4 +1,6 @@
 package com.example.scouterapp;
+import static java.security.AccessController.getContext;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -17,6 +19,8 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 import java.util.Objects;
+import java.util.UUID;
+import android.provider.Settings.Secure;
 
 public class qr extends AppCompatActivity {
 
@@ -78,11 +82,15 @@ public class qr extends AppCompatActivity {
         String aggression = intent.getStringExtra("aggression");
         String additional = intent.getStringExtra("additional");
         String type = intent.getStringExtra("type");
+        String heavy = intent.getStringExtra("heavy");
+
+
 
         String win = intent.getStringExtra("win");
-
+        String fun = Secure.getString(this.getContentResolver(),
+                Secure.ANDROID_ID);
         //Final string output
-        String finalresult = Match_Number + ";" + Team_Number + ";" + Alliance + ";" + Driver_Station + ";" + climb_time + ";" + auto_grid + ";" + left_community_checked + ";" + Docked_Engaged_checked + ";" + docked_checked + ";" + engaged_checked + ";" + cone_pickup_checked + ";" + cube_pickup_checked + ";" + station_cone_checked + ";" + station_cube_checked + ";" + ground_cone_checked + ";" + ground_cube_checked + ";" + teleop_grid + ";" + climb_time2 + ";" + attempted_checked + ";" + docked2_checked + ";" + engaged2_checked + ";" + soloclimb_checked + ";" + gave_assistance_checked + ";" + recieved_assistance_checked + ";" + parked_checked + ";" + climb_time3 + ";" + aggression + ";" + type + ";" + additional + ";" + win + "?";
+        String finalresult = Match_Number + ";" + Team_Number + ";" + Alliance + ";" + Driver_Station + ";" + climb_time + ";" + auto_grid + ";" + left_community_checked + ";" + Docked_Engaged_checked + ";" + docked_checked + ";" + engaged_checked + ";" + cone_pickup_checked + ";" + cube_pickup_checked + ";" + station_cone_checked + ";" + station_cube_checked + ";" + ground_cone_checked + ";" + ground_cube_checked + ";" + teleop_grid + ";" + climb_time2 + ";" + attempted_checked + ";" + docked2_checked + ";" + engaged2_checked + ";" + soloclimb_checked + ";" + gave_assistance_checked + ";" + recieved_assistance_checked + ";" + parked_checked + ";" + climb_time3 + ";" + aggression + ";" + type + ";" + additional + ";" + heavy + ";" + win + ";" + fun + "?";
 
 
 
@@ -160,6 +168,8 @@ public class qr extends AppCompatActivity {
                         startActivity(i);
                     }
                 });
+
+
 
 
 

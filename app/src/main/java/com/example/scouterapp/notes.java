@@ -20,6 +20,7 @@ import java.util.Objects;
 
 public class notes extends AppCompatActivity {
     String win = "0";
+    String heavy = "0";
     int aggression = 0;
 
     String types = "";
@@ -107,6 +108,29 @@ public class notes extends AppCompatActivity {
                 if (no.isChecked())
                 {
                     win = (String) "0";
+                }
+            }
+        });
+
+
+        RadioButton yesheavy = (RadioButton) findViewById(R.id.yesheavy);
+        RadioButton noheavy = (RadioButton) findViewById(R.id.noheavy);
+
+        yesheavy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (yesheavy.isChecked())
+                {
+                    heavy = (String) "1";
+                }
+            }
+        });
+        noheavy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (noheavy.isChecked())
+                {
+                    heavy = (String) "0";
                 }
             }
         });
@@ -212,6 +236,7 @@ public class notes extends AppCompatActivity {
                 i.putExtra("aggression", bar);
                 i.putExtra ("additional",finalstr);
                 i.putExtra("type", types);
+                i.putExtra("heavy", heavy);
                 i.putExtra("win", win);
                 startActivity(i);
 

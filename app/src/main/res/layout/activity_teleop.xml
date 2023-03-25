@@ -18,7 +18,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="7dp"
         android:layout_marginTop="137dp"
-        android:background="@drawable/simple_rectangle"
+        android:background="@drawable/cube"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +28,7 @@
         android:layout_marginStart="7dp"
         android:layout_marginTop="266dp"
         android:background="@drawable/triangle_blue"
-        android:rotation="-90"
+        android:rotation="180"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -426,82 +426,51 @@
     </RadioGroup>
 
 
-    <RadioGroup
-        android:id="@+id/shape"
-        android:layout_width="221dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="676dp"
-        android:orientation="horizontal"
-        android:paddingStart="20dip"
-        android:paddingEnd="10dip"
+    <!-- android:buttonTint="@color/purple_700" -->
+
+
+    <CheckBox
+        android:id="@+id/Cube_select"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="688dp"
+        android:background="#5920E4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/Cube_select"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#5920E4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
-
-        <RadioButton
-            android:id="@+id/Cone_select"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="@drawable/triangle_blue"
-
-            android:contentDescription="@string/greyed_our_arrow"
-            android:rotation="-90"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <!-- android:buttonTint="@color/purple_700" -->
-
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
-
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/shape2"
-        android:layout_width="221dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="380dp"
-        android:layout_marginTop="665dp"
-        android:orientation="horizontal"
-        android:paddingStart="20dip"
-        android:paddingEnd="10dip"
+    <CheckBox
+        android:id="@+id/Cone_select"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="688dp"
+        android:background="@drawable/triangle_blue"
+        android:contentDescription="@string/greyed_our_arrow"
+        android:rotation="180"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/Cube_select2"
-            android:layout_width="95dp"
-            android:layout_height="85dp"
-            android:background="@drawable/xcube"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <CheckBox
+        android:id="@+id/Cube_select2"
+        android:layout_width="95dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="384dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/xcube"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/Cone_select2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/xtraingle"
-            android:contentDescription="@string/greyed_our_arrow"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
-
-    </RadioGroup>
+    <CheckBox
+        android:id="@+id/Cone_select2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="484dp"
+        android:layout_marginTop="680dp"
+        android:background="@drawable/xtraingle"
+        android:contentDescription="@string/greyed_our_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Forward_page_3"
@@ -536,7 +505,7 @@
         android:layout_marginTop="704dp"
         android:layout_marginEnd="243dp"
         android:backgroundTint="#FF0000"
-        android:text="Reset Field"
+        android:text="Reset Data"
         android:textSize="12sp"
         android:shadowColor="#000000"
         android:shadowDx="1.5"

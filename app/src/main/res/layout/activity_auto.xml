@@ -11,7 +11,8 @@
         android:layout_height="match_parent"
         android:background="@drawable/db03c090f3453aa392e368f65667b6d9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="115dp"
@@ -56,14 +57,14 @@
         android:background="@drawable/corner_rectangle_maroon"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
-        android:text="@string/left_community"
-        android:textColor="@color/white"
-        android:textSize="24sp"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
+        android:text="@string/left_community"
         android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         app:fontFamily="@font/avenir"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -79,14 +80,14 @@
         android:background="@drawable/corner_rectangle_maroon"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
-        android:text="@string/attempted_d_e"
-        android:textColor="@color/white"
-        android:textSize="24sp"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
+        android:text="@string/attempted_d_e"
         android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         app:fontFamily="@font/avenir"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -102,15 +103,15 @@
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
-        android:text="@string/docked"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        app:fontFamily="@font/avenir"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
+        android:text="@string/docked"
         android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:fontFamily="@font/avenir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -124,14 +125,14 @@
         android:background="@drawable/smaller_rect_field"
         android:buttonTint="#ffffff"
         android:fontFamily="@font/avenir"
-        android:text="Engaged"
-        android:textColor="@color/white"
-        android:textSize="26sp"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
+        android:text="Engaged"
         android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="26sp"
         app:fontFamily="@font/avenir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -195,7 +196,7 @@
             android:layout_height="65dp"
             android:background="@drawable/triangle_blue"
             android:contentDescription="@string/greyed_our_arrow"
-            android:rotation="-90"
+            android:rotation="180"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <!-- android:buttonTint="@color/purple_700" -->
@@ -454,30 +455,31 @@
         android:layout_marginTop="250dp"
         android:layout_marginEnd="412dp"
         android:backgroundTint="#FF0000"
-        android:text="@string/reset_data"
-        android:textSize="12sp"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
+        android:text="@string/reset_data"
         android:textAllCaps="true"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
         android:id="@+id/seekBar"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="549dp"
+        android:layout_width="550dp"
         android:layout_height="62dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="796dp"
+        android:layout_marginTop="792dp"
         android:layout_marginEnd="26dp"
         android:max="15"
         android:progress="0"
+        android:splitTrack="false"
         android:thumb="@drawable/triangle_blue"
         android:thumbTint="#C40818"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -485,12 +487,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
+        android:layout_marginTop="786dp"
         android:layout_marginBottom="147dp"
         android:text="@string/_0"
         android:textColor="#C40818"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -509,8 +513,8 @@
         android:layout_marginStart="376dp"
         android:layout_marginBottom="147dp"
         android:text="@string/_10"
-        android:textSize="20dp"
         android:textColor="#C40818"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -535,47 +539,34 @@
         android:layout_marginStart="234dp"
         android:layout_marginBottom="167dp"
         android:fontFamily="@font/avenirbold"
-        android:text="@string/d_e_time"
-        android:textColor="#C40818"
-        android:textSize="30sp"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
+        android:text="@string/d_e_time"
         android:textAllCaps="true"
+        android:textColor="#C40818"
+        android:textSize="30sp"
         app:fontFamily="@font/avenirbold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/clear"
-        android:layout_width="124dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="556dp"
-        android:layout_marginEnd="272dp"
-        android:text="@string/clear_grid"
-        android:shadowColor="#000000"
-        android:shadowDx="1.5"
-        android:shadowDy="1.3"
-        android:shadowRadius="1.6"
-        android:textAllCaps="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/Undo"
         android:layout_width="115dp"
         android:layout_height="40dp"
+        android:layout_marginTop="249dp"
+        android:layout_marginEnd="86dp"
         android:backgroundTint="#FF0000"
-        android:text="Undo"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.6"
+        android:text="Undo"
         android:textAllCaps="true"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="400dp"
-        tools:layout_editor_absoluteY="249dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- grid -->
 
