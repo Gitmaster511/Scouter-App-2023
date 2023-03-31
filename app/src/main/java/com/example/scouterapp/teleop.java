@@ -174,7 +174,8 @@ public class teleop extends AppCompatActivity {
                 i.putExtra("station_cube_checked", station_cube_checked);
                 i.putExtra("ground_cone_checked", ground_cone_checked);
                 i.putExtra("ground_cube_checked", ground_cube_checked);
-                i.putExtra("teleop_grid", finalgrid2);
+                String listString = String.join(", ", finalgrid);
+                i.putExtra("teleop_grid", listString);
                 i.putExtra("climb_time2", lol);
 
 
@@ -478,7 +479,7 @@ public class teleop extends AppCompatActivity {
                     row1.clearCheck();
                     row2.clearCheck();
                     row3.clearCheck();
-                    finalgrid2 = (String) "";
+                    finalgrid.clear();
                 });
 
                 // Set the Negative button with No name Lambda OnClickListener method is use of DialogInterface interface.
@@ -551,10 +552,7 @@ public class teleop extends AppCompatActivity {
                     row1.clearCheck();
                     finalgrid.add("1,1,cone,-1?");
                     cone2.setChecked(false);
-
                     grid1.setBackgroundResource(R.drawable.xtraingle);
-
-
                 }
                 if (grid2.isChecked() && cube.isChecked()) {
                     row1.clearCheck();
@@ -568,9 +566,6 @@ public class teleop extends AppCompatActivity {
                     AlertDialog alert11 = cone_message.create();
                     alert11.show();
                     cone.setChecked(false);
-
-
-
 
                 }
                 else if (grid2.isChecked() && cube2.isChecked()) {
@@ -764,7 +759,6 @@ public class teleop extends AppCompatActivity {
                 else if (grid7.isChecked() && cone2.isChecked()) {
                     row1.clearCheck();
                     cone2.setChecked(false);
-
                     finalgrid.add("7,1,cone,-1?");
                     grid7.setBackgroundResource(R.drawable.xtraingle);
 
@@ -1506,8 +1500,6 @@ public class teleop extends AppCompatActivity {
                     cone2.setChecked(false);
                     finalgrid.add("9,3,cone,-1?");
                     grid27.setBackgroundResource(R.drawable.xtraingle);
-
-
                 }
 
             }

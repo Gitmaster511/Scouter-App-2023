@@ -201,7 +201,6 @@ public class endgame extends AppCompatActivity {
                 i.putExtra("climb_time2",climb_time2);
 
 
-
                 //Fourth Page
                 i.putExtra("attempted_checked", attempted_checked);
                 i.putExtra("docked2_checked", docked2_checked);

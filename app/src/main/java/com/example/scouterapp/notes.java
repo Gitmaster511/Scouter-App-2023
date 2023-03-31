@@ -88,6 +88,7 @@ public class notes extends AppCompatActivity {
         TextView additional = (EditText)findViewById(R.id.text_input);
         additional.setTextColor(Color.WHITE);
 
+        /*
         RadioButton yes = (RadioButton) findViewById(R.id.yes);
         RadioButton no = (RadioButton) findViewById(R.id.no);
 
@@ -112,6 +113,8 @@ public class notes extends AppCompatActivity {
             }
         });
 
+         */
+/*
 
         RadioButton yesheavy = (RadioButton) findViewById(R.id.yesheavy);
         RadioButton noheavy = (RadioButton) findViewById(R.id.noheavy);
@@ -134,6 +137,7 @@ public class notes extends AppCompatActivity {
                 }
             }
         });
+        */
 
 
 

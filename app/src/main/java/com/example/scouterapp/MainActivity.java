@@ -108,16 +108,31 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(k);
                             }
                         });
+                AlertDialog.Builder builder3 = new AlertDialog.Builder(MainActivity.this);
+                builder3.setMessage("No Data Entered!");
+                builder3.setPositiveButton(
+                        "Ok",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                                Intent k = new Intent(MainActivity.this, MainActivity.class);
+
+                                startActivity(k);
+                            }
+                        });
 
 
 
-
-                if (Integer.valueOf(Integer.valueOf(String.valueOf(matchNumber.getText()))) > 100) {
+                if (String.valueOf(matchNumber.getText()).equals("") || String.valueOf(teamNumber.getText()).equals("")) {
+                    AlertDialog alert13 = builder3.create();
+                    alert13.show();
+                    matchNumber.getText().clear();
+                    teamNumber.getText().clear();
+                }
+                else if (Integer.valueOf(Integer.valueOf(String.valueOf(matchNumber.getText()))) > 150) {
                     AlertDialog alert11 = builder1.create();
                     alert11.show();
                     matchNumber.getText().clear();
-
-
                 }
                 else if (Integer.valueOf(String.valueOf(teamNumber.getText())) > 9999) {
                     AlertDialog alert12 = builder2.create();
